@@ -3,7 +3,7 @@
 // Framework's Variables                        ||
 // =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-18 22:12  ||
-// Last Update: 2015-02-19 21:28 @ Rakume       ||
+// Last Update: 2015-02-19 22:38 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
@@ -28,19 +28,27 @@ color-font-blockquote = #666664
 color-font-mark       = color-font
 color-font-blockquote-small = #999
 
+// Button
+color-font-btn = #444
+color-font-btn-primary = #FFF
+
 // Background
 color-background-pre  = #F8F8F8
 color-background-code = #F9F9F7
 color-background-mark = #FFA
 
-// Table Background
-color-background-th      = #EEE
-color-background-th-mark = #FFA
-color-background-th-odd  = #F4F4F4
-
+// Button
+color-background-btn           = #E6E6E6
+color-background-btn-primary   = #0078E7
+color-background-btn-secondary = #42B8DD
 // Border
 color-border      = #E2E2E2
-color-border-dark = #BBB
+color-border-dark = darken(color-border, 2)
+
+// Table Background
+color-background-th      = darken(color-border, .5)
+color-background-th-mark = #FFA
+color-background-th-odd  = lighten(color-background-th, 7)
 
 /* Width */
 width-border = 2px
