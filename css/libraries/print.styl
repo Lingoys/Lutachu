@@ -1,0 +1,84 @@
+// ===============================================
+// Lutachu CSS / Print.styl                     ||
+// Based On Print.css                           ||
+// =============================================||
+// Made by Rakume<i@fake.moe> 2015-02-18 00:37  ||
+// Last Update: 2015-02-19 19:44 @ Rakume       ||
+// MIT License                                  ||
+// ===============================================
+
+/*! Source https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+
+// ==========================================================================
+// Print styles.
+// Inlined to avoid the additional HTTP request h5bp.com/r
+// ==========================================================================
+
+@media print
+  *,
+  *:before,
+  *:after
+    background transparent !important
+    color #000 !important // Black prints faster h5bp.com/s
+    box-shadow none !important
+    text-shadow none !important
+
+  a
+    &:visited
+      text-decoration underline
+    
+    &[href]:after
+      content " (" attr(href) ")"
+    
+    // Don't show links that are fragment identifiers,
+    // or use the `javascript:` pseudo protocol
+    &[href^="#"]:after,
+    &[href^="javascript:"]:after
+      content ""
+
+  abbr[title]:after
+    content " (" attr(title) ")"
+
+  pre,
+  blockquote
+    border 1px solid #999
+    page-break-inside avoid
+
+  thead
+    display table-header-group // h5bp.com/t
+
+  tr,
+  img
+    page-break-inside avoid
+
+  img
+    max-width 100% !important
+
+  p,
+  h2,
+  h3
+    orphans 3
+    widows 3
+
+  h2,
+  h3
+    page-break-after avoid
+
+  // Bootstrap specific changes start
+  //
+  // Chrome (OSX) fix for https://github.com/twbs/bootstrap/issues/11245
+  // Once fixed, we can just straight up remove this.
+  select
+    background #fff !important
+  
+  .print-hide
+    display none !important
+
+  .print-block
+    display block !important
+
+  .print-inlnie-block
+    display inline-block !important
+
+  .print-inlnie
+    display inline !important

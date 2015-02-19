@@ -1,0 +1,399 @@
+// ===============================================
+// Lutachu CSS / Typography.styl                ||
+// Typography System                            ||
+// =============================================||
+// Made by Rakume<i@fake.moe> 2015-02-19 02:36  ||
+// Last Update: 2015-02-19 19:41 @ Rakume       ||
+// MIT License                                  ||
+// ===============================================
+
+*,
+*:before
+*:after
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+
+body
+  color color-font
+  font 400 font-size/1.82 font-family
+  counter-reset lutitleh2 lutitleh3 lutitleh4 lutitleh5 lutitleh6
+
+// Titles
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color color-font
+  font-family font-family
+
+h1
+  margin-top 0
+
+h2
+  font-size 1.5em
+  margin .83em 0
+
+h3
+  font-size 1.17em
+  margin 1em 0
+
+h4,
+h5,
+h6
+  font-size 1em
+  margin 1.6em 0 1em 0
+
+/*
+ * Code From Entry CSS
+ */
+
+h1
+  text-align center
+
+h2
+  counter-reset lutitleh3 lutitleh4 lutitleh5 lutitleh6
+
+  &:before
+    content counter(lutitleh2) '\3000'
+    content counter(lutitleh2, cjk-ideographic) '、'
+    counter-increment lutitleh2
+  
+h3
+    counter-reset lutitleh4 lutitleh5 lutitleh6
+
+    &:before
+      content counter(lutitleh2) '.' counter(lutitleh3) '\3000'
+      counter-increment lutitleh3
+
+h4
+  counter-reset lutitleh5 lutitleh6
+
+  &:before
+    content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '\3000'
+    counter-increment lutitleh4
+  
+h5
+  counter-reset lutitleh6
+
+  &:before
+    content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '.' counter(lutitleh5) '\3000'
+    counter-increment lutitleh5
+  
+h6
+  &:before
+    content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '.' counter(lutitleh5) '.' counter(lutitleh6) '\3000'
+    counter-increment lutitleh6
+
+h6
+  font-weight 500
+
+.nocouter
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    &:before
+      content none
+
+
+p
+  margin-top 0
+  margin-bottom 1.46em
+  letter-spacing .2px
+
+.indent p:before
+  content '\3000\3000'
+  display inline
+
+a
+  -moz-text-decoration-color rgba(0, 0, 0, .6)
+  text-decoration-color rgba(0, 0, 0, .6)
+  
+  img
+    border 0
+
+// Symbol
+
+b,
+em,
+cite,
+strong
+  color color-font
+  font-weight 700
+
+em,
+cite
+  font-style normal
+
+em
+  font-style inherit
+  font-weight inherit
+  text-decoration inherit
+  -webkit-text-emphasis filled circle
+  -moz-text-emphasis filled circle
+  -ms-text-emphasis filled circle
+  text-emphasis filled circle
+  -webkit-text-emphasis-position under
+  -moz-text-emphasis-position under
+  -ms-text-emphasis-position under
+  text-emphasis-position under
+
+i
+  color color-font
+  font-style italic
+
+img
+  margin .2em 0
+
+// Code Block
+
+tt,
+code
+  font-size .8em
+  margin: 0 .3em
+  padding .1em .3em
+  border-radius 3px
+  word-break break-all
+  color color-font-code
+  background color-background-code
+  border 1px solid color-border
+
+sub,
+sup
+  a
+    text-decoration none
+
+pre
+  display block
+  overflow auto
+  margin 1.6em 0
+  font-size .9em
+  line-height 1.5
+  padding .5em .8em
+  color color-font-pre
+  background color-background-pre
+  border-left width-border solid color-border
+  
+  code,
+  tt
+    padding 0
+    border none
+    font-size 1em
+    background none
+    color color-font-pre
+
+blockquote
+  padding-left 1.3em
+  margin 0 0 1.6em 0
+  font-size .9em
+  line-height 1.62
+  color color-font-blockquote
+  border-left width-border solid color-border
+  
+  small
+    color color-font-blockquote-small
+    display block
+    text-align right
+
+  a
+    color color-font-blockquote
+
+  p
+    margin-bottom .5em
+
+  p:last-child
+    margin-bottom 0
+
+// Table
+
+table
+  width 100%
+  max-width 100%
+  border-spacing 0
+  margin-bottom 1.5em
+  border-collapse collapse
+  border 1px solid color-border
+
+th,
+td
+  text-align left
+  padding .5em .5em .5em .8em
+  border-bottom 1px solid color-border
+  border-right 1px solid color-border
+
+th
+  background-color color-background-th
+
+hr
+  width 15%
+  display block
+  border 0 none
+  margin 2em auto
+  border-top width-border solid color-border
+
+// List
+
+ul,
+ol
+  margin 0 0 24px 6px
+  padding-left 24px
+
+ul
+  list-style-type square
+
+ol
+  list-style-type decimal
+
+li
+  margin-bottom .2em
+
+  ul,
+  ol
+    margin-top 0
+    margin-bottom 0
+    margin-left 14px
+
+  ul
+    list-style-type disc    
+
+    ul
+      list-style-type circle
+
+  p
+    margin .4em 0 .6em
+
+    &:before
+      content none
+
+// DT
+
+dl
+  margin-bottom .2em
+
+dt
+  padding 0
+  font-weight 800
+
+dd
+  margin-left 0
+
+dt + dd
+  margin-top .2em
+
+dd + dt
+  margin-top .6em
+
+// Title ~ *
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  + *
+    margin-top -.8em
+
+// Poem
+
+.{ns}poem-hc
+  text-align center
+  margin 2em 0
+
+  p
+    margin-bottom .2em
+
+    &:before
+      content none
+
+  .poem-author
+    display block
+    text-align right
+    font-weight 800
+    
+    &:before
+      content '——'
+
+// Vertical
+
+.{ns}poem-lr,
+.{ns}poem-rl
+  display block
+  white-space pre
+  margin 2em auto
+  line-height 1.4em
+  letter-spacing 3px
+  writing-mode vertical-rl
+  -webkit-writing-mode vertical-rl
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .poem-title
+    margin 0
+    font-size 1.2em
+    margin-left -.5em
+    
+    &:before
+      content none
+
+    & > span
+      font-size .6em
+
+  p
+    margin 0 -.8em
+    text-align center
+
+    &:before
+      content none
+
+.{ns}poem-lr
+  writing-mode vertical-lr
+  -webkit-writing-mode vertical-lr
+
+// Aside Note
+
+.{ns}acomment,
+.{ns}acomment-left,
+.{ns}acomment-right
+  right -15px
+  width 120px
+  font-size .9em
+  padding-top .6em
+  position absolute
+  font-style normal
+  font-weight normal
+  margin-right - @width
+
+  &:before
+    top 0
+    left 0
+    width 40%
+    content ''
+    position absolute
+    border-top 1px solid color-border-dark
+
+.{ns}acomment-left
+  left -15px
+  right auto
+  margin-right 0
+  margin-left -120px
+
+  &:before
+    right 0
+    left auto
+
+[draggable]
+  cursor move
+
+// Clearfix
+
+.clearfix
+  clearfix()

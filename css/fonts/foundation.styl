@@ -1,0 +1,635 @@
+// ===============================================
+// Lutachu CSS / Foundation.styl                ||
+// Font Icons                                   ||
+// =============================================||
+// Made by Rakume<i@fake.moe> 2015-02-19 19:36  ||
+// Last Update: 2015-02-19 19:36 @ Rakume       ||
+// MIT License                                  ||
+// ===============================================
+
+/* 
+ * Foundation Icons v 3.0
+ * Made by ZURB 2013 http://zurb.com/playground/foundation-icon-fonts-3
+ * MIT License
+ */
+
+foundicons-path = "//dn-staticfile.qbox.me/foundicons/3.0.0/"
+foundicons-prefix = ns + "icon-"
+foundicons-version = "3.0.0"
+
+@font-face
+  font-family "foundation-icons"
+  src url(foundicons-path + "foundation-icons.eot")
+  src url(foundicons-path + "foundation-icons.eot?#iefix") format("embedded-opentype"),
+       url(foundicons-path + "foundation-icons.woff") format("woff"),
+       url(foundicons-path + "foundation-icons.ttf") format("truetype"),
+       url(foundicons-path + "foundation-icons.svg#fontcustom") format("svg")
+  font-weight normal
+  font-style normal
+
+
+[class*={foundicons-prefix}]
+  display inline-block
+
+  &:before
+    font-family "foundation-icons"
+    font-style normal
+    font-weight normal
+    font-variant normal
+    text-transform none
+    line-height 1
+    -webkit-font-smoothing antialiased
+    display inline-block
+    text-decoration inherit
+
+// Size
+
+.{foundicons-prefix}sm
+  font-size 1.5em
+  
+.{foundicons-prefix}md
+  font-size 2em
+
+.{foundicons-prefix}lg
+  font-size 2.5em
+
+// Spin
+
+@keyframes icon-spin
+  0%
+    transform rotate(0deg)
+
+  100%
+    transform rotate(359deg)
+
+.{foundicons-prefix}spin
+  animation icon-spin 2s infinite linear
+
+// Font
+
+.{foundicons-prefix}address-book:before
+  content "\f100"
+.{foundicons-prefix}alert:before
+  content "\f101"
+.{foundicons-prefix}align-center:before
+  content "\f102"
+.{foundicons-prefix}align-justify:before
+  content "\f103"
+.{foundicons-prefix}align-left:before
+  content "\f104"
+.{foundicons-prefix}align-right:before
+  content "\f105"
+.{foundicons-prefix}anchor:before
+  content "\f106"
+.{foundicons-prefix}annotate:before
+  content "\f107"
+.{foundicons-prefix}archive:before
+  content "\f108"
+.{foundicons-prefix}arrow-down:before
+  content "\f109"
+.{foundicons-prefix}arrow-left:before
+  content "\f10a"
+.{foundicons-prefix}arrow-right:before
+  content "\f10b"
+.{foundicons-prefix}arrow-up:before
+  content "\f10c"
+.{foundicons-prefix}arrows-compress:before
+  content "\f10d"
+.{foundicons-prefix}arrows-expand:before
+  content "\f10e"
+.{foundicons-prefix}arrows-in:before
+  content "\f10f"
+.{foundicons-prefix}arrows-out:before
+  content "\f110"
+.{foundicons-prefix}asl:before
+  content "\f111"
+.{foundicons-prefix}asterisk:before
+  content "\f112"
+.{foundicons-prefix}at-sign:before
+  content "\f113"
+.{foundicons-prefix}background-color:before
+  content "\f114"
+.{foundicons-prefix}battery-empty:before
+  content "\f115"
+.{foundicons-prefix}battery-full:before
+  content "\f116"
+.{foundicons-prefix}battery-half:before
+  content "\f117"
+.{foundicons-prefix}bitcoin-circle:before
+  content "\f118"
+.{foundicons-prefix}bitcoin:before
+  content "\f119"
+.{foundicons-prefix}blind:before
+  content "\f11a"
+.{foundicons-prefix}bluetooth:before
+  content "\f11b"
+.{foundicons-prefix}bold:before
+  content "\f11c"
+.{foundicons-prefix}book-bookmark:before
+  content "\f11d"
+.{foundicons-prefix}book:before
+  content "\f11e"
+.{foundicons-prefix}bookmark:before
+  content "\f11f"
+.{foundicons-prefix}braille:before
+  content "\f120"
+.{foundicons-prefix}burst-new:before
+  content "\f121"
+.{foundicons-prefix}burst-sale:before
+  content "\f122"
+.{foundicons-prefix}burst:before
+  content "\f123"
+.{foundicons-prefix}calendar:before
+  content "\f124"
+.{foundicons-prefix}camera:before
+  content "\f125"
+.{foundicons-prefix}check:before
+  content "\f126"
+.{foundicons-prefix}checkbox:before
+  content "\f127"
+.{foundicons-prefix}clipboard-notes:before
+  content "\f128"
+.{foundicons-prefix}clipboard-pencil:before
+  content "\f129"
+.{foundicons-prefix}clipboard:before
+  content "\f12a"
+.{foundicons-prefix}clock:before
+  content "\f12b"
+.{foundicons-prefix}closed-caption:before
+  content "\f12c"
+.{foundicons-prefix}cloud:before
+  content "\f12d"
+.{foundicons-prefix}comment-minus:before
+  content "\f12e"
+.{foundicons-prefix}comment-quotes:before
+  content "\f12f"
+.{foundicons-prefix}comment-video:before
+  content "\f130"
+.{foundicons-prefix}comment:before
+  content "\f131"
+.{foundicons-prefix}comments:before
+  content "\f132"
+.{foundicons-prefix}compass:before
+  content "\f133"
+.{foundicons-prefix}contrast:before
+  content "\f134"
+.{foundicons-prefix}credit-card:before
+  content "\f135"
+.{foundicons-prefix}crop:before
+  content "\f136"
+.{foundicons-prefix}crown:before
+  content "\f137"
+.{foundicons-prefix}css3:before
+  content "\f138"
+.{foundicons-prefix}database:before
+  content "\f139"
+.{foundicons-prefix}die-five:before
+  content "\f13a"
+.{foundicons-prefix}die-four:before
+  content "\f13b"
+.{foundicons-prefix}die-one:before
+  content "\f13c"
+.{foundicons-prefix}die-six:before
+  content "\f13d"
+.{foundicons-prefix}die-three:before
+  content "\f13e"
+.{foundicons-prefix}die-two:before
+  content "\f13f"
+.{foundicons-prefix}dislike:before
+  content "\f140"
+.{foundicons-prefix}dollar-bill:before
+  content "\f141"
+.{foundicons-prefix}dollar:before
+  content "\f142"
+.{foundicons-prefix}download:before
+  content "\f143"
+.{foundicons-prefix}eject:before
+  content "\f144"
+.{foundicons-prefix}elevator:before
+  content "\f145"
+.{foundicons-prefix}euro:before
+  content "\f146"
+.{foundicons-prefix}eye:before
+  content "\f147"
+.{foundicons-prefix}fast-forward:before
+  content "\f148"
+.{foundicons-prefix}female-symbol:before
+  content "\f149"
+.{foundicons-prefix}female:before
+  content "\f14a"
+.{foundicons-prefix}filter:before
+  content "\f14b"
+.{foundicons-prefix}first-aid:before
+  content "\f14c"
+.{foundicons-prefix}flag:before
+  content "\f14d"
+.{foundicons-prefix}folder-add:before
+  content "\f14e"
+.{foundicons-prefix}folder-lock:before
+  content "\f14f"
+.{foundicons-prefix}folder:before
+  content "\f150"
+.{foundicons-prefix}foot:before
+  content "\f151"
+.{foundicons-prefix}foundation:before
+  content "\f152"
+.{foundicons-prefix}graph-bar:before
+  content "\f153"
+.{foundicons-prefix}graph-horizontal:before
+  content "\f154"
+.{foundicons-prefix}graph-pie:before
+  content "\f155"
+.{foundicons-prefix}graph-trend:before
+  content "\f156"
+.{foundicons-prefix}guide-dog:before
+  content "\f157"
+.{foundicons-prefix}hearing-aid:before
+  content "\f158"
+.{foundicons-prefix}heart:before
+  content "\f159"
+.{foundicons-prefix}home:before
+  content "\f15a"
+.{foundicons-prefix}html5:before
+  content "\f15b"
+.{foundicons-prefix}indent-less:before
+  content "\f15c"
+.{foundicons-prefix}indent-more:before
+  content "\f15d"
+.{foundicons-prefix}info:before
+  content "\f15e"
+.{foundicons-prefix}italic:before
+  content "\f15f"
+.{foundicons-prefix}key:before
+  content "\f160"
+.{foundicons-prefix}laptop:before
+  content "\f161"
+.{foundicons-prefix}layout:before
+  content "\f162"
+.{foundicons-prefix}lightbulb:before
+  content "\f163"
+.{foundicons-prefix}like:before
+  content "\f164"
+.{foundicons-prefix}link:before
+  content "\f165"
+.{foundicons-prefix}list-bullet:before
+  content "\f166"
+.{foundicons-prefix}list-number:before
+  content "\f167"
+.{foundicons-prefix}list-thumbnails:before
+  content "\f168"
+.{foundicons-prefix}list:before
+  content "\f169"
+.{foundicons-prefix}lock:before
+  content "\f16a"
+.{foundicons-prefix}loop:before
+  content "\f16b"
+.{foundicons-prefix}magnifying-glass:before
+  content "\f16c"
+.{foundicons-prefix}mail:before
+  content "\f16d"
+.{foundicons-prefix}male-female:before
+  content "\f16e"
+.{foundicons-prefix}male-symbol:before
+  content "\f16f"
+.{foundicons-prefix}male:before
+  content "\f170"
+.{foundicons-prefix}map:before
+  content "\f171"
+.{foundicons-prefix}marker:before
+  content "\f172"
+.{foundicons-prefix}megaphone:before
+  content "\f173"
+.{foundicons-prefix}microphone:before
+  content "\f174"
+.{foundicons-prefix}minus-circle:before
+  content "\f175"
+.{foundicons-prefix}minus:before
+  content "\f176"
+.{foundicons-prefix}mobile-signal:before
+  content "\f177"
+.{foundicons-prefix}mobile:before
+  content "\f178"
+.{foundicons-prefix}monitor:before
+  content "\f179"
+.{foundicons-prefix}mountains:before
+  content "\f17a"
+.{foundicons-prefix}music:before
+  content "\f17b"
+.{foundicons-prefix}next:before
+  content "\f17c"
+.{foundicons-prefix}no-dogs:before
+  content "\f17d"
+.{foundicons-prefix}no-smoking:before
+  content "\f17e"
+.{foundicons-prefix}page-add:before
+  content "\f17f"
+.{foundicons-prefix}page-copy:before
+  content "\f180"
+.{foundicons-prefix}page-csv:before
+  content "\f181"
+.{foundicons-prefix}page-delete:before
+  content "\f182"
+.{foundicons-prefix}page-doc:before
+  content "\f183"
+.{foundicons-prefix}page-edit:before
+  content "\f184"
+.{foundicons-prefix}page-export-csv:before
+  content "\f185"
+.{foundicons-prefix}page-export-doc:before
+  content "\f186"
+.{foundicons-prefix}page-export-pdf:before
+  content "\f187"
+.{foundicons-prefix}page-export:before
+  content "\f188"
+.{foundicons-prefix}page-filled:before
+  content "\f189"
+.{foundicons-prefix}page-multiple:before
+  content "\f18a"
+.{foundicons-prefix}page-pdf:before
+  content "\f18b"
+.{foundicons-prefix}page-remove:before
+  content "\f18c"
+.{foundicons-prefix}page-search:before
+  content "\f18d"
+.{foundicons-prefix}page:before
+  content "\f18e"
+.{foundicons-prefix}paint-bucket:before
+  content "\f18f"
+.{foundicons-prefix}paperclip:before
+  content "\f190"
+.{foundicons-prefix}pause:before
+  content "\f191"
+.{foundicons-prefix}paw:before
+  content "\f192"
+.{foundicons-prefix}paypal:before
+  content "\f193"
+.{foundicons-prefix}pencil:before
+  content "\f194"
+.{foundicons-prefix}photo:before
+  content "\f195"
+.{foundicons-prefix}play-circle:before
+  content "\f196"
+.{foundicons-prefix}play-video:before
+  content "\f197"
+.{foundicons-prefix}play:before
+  content "\f198"
+.{foundicons-prefix}plus:before
+  content "\f199"
+.{foundicons-prefix}pound:before
+  content "\f19a"
+.{foundicons-prefix}power:before
+  content "\f19b"
+.{foundicons-prefix}previous:before
+  content "\f19c"
+.{foundicons-prefix}price-tag:before
+  content "\f19d"
+.{foundicons-prefix}pricetag-multiple:before
+  content "\f19e"
+.{foundicons-prefix}print:before
+  content "\f19f"
+.{foundicons-prefix}prohibited:before
+  content "\f1a0"
+.{foundicons-prefix}projection-screen:before
+  content "\f1a1"
+.{foundicons-prefix}puzzle:before
+  content "\f1a2"
+.{foundicons-prefix}quote:before
+  content "\f1a3"
+.{foundicons-prefix}record:before
+  content "\f1a4"
+.{foundicons-prefix}refresh:before
+  content "\f1a5"
+.{foundicons-prefix}results-demographics:before
+  content "\f1a6"
+.{foundicons-prefix}results:before
+  content "\f1a7"
+.{foundicons-prefix}rewind-ten:before
+  content "\f1a8"
+.{foundicons-prefix}rewind:before
+  content "\f1a9"
+.{foundicons-prefix}rss:before
+  content "\f1aa"
+.{foundicons-prefix}safety-cone:before
+  content "\f1ab"
+.{foundicons-prefix}save:before
+  content "\f1ac"
+.{foundicons-prefix}share:before
+  content "\f1ad"
+.{foundicons-prefix}sheriff-badge:before
+  content "\f1ae"
+.{foundicons-prefix}shield:before
+  content "\f1af"
+.{foundicons-prefix}shopping-bag:before
+  content "\f1b0"
+.{foundicons-prefix}shopping-cart:before
+  content "\f1b1"
+.{foundicons-prefix}shuffle:before
+  content "\f1b2"
+.{foundicons-prefix}skull:before
+  content "\f1b3"
+.{foundicons-prefix}social-500px:before
+  content "\f1b4"
+.{foundicons-prefix}social-adobe:before
+  content "\f1b5"
+.{foundicons-prefix}social-amazon:before
+  content "\f1b6"
+.{foundicons-prefix}social-android:before
+  content "\f1b7"
+.{foundicons-prefix}social-apple:before
+  content "\f1b8"
+.{foundicons-prefix}social-behance:before
+  content "\f1b9"
+.{foundicons-prefix}social-bing:before
+  content "\f1ba"
+.{foundicons-prefix}social-blogger:before
+  content "\f1bb"
+.{foundicons-prefix}social-delicious:before
+  content "\f1bc"
+.{foundicons-prefix}social-designer-news:before
+  content "\f1bd"
+.{foundicons-prefix}social-deviant-art:before
+  content "\f1be"
+.{foundicons-prefix}social-digg:before
+  content "\f1bf"
+.{foundicons-prefix}social-dribbble:before
+  content "\f1c0"
+.{foundicons-prefix}social-drive:before
+  content "\f1c1"
+.{foundicons-prefix}social-dropbox:before
+  content "\f1c2"
+.{foundicons-prefix}social-evernote:before
+  content "\f1c3"
+.{foundicons-prefix}social-facebook:before
+  content "\f1c4"
+.{foundicons-prefix}social-flickr:before
+  content "\f1c5"
+.{foundicons-prefix}social-forrst:before
+  content "\f1c6"
+.{foundicons-prefix}social-foursquare:before
+  content "\f1c7"
+.{foundicons-prefix}social-game-center:before
+  content "\f1c8"
+.{foundicons-prefix}social-github:before
+  content "\f1c9"
+.{foundicons-prefix}social-google-plus:before
+  content "\f1ca"
+.{foundicons-prefix}social-hacker-news:before
+  content "\f1cb"
+.{foundicons-prefix}social-hi5:before
+  content "\f1cc"
+.{foundicons-prefix}social-instagram:before
+  content "\f1cd"
+.{foundicons-prefix}social-joomla:before
+  content "\f1ce"
+.{foundicons-prefix}social-lastfm:before
+  content "\f1cf"
+.{foundicons-prefix}social-linkedin:before
+  content "\f1d0"
+.{foundicons-prefix}social-medium:before
+  content "\f1d1"
+.{foundicons-prefix}social-myspace:before
+  content "\f1d2"
+.{foundicons-prefix}social-orkut:before
+  content "\f1d3"
+.{foundicons-prefix}social-path:before
+  content "\f1d4"
+.{foundicons-prefix}social-picasa:before
+  content "\f1d5"
+.{foundicons-prefix}social-pinterest:before
+  content "\f1d6"
+.{foundicons-prefix}social-rdio:before
+  content "\f1d7"
+.{foundicons-prefix}social-reddit:before
+  content "\f1d8"
+.{foundicons-prefix}social-skillshare:before
+  content "\f1d9"
+.{foundicons-prefix}social-skype:before
+  content "\f1da"
+.{foundicons-prefix}social-smashing-mag:before
+  content "\f1db"
+.{foundicons-prefix}social-snapchat:before
+  content "\f1dc"
+.{foundicons-prefix}social-spotify:before
+  content "\f1dd"
+.{foundicons-prefix}social-squidoo:before
+  content "\f1de"
+.{foundicons-prefix}social-stack-overflow:before
+  content "\f1df"
+.{foundicons-prefix}social-steam:before
+  content "\f1e0"
+.{foundicons-prefix}social-stumbleupon:before
+  content "\f1e1"
+.{foundicons-prefix}social-treehouse:before
+  content "\f1e2"
+.{foundicons-prefix}social-tumblr:before
+  content "\f1e3"
+.{foundicons-prefix}social-twitter:before
+  content "\f1e4"
+.{foundicons-prefix}social-vimeo:before
+  content "\f1e5"
+.{foundicons-prefix}social-windows:before
+  content "\f1e6"
+.{foundicons-prefix}social-xbox:before
+  content "\f1e7"
+.{foundicons-prefix}social-yahoo:before
+  content "\f1e8"
+.{foundicons-prefix}social-yelp:before
+  content "\f1e9"
+.{foundicons-prefix}social-youtube:before
+  content "\f1ea"
+.{foundicons-prefix}social-zerply:before
+  content "\f1eb"
+.{foundicons-prefix}social-zurb:before
+  content "\f1ec"
+.{foundicons-prefix}sound:before
+  content "\f1ed"
+.{foundicons-prefix}star:before
+  content "\f1ee"
+.{foundicons-prefix}stop:before
+  content "\f1ef"
+.{foundicons-prefix}strikethrough:before
+  content "\f1f0"
+.{foundicons-prefix}subscript:before
+  content "\f1f1"
+.{foundicons-prefix}superscript:before
+  content "\f1f2"
+.{foundicons-prefix}tablet-landscape:before
+  content "\f1f3"
+.{foundicons-prefix}tablet-portrait:before
+  content "\f1f4"
+.{foundicons-prefix}target-two:before
+  content "\f1f5"
+.{foundicons-prefix}target:before
+  content "\f1f6"
+.{foundicons-prefix}telephone-accessible:before
+  content "\f1f7"
+.{foundicons-prefix}telephone:before
+  content "\f1f8"
+.{foundicons-prefix}text-color:before
+  content "\f1f9"
+.{foundicons-prefix}thumbnails:before
+  content "\f1fa"
+.{foundicons-prefix}ticket:before
+  content "\f1fb"
+.{foundicons-prefix}torso-business:before
+  content "\f1fc"
+.{foundicons-prefix}torso-female:before
+  content "\f1fd"
+.{foundicons-prefix}torso:before
+  content "\f1fe"
+.{foundicons-prefix}torsos-all-female:before
+  content "\f1ff"
+.{foundicons-prefix}torsos-all:before
+  content "\f200"
+.{foundicons-prefix}torsos-female-male:before
+  content "\f201"
+.{foundicons-prefix}torsos-male-female:before
+  content "\f202"
+.{foundicons-prefix}torsos:before
+  content "\f203"
+.{foundicons-prefix}trash:before
+  content "\f204"
+.{foundicons-prefix}trees:before
+  content "\f205"
+.{foundicons-prefix}trophy:before
+  content "\f206"
+.{foundicons-prefix}underline:before
+  content "\f207"
+.{foundicons-prefix}universal-access:before
+  content "\f208"
+.{foundicons-prefix}unlink:before
+  content "\f209"
+.{foundicons-prefix}unlock:before
+  content "\f20a"
+.{foundicons-prefix}upload-cloud:before
+  content "\f20b"
+.{foundicons-prefix}upload:before
+  content "\f20c"
+.{foundicons-prefix}usb:before
+  content "\f20d"
+.{foundicons-prefix}video:before
+  content "\f20e"
+.{foundicons-prefix}volume-none:before
+  content "\f20f"
+.{foundicons-prefix}volume-strike:before
+  content "\f210"
+.{foundicons-prefix}volume:before
+  content "\f211"
+.{foundicons-prefix}web:before
+  content "\f212"
+.{foundicons-prefix}wheelchair:before
+  content "\f213"
+.{foundicons-prefix}widget:before
+  content "\f214"
+.{foundicons-prefix}wrench:before
+  content "\f215"
+.{foundicons-prefix}x-circle:before
+  content "\f216"
+.{foundicons-prefix}x:before
+  content "\f217"
+.{foundicons-prefix}yen:before
+  content "\f218"
+.{foundicons-prefix}zoom-in:before
+  content "\f219"
+.{foundicons-prefix}zoom-out:before
+  content "\f21a" 
