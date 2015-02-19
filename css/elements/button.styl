@@ -1,0 +1,94 @@
+// ===============================================
+// Lutachu CSS / Button.styl                    ||
+// Button Style                                 ||
+// =============================================||
+// Made by Rakume<i@fake.moe> 2015-02-19 21:55  ||
+// Last Update: 2015-02-19 23:17 @ Rakume       ||
+// MIT License                                  ||
+// ===============================================
+
+.{ns}btn
+  border 0
+  outline 0
+  border 0
+  color #fff
+  cursor pointer
+  text-align center
+  padding .35em 1.2em
+  text-decoration none
+  color color-font-btn
+  display inline-block
+  vertical-align middle
+  background-color color-background-btn
+  background-image none
+  transition box-shadow .2s linear
+
+  [class*={ns}icon-]:before
+    transform scale(1.2)
+
+  &:hover
+    box-shadow 1px 1px 3px rgba(0, 0, 0, .2)
+
+  &.{ns}btn-active,
+  &:active
+    box-shadow 1px 1px 3px rgba(0, 0, 0, .4)
+
+  &.{ns}btn-primary,
+  &.{ns}btn-secondary,
+  &.{ns}btn-success,
+  &.{ns}btn-warning,
+  &.{ns}btn-error
+    color #fff
+
+    [class*={ns}icon-]:before
+      color #fff
+
+    &:hover
+      box-shadow inset 0 0 7px 4px rgba(0, 0, 0, .14), 1px 1px 3px rgba(0, 0, 0, .2)
+
+    &.{ns}btn-active,
+    &:active
+      box-shadow inset 0 0 12px 4px rgba(15, 15, 15, .26), 1px 1px 5px rgba(0, 0, 0, .4)
+
+  &.{ns}btn-primary
+    background-color color-background-btn-primary
+
+  &.{ns}btn-secondary
+    background-color color-background-btn-secondary
+
+  &.{ns}btn-success
+    background-color color-background-btn-success
+
+  &.{ns}btn-error
+    background-color color-background-btn-error
+
+  &.{ns}btn-warning
+    background-color color-background-btn-warning
+
+  &.{ns}btn-disabled,
+  &[disabled]
+    &,
+    &:hover,
+    &:active
+      border 0
+      opacity .6
+      box-shadow none
+      cursor not-allowed
+
+  &.{ns}btn-radius
+    border-radius 3px
+
+  &.{ns}btn-round
+    border-radius 100000px
+
+  &.{ns}btn-xl
+    font-size 1.4rem
+
+  &.{ns}btn-lg
+    font-size 1.2rem
+
+  &.{ns}btn-sm
+    font-size .8rem
+   
+  &.{ns}btn-xs
+    font-size .6rem
