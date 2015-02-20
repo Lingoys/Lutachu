@@ -31,3 +31,9 @@ for f in 1..gridMaxColumn
   .{ns}avg-{f}
     > li
       width (1/f) * 100 + '%'
+
+@media (max-width: 700px)
+  [class*={ns}unit-]
+    display block
+    float none
+    width auto
