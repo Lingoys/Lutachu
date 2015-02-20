@@ -3,7 +3,7 @@
 // Typography System                            ||
 // =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-19 02:36  ||
-// Last Update: 2015-02-19 21:43 @ Rakume       ||
+// Last Update: 2015-02-20 15:20 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
@@ -15,7 +15,7 @@
   box-sizing border-box
 
 body
-  color color-font
+  color color-normal
   font 400 font-size/1.82 font-family
   counter-reset lutitleh2 lutitleh3 lutitleh4 lutitleh5 lutitleh6
 
@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6
-  color color-font
+  color color-normal
   font-family font-family
 
 h1
@@ -123,7 +123,7 @@ b,
 em,
 cite,
 strong
-  color color-font
+  color color-normal
   font-weight 700
 
 em,
@@ -144,7 +144,7 @@ em
   text-emphasis-position under
 
 i
-  color color-font
+  color color-normal
   font-style italic
 
 img
@@ -226,7 +226,7 @@ h6
 
 // Poem
 
-.{ns}poem-hc
+.poem-hc
   text-align center
   margin 2em 0
 
@@ -246,8 +246,8 @@ h6
 
 // Vertical
 
-.{ns}poem-lr,
-.{ns}poem-rl
+.poem-lr,
+.poem-rl
   display block
   white-space pre
   margin 2em auto
@@ -280,15 +280,15 @@ h6
     &:before
       content none
 
-.{ns}poem-lr
+.poem-lr
   writing-mode vertical-lr
   -webkit-writing-mode vertical-lr
 
 // Aside Note
 
-.{ns}acomment,
-.{ns}acomment-left,
-.{ns}acomment-right
+.acomment,
+.acomment-left,
+.acomment-right
   right -15px
   width 120px
   font-size .9em
@@ -306,7 +306,7 @@ h6
     position absolute
     border-top 1px solid color-border-dark
 
-.{ns}acomment-left
+.acomment-left
   left -15px
   right auto
   margin-right 0
@@ -318,8 +318,12 @@ h6
 
 [draggable]
   cursor move
-
-// Clearfix
-
-.clearfix
-  clearfix()
+  
+// Key Board Log
+kbd
+  padding 2px 4px
+  font-size 90%
+  color #fff
+  background-color #333
+  border-radius 3px
+  box-shadow inset 0 -1px 0 rgba(0, 0, 0, .25)

@@ -3,11 +3,11 @@
 // Table Style                                  ||
 // =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-19 21:28  ||
-// Last Update: 2015-02-19 21:55 @ Rakume       ||
+// Last Update: 2015-02-20 15:25 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
-.{ns}table
+.table
   width 100%
   font-size .9em
   margin-bottom 1.5em
@@ -38,48 +38,47 @@
       > td
         border-top 2px solid color-border
 
-.{ns}table-bordered
-  border 1px solid color-border
+  &.table-bordered
+    border 1px solid color-border
 
-  > thead,
-  > tbody,
-  > tfoot
-    > tr
-      > th,
-      > td
-        border-left 1px solid color-border
+    > thead,
+    > tbody,
+    > tfoot
+      > tr
+        > th,
+        > td
+          border-left 1px solid color-border
 
-      > th:first-child,
-      > td:first-child
-        border-left 0
-  
-.{ns}table-radius
-  border-radius 3px
+        > th:first-child,
+        > td:first-child
+          border-left 0
+    
+  &.table-radius
+    border-radius 3px
 
-.{ns}table-striped
-  > tbody
-    > tr:nth-child(odd)
-      > th,
-      > td
-        background-color color-background-th-odd
+  &.table-striped
+    > tbody
+      > tr:nth-child(odd)
+        > th,
+        > td
+          background-color background-th-odd
 
-.{ns}table-hover
-  > tbody
-    > tr:hover
-      > th,
-      > td
-        background-color color-background-th
+  &.table-hover
+    > tbody
+      > tr:hover
+        > th,
+        > td
+          background-color background-th
 
-.{ns}table-center
-  th,
-  td
-    text-align center
+  &.table-center
+    th,
+    td
+      text-align center
 
-.{ns}table
   > thead,
   > tbody,
   > tfoot
     > tr.lu-active
       > th,
       > td
-        background-color color-background-th-mark
+        background-color background-th-mark

@@ -3,11 +3,11 @@
 // 1~12 Rows Grid System                        ||
 // =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-19 19:36  ||
-// Last Update: 2015-02-20 14:02 @ Rakume       ||
+// Last Update: 2015-02-20 15:27 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
-.{ns}grid
+.row
   center()
   clearfix()
 
@@ -18,7 +18,7 @@
   &.fixed
     max-width 1120px
 
-[class*={ns}unit-]
+[class*=grid-u-]
   float left
   padding 1em
   display inline
@@ -26,27 +26,27 @@
 for f in 1..gridMaxColumn
   for n in 1..f
     if f == gridMaxColumn
-      .{ns}unit-{n}-{f},
-      .{ns}unit-{n}
+      .grid-u-{n}-{f},
+      .grid-u-{n}
         width (n/f) * 100 + '%'
 
-        &.{ns}ml-{n}-{f},
-        &.{ns}unit-{n}
+        &.grid-ml-{n}-{f},
+        &.grid-u-{n}
           margin-left (n/f) * 100 + '%'
     else
-      .{ns}unit-{n}-{f}
+      .grid-u-{n}-{f}
         width (n/f) * 100 + '%'
 
-        &.{ns}ml-{n}-{f}
+        &.grid-ml-{n}-{f}
           width (n/f) * 100 + '%'
 
   // AVG Grid
-  .{ns}avg-{f}
+  .grid-avg-{f}
     > li
       width (1/f) * 100 + '%'
 
 @media (max-width: 700px)
-  [class*={ns}unit-]
+  [class*=grid-u-]
     display block
     float none
     width auto
