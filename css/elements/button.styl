@@ -7,6 +7,32 @@
 // MIT License                                  ||
 // ===============================================
 
+// Normal, Hover, Active
+
+btn-bgcolor(n, l = 6, d = 4)
+  &
+    background-color n
+
+  &:hover
+    background-color lighten(n, l)
+    box-shadow 1px 1px 3px rgba(0, 0, 0, .2)
+
+  &.btn-active,
+  &:active
+    background-color darken(n, d)
+    box-shadow 1px 1px 3px rgba(0, 0, 0, .4)
+
+  &.btn-disabled,
+  &[disabled]
+    &,
+    &:hover,
+    &:active
+      border 0
+      opacity .6
+      background n
+      box-shadow none
+      cursor not-allowed
+
 .btn
   border 0
   outline 0
@@ -19,19 +45,11 @@
   color color-btn
   display inline-block
   vertical-align middle
-  background-color background-btn
-  background-image none
-  transition box-shadow .2s linear
+  btn-bgcolor lighten(color-grey, 22)
+  transition background .4s ease, box-shadow .1s linear
 
   [class*=icon-]:before
     transform scale(1.2)
-
-  &:hover
-    box-shadow 1px 1px 3px rgba(0, 0, 0, .2)
-
-  &.btn-active,
-  &:active
-    box-shadow 1px 1px 3px rgba(0, 0, 0, .4)
 
   &.btn-default,
   &.btn-primary,
@@ -44,47 +62,23 @@
     [class*=icon-]:before
       color #fff
 
-    &:hover
-      box-shadow inset 0 0 6px 2px rgba(0, 0, 0, .24), 1px 1px 3px rgba(0, 0, 0, .2)
-
-    &.btn-active,
-    &:active
-      box-shadow inset 0 0 8px 1px rgba(15, 15, 15, .34), 1px 1px 5px rgba(0, 0, 0, .4)
-
   &.btn-default
-    background-color background-btn-default
-
-    &:hover
-      box-shadow inset 0 0 8px 3px rgba(255, 255, 255, .2), 1px 1px 3px rgba(0, 0, 0, .2)
-
-    &.btn-active,
-    &:active
-      box-shadow inset 0 0 8px 1px rgba(255, 255, 255, .2), 1px 1px 5px rgba(0, 0, 0, .4)
+    btn-bgcolor darken(color-grey, 26)
 
   &.btn-primary
-    background-color background-btn-primary
+    btn-bgcolor color-blue
 
   &.btn-secondary
-    background-color background-btn-secondary
+    btn-bgcolor color-light-blue
 
   &.btn-success
-    background-color background-btn-success
+    btn-bgcolor color-green
 
   &.btn-error
-    background-color background-btn-error
+    btn-bgcolor color-red
 
   &.btn-warning
-    background-color background-btn-warning
-
-  &.btn-disabled,
-  &[disabled]
-    &,
-    &:hover,
-    &:active
-      border 0
-      opacity .6
-      box-shadow none
-      cursor not-allowed
+    btn-bgcolor color-orange
 
   &.btn-radius
     border-radius 3px
