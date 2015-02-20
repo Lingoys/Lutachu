@@ -3,7 +3,7 @@
 // Typography System                            ||
 // =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-19 02:36  ||
-// Last Update: 2015-02-20 15:20 @ Rakume       ||
+// Last Update: 2015-02-20 15:43 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
@@ -61,7 +61,7 @@ h2
     content counter(lutitleh2) '\3000'
     content counter(lutitleh2, cjk-ideographic) '、'
     counter-increment lutitleh2
-  
+
 h3
     counter-reset lutitleh4 lutitleh5 lutitleh6
 
@@ -75,14 +75,14 @@ h4
   &:before
     content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '\3000'
     counter-increment lutitleh4
-  
+
 h5
   counter-reset lutitleh6
 
   &:before
     content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '.' counter(lutitleh5) '\3000'
     counter-increment lutitleh5
-  
+
 h6
   &:before
     content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '.' counter(lutitleh5) '.' counter(lutitleh6) '\3000'
@@ -113,7 +113,7 @@ p
 a
   -moz-text-decoration-color rgba(0, 0, 0, .6)
   text-decoration-color rgba(0, 0, 0, .6)
-  
+
   img
     border 0
 
@@ -185,7 +185,7 @@ li
     margin-left 14px
 
   ul
-    list-style-type disc    
+    list-style-type disc
 
     ul
       list-style-type circle
@@ -240,7 +240,7 @@ h6
     display block
     text-align right
     font-weight 800
-    
+
     &:before
       content '——'
 
@@ -255,7 +255,7 @@ h6
   letter-spacing 3px
   writing-mode vertical-rl
   -webkit-writing-mode vertical-rl
-  
+
   h1,
   h2,
   h3,
@@ -266,7 +266,7 @@ h6
     margin 0
     font-size 1.2em
     margin-left -.5em
-    
+ 
     &:before
       content none
 
@@ -318,7 +318,7 @@ h6
 
 [draggable]
   cursor move
-  
+
 // Key Board Log
 kbd
   padding 2px 4px
