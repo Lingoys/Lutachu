@@ -17,6 +17,10 @@
 body
   color color-normal
   font 400 font-size/1.82 font-family
+
+body,
+article,
+summary
   counter-reset lutitleh2 lutitleh3 lutitleh4 lutitleh5 lutitleh6
 
 // Titles
@@ -51,55 +55,46 @@ h6
  * Code From Entry CSS
  */
 
-h1
-  text-align center
+.title-counter
+  h1
+    text-align center
 
-h2
-  counter-reset lutitleh3 lutitleh4 lutitleh5 lutitleh6
-
-  &:before
-    content counter(lutitleh2) '\3000'
-    content counter(lutitleh2, cjk-ideographic) '、'
-    counter-increment lutitleh2
-
-h3
-    counter-reset lutitleh4 lutitleh5 lutitleh6
+  h2
+    counter-reset lutitleh3 lutitleh4 lutitleh5 lutitleh6
 
     &:before
-      content counter(lutitleh2) '.' counter(lutitleh3) '\3000'
-      counter-increment lutitleh3
+      content counter(lutitleh2) '\3000'
+      content counter(lutitleh2, cjk-ideographic) '、'
+      counter-increment lutitleh2
 
-h4
-  counter-reset lutitleh5 lutitleh6
+  h3
+      counter-reset lutitleh4 lutitleh5 lutitleh6
 
-  &:before
-    content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '\3000'
-    counter-increment lutitleh4
+      &:before
+        content counter(lutitleh2) '.' counter(lutitleh3) '\3000'
+        counter-increment lutitleh3
 
-h5
-  counter-reset lutitleh6
+  h4
+    counter-reset lutitleh5 lutitleh6
 
-  &:before
-    content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '.' counter(lutitleh5) '\3000'
-    counter-increment lutitleh5
+    &:before
+      content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '\3000'
+      counter-increment lutitleh4
 
-h6
-  &:before
-    content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '.' counter(lutitleh5) '.' counter(lutitleh6) '\3000'
-    counter-increment lutitleh6
+  h5
+    counter-reset lutitleh6
 
-h6
-  font-weight 500
+    &:before
+      content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '.' counter(lutitleh5) '\3000'
+      counter-increment lutitleh5
 
-.nocouter
-  h2,
-  h3,
-  h4,
-  h5,
   h6
     &:before
-      content none
+      content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '.' counter(lutitleh5) '.' counter(lutitleh6) '\3000'
+      counter-increment lutitleh6
 
+  h6
+    font-weight 500
 
 p
   margin-top 0
@@ -264,8 +259,8 @@ h6
   h6,
   .poem-title
     margin 0
-    font-size 1.2em
-    margin-left -.5em
+    font-size 1.6em
+    //margin-left -.5em
  
     &:before
       content none
@@ -274,8 +269,11 @@ h6
       font-size .6em
 
   p
-    margin 0 -.8em
-    text-align center
+    margin 0 -1.4em
+    text-align left
+    max-height 600px
+    letter-spacing inherit
+    word-wrap break-word
 
     &:before
       content none
