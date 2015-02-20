@@ -24,8 +24,13 @@
 
 for f in 1..gridMaxColumn
   for n in 1..f
-    .{ns}unit-{n}-{f}
-      width (n/f) * 100 + '%'
+    if f == gridMaxColumn
+      .{ns}unit-{n}-{f},
+      .{ns}unit-{n}
+        width (n/f) * 100 + '%'
+    else
+      .{ns}unit-{n}-{f}
+        width (n/f) * 100 + '%'
 
   // AVG Grid
   .{ns}avg-{f}
