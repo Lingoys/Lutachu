@@ -1,0 +1,74 @@
+// ===============================================
+// Lutachu CSS / Form.styl                      ||
+// Form                                         ||
+// =============================================||
+// Made by Rakume<i@fake.moe> 2015-02-20 16:53  ||
+// Last Update: 2015-02-20 16:53 @ Rakume       ||
+// MIT License                                  ||
+// ===============================================
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=datetime],
+input[type=datetime-local],
+input[type=week],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=color],
+select,
+textarea
+  padding .5em .8em
+  outline none
+  border-radius 3px
+  background #fff
+  display block
+  width 100%
+  margin-bottom .75em
+  border 1px solid color-border
+
+  &.disabled,
+  &[disabled]
+    cursor not-allowed
+    color #999
+    border-color #DDD
+    background-color #f9f9f9
+
+  &:active,
+  &:focus
+    border-color color-blue
+
+label,
+option
+  &.disabled,
+  &[disabled]
+    cursor not-allowed
+    color #999
+    border-color #DDD
+    background-color #f9f9f9
+
+label
+  display block
+  margin-bottom .2rem
+
+.form-group
+  padding 0
+  border 0
+  margin-bottom .75em
+
+  input
+    margin 0
+    border-radius 0
+    border-bottom 0
+
+    &:first-child
+      border-top-radius 3px
+
+    &:last-child
+      border-bottom 1px solid color-border
+      border-bottom-radius 3px
