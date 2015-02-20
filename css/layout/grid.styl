@@ -3,7 +3,7 @@
 // 1~12 Rows Grid System                        ||
 // =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-19 19:36  ||
-// Last Update: 2015-02-20 15:27 @ Rakume       ||
+// Last Update: 2015-02-20 16:38 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
@@ -31,7 +31,7 @@ for f in 1..gridMaxColumn
         width (n/f) * 100 + '%'
 
         &.grid-ml-{n}-{f},
-        &.grid-u-{n}
+        &.grid-ml-{n}
           margin-left (n/f) * 100 + '%'
     else
       .grid-u-{n}-{f}
