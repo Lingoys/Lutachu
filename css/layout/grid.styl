@@ -1,8 +1,9 @@
 // ===============================================
 // Lutachu CSS / Grid.styl                      ||
 // 1~12 Rows Grid System                        ||
+// =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-19 19:36  ||
-// Last Update: 2015-02-19 20:46 @ Rakume       ||
+// Last Update: 2015-02-20 14:02 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
@@ -28,9 +29,16 @@ for f in 1..gridMaxColumn
       .{ns}unit-{n}-{f},
       .{ns}unit-{n}
         width (n/f) * 100 + '%'
+
+        &.{ns}ml-{n}-{f},
+        &.{ns}unit-{n}
+          margin-left (n/f) * 100 + '%'
     else
       .{ns}unit-{n}-{f}
         width (n/f) * 100 + '%'
+
+        &.{ns}ml-{n}-{f}
+          width (n/f) * 100 + '%'
 
   // AVG Grid
   .{ns}avg-{f}
