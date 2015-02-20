@@ -3,7 +3,7 @@
 // Button Style                                 ||
 // =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-19 21:55  ||
-// Last Update: 2015-02-20 00:01 @ Rakume       ||
+// Last Update: 2015-02-20 11:22 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
@@ -33,6 +33,7 @@
   &:active
     box-shadow 1px 1px 3px rgba(0, 0, 0, .4)
 
+  &.{ns}btn-default,
   &.{ns}btn-primary,
   &.{ns}btn-secondary,
   &.{ns}btn-success,
@@ -44,11 +45,21 @@
       color #fff
 
     &:hover
-      box-shadow inset 0 0 6px 2px rgba(0, 0, 0, .14), 1px 1px 3px rgba(0, 0, 0, .2)
+      box-shadow inset 0 0 6px 2px rgba(0, 0, 0, .24), 1px 1px 3px rgba(0, 0, 0, .2)
 
     &.{ns}btn-active,
     &:active
-      box-shadow inset 0 0 8px 1px rgba(15, 15, 15, .26), 1px 1px 5px rgba(0, 0, 0, .4)
+      box-shadow inset 0 0 8px 1px rgba(15, 15, 15, .34), 1px 1px 5px rgba(0, 0, 0, .4)
+
+  &.{ns}btn-default
+    background-color color-background-btn-default
+
+    &:hover
+      box-shadow inset 0 0 8px 3px rgba(255, 255, 255, .2), 1px 1px 3px rgba(0, 0, 0, .2)
+
+    &.{ns}btn-active,
+    &:active
+      box-shadow inset 0 0 8px 1px rgba(255, 255, 255, .2), 1px 1px 5px rgba(0, 0, 0, .4)
 
   &.{ns}btn-primary
     background-color color-background-btn-primary
