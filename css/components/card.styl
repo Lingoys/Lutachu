@@ -17,8 +17,28 @@
   box-shadow 0 1px 5px 1px rgba(0, 0, 0, .26)
 
   .card-rich
+    min-height 50px
+    position relative
+
     img
       margin 0
+      border-top-radius 3px
+
+    .card-title
+      left 0
+      bottom 0
+      color #fff
+      width 100%
+      padding 0 .6em
+      font-size 1.8em
+      position absolute
+      margin-bottom .6em
+      font-weight normal
+      text-shadow 1px 1px 1px rgba(0, 0, 0, .3)
+
+  * + .card-rich
+    img
+      border-top-radius 0
 
   .card-head
     padding .8em 1.5em 0
