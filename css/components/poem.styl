@@ -1,0 +1,70 @@
+// ===============================================
+// Lutachu CSS / Poem.styl                      ||
+// Horizontal And Vertical Poem                 ||
+// =============================================||
+// Made by Rakume<i@fake.moe> 2015-02-21 17:49  ||
+// Last Update: 2015-02-21 17:49 @ Rakume       ||
+// MIT License                                  ||
+// ===============================================
+
+
+// Horizontal
+.poem-hc
+  text-align center
+  margin 2em 0
+
+  p
+    margin-bottom .2em
+
+    &:before
+      content none
+
+  .poem-author
+    display block
+    text-align right
+    font-weight 800
+
+    &:before
+      content '——'
+
+// Vertical
+
+.poem-lr,
+.poem-rl
+  display block
+  white-space pre
+  margin 2em auto
+  line-height 1.4em
+  letter-spacing 3px
+  writing-mode vertical-rl
+  -webkit-writing-mode vertical-rl
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .poem-title
+    margin 0
+    margin-left -.5em
+ 
+    &:before
+      content none
+
+    & > span
+      font-size .6em
+
+  p
+    margin 0 -1em
+    text-align left
+    max-height 600px
+    letter-spacing inherit
+    word-wrap break-word
+
+    &:before
+      content none
+
+.poem-lr
+  writing-mode vertical-lr
+  -webkit-writing-mode vertical-lr
