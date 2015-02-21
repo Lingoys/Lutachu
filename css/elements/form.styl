@@ -55,6 +55,15 @@ label
   display block
   margin-bottom .2rem
 
+.radius
+  input,
+  select,
+  textarea,
+  option,
+  button,
+  a.btn
+    border-radius 3px
+
 .form-group
   padding 0
   border 0
@@ -65,9 +74,36 @@ label
     border-radius 0
     border-bottom 0
 
-    &:first-child
-      border-top-radius 3px
+    &:active,
+    &:focus
+      position relative
+      margin-bottom -1px
+      border-bottom 1px solid color-blue
 
     &:last-child
       border-bottom 1px solid color-border
-      border-bottom-radius 3px
+
+      &:active,
+      &:focus
+        margin-bottom 0
+        border-bottom-color color-blue
+
+  &.radius
+
+      &:first-child
+        border-top-radius 3px
+
+      &:last-child
+        border-bottom-radius 3px
+
+.radius
+
+  .form-group
+
+    input
+
+      &:first-child
+        border-top-radius 3px
+
+      &:last-child
+        border-bottom-radius 3px
