@@ -1,9 +1,9 @@
 // ===============================================
-// Lutachu CSS / Base.styl                      ||
+// Lutachu CSS / Utillyties.styl                ||
 // Some Utillyties                              ||
 // =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-19 17:48  ||
-// Last Update: 2015-02-20 15:41 @ Rakume       ||
+// Last Update: 2015-02-21 18:45 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
@@ -138,56 +138,11 @@
 
 // Color
 
-for a in 1..2
-  if a == 1
-    a = 'background'
-  else
-    a = 'color'
+for c in color
+  .color-{c}
+    &,
+    a
+      color color[c]
 
-  .{a}-red
-    {a}: color-red
-
-  .{a}-green
-    {a}: color-green
-
-  .{a}-purple
-    {a}: color-purple
-
-  .{a}-indigo
-    {a}: color-indigo
-
-  .{a}-blue
-    {a}: color-blue
-
-  .{a}-cyan
-    {a}: color-cyan
-
-  .{a}-teal
-    {a}: color-teal
-
-  .{a}-green
-    {a}: color-green
-
-  .{a}-lime
-    {a}: color-lime
-
-  .{a}-yellow
-    {a}: color-yellow
-
-  .{a}-amber
-    {a}: color-amber
-
-  .{a}-orange
-    {a}: color-orange
-
-  .{a}-brown
-    {a}: color-brown
-
-  .{a}-grey
-    {a}: color-grey
-
-  .{a}-black
-    {a}: color-black
-
-  .{a}-white
-    {a}: color-white
+  .background-{c}
+    background color[c]

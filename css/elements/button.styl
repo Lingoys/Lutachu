@@ -3,7 +3,7 @@
 // Button Style                                 ||
 // =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-19 21:55  ||
-// Last Update: 2015-02-20 16:25 @ Rakume       ||
+// Last Update: 2015-02-21 19:26 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
@@ -46,7 +46,7 @@ btn-bgcolor(n, l = 6, d = 4)
   line-height 1.5em
   display inline-block
   vertical-align middle
-  btn-bgcolor lighten(color-grey, 22)
+  btn-bgcolor lighten(color['grey'], 22)
   transition background .4s ease, box-shadow .1s linear
 
   [class*=icon-]:before
@@ -64,22 +64,22 @@ btn-bgcolor(n, l = 6, d = 4)
       color #fff
 
   &.btn-default
-    btn-bgcolor darken(color-grey, 26)
+    btn-bgcolor darken(color['grey'], 26)
 
   &.btn-primary
-    btn-bgcolor color-blue
+    btn-bgcolor color['blue']
 
   &.btn-secondary
-    btn-bgcolor color-light-blue
+    btn-bgcolor color['light-blue']
 
   &.btn-success
-    btn-bgcolor color-green
+    btn-bgcolor color['green']
 
   &.btn-error
-    btn-bgcolor color-red
+    btn-bgcolor color['red']
 
   &.btn-warning
-    btn-bgcolor color-orange
+    btn-bgcolor color['orange']
 
   &.btn-xl
     font-size 1.4rem
