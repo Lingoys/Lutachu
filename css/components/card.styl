@@ -3,11 +3,50 @@
 // Card Box                                     ||
 // =============================================||
 // Made by Rakume<i@fake.moe> 2015-02-21 18:02  ||
-// Last Update: 2015-02-21 18:02 @ Rakume       ||
+// Last Update: 2015-02-21 20:12 @ Rakume       ||
 // MIT License                                  ||
 // ===============================================
 
 .card
+  padding 0
+  width 100%
   background #fff
   border-radius 3px
+  position relative
+  padding-bottom 50px
   box-shadow 0 1px 5px 1px rgba(0, 0, 0, .26)
+
+  .card-rich
+    img
+      margin 0
+
+  .card-head
+    padding .8em 1.5em 0
+
+    .card-title
+      font-size 1.8em
+      margin-bottom 0
+
+    .card-subhead
+      margin-top -.8em
+      margin-bottom .8em
+
+  .card-content
+    padding .8em 1.5em
+    color color['grey']
+
+  * + .card-content
+    padding-top 0
+
+  .card-head + .card-content
+    margin-top -.8em
+
+  .card-bar
+    left 0
+    bottom 0
+    width 100%
+    height 50px
+    padding 0 1.5em
+    line-height 50px
+    position absolute
+    border-top 1px solid color-border-dark
