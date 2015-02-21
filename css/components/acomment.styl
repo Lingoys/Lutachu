@@ -1,0 +1,38 @@
+// ===============================================
+// Lutachu CSS / Acomment.styl                  ||
+// Aside Comment                                ||
+// =============================================||
+// Made by Rakume<i@fake.moe> 2015-02-21 17:53  ||
+// Last Update: 2015-02-21 17:53 @ Rakume       ||
+// MIT License                                  ||
+// ===============================================
+
+.acomment,
+.acomment-left,
+.acomment-right
+  right -15px
+  width 120px
+  font-size .9em
+  padding-top .6em
+  position absolute
+  font-style normal
+  font-weight normal
+  margin-right - @width
+
+  &:before
+    top 0
+    left 0
+    width 40%
+    content ''
+    position absolute
+    border-top 1px solid color-border-dark
+
+.acomment-left
+  left -15px
+  right auto
+  margin-right 0
+  margin-left -120px
+
+  &:before
+    right 0
+    left auto
