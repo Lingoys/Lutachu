@@ -81,6 +81,16 @@ btn-bgcolor(n, l = 6, d = 4)
   &.btn-warning
     btn-bgcolor color['orange']
 
+  &.btn-ghost
+    border 1px solid
+    background-color trasparent
+
+    &:hover
+      background-color rgba(255, 255, 255, .2)
+
+    &:active
+      background-color rgba(255, 255, 255, .4)
+
   &.btn-xl
     font-size 1.4rem
 

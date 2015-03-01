@@ -2314,6 +2314,16 @@ blockquote p:last-child {
   box-shadow: none;
   cursor: not-allowed;
 }
+.btn.btn-ghost {
+  border: 1px solid;
+  background-color: trasparent;
+}
+.btn.btn-ghost:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+.btn.btn-ghost:active {
+  background-color: rgba(255,255,255,0.4);
+}
 .btn.btn-xl {
   font-size: 1.4rem;
 }
@@ -2597,7 +2607,6 @@ label {
 }
 .card {
   padding: 0;
-  width: 100%;
   background: #fff;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -2924,6 +2933,9 @@ label {
 }
 .nav .drop:hover .drop-menu {
   display: block;
+}
+.nav .drop.right {
+  float: right;
 }
 .nav.fixed {
   top: 0;
