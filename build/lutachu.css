@@ -2316,12 +2316,14 @@ blockquote p:last-child {
 }
 .btn.btn-ghost {
   border: 1px solid;
-  background-color: trasparent;
+  background-color: transparent;
 }
 .btn.btn-ghost:hover {
+  border: 1px solid;
   background-color: rgba(255,255,255,0.2);
 }
 .btn.btn-ghost:active {
+  border: 1px solid;
   background-color: rgba(255,255,255,0.4);
 }
 .btn.btn-xl {
