@@ -23,14 +23,11 @@
       float right
 
     &:hover
-      background-color lighten(color['grey'], 30)
+      background-color rgba(0, 0, 0, .15)
 
+    &.active,
     &.band
-      color #fff
-      background-color color['grey']
-
-    &.active
-      background-color lighten(color['grey'], 20)
+      background-color rgba(0, 0, 0, .3)
 
   .drop
     float left
@@ -49,10 +46,13 @@
         float none
 
     &:hover > a
-      background-color lighten(color['grey'], 30)
+      background-color rgba(0, 0, 0, .3)
 
     &:hover .drop-menu
       display block
+
+    &.right
+      float right
 
   &.fixed
     top 0
@@ -83,15 +83,3 @@
 
         a
           color #fff
-
-          &:hover
-            background-color rgba(255, 255, 255, .35)
-
-          &.active
-            background-color rgba(0, 0, 0, .10)
-
-          &.band
-            background-color rgba(0, 0, 0, .30)
-
-        .drop:hover > a
-          background-color rgba(255, 255, 255, .35)

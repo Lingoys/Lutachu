@@ -1229,9 +1229,6 @@ q {
 .row:after {
   clear: both;
 }
-.row.fixed {
-  max-width: 1120px;
-}
 [class*=grid-u-] {
   float: left;
   padding: 0 1em;
@@ -2893,14 +2890,11 @@ label {
   float: right;
 }
 .nav a:hover {
-  background-color: #ebebeb;
+  background-color: rgba(0,0,0,0.15);
 }
+.nav a.active,
 .nav a.band {
-  color: #fff;
-  background-color: #9e9e9e;
-}
-.nav a.active {
-  background-color: #d1d1d1;
+  background-color: rgba(0,0,0,0.3);
 }
 .nav .drop {
   float: left;
@@ -2926,7 +2920,7 @@ label {
   float: none;
 }
 .nav .drop:hover > a {
-  background-color: #ebebeb;
+  background-color: rgba(0,0,0,0.3);
 }
 .nav .drop:hover .drop-menu {
   display: block;
@@ -2957,22 +2951,6 @@ label {
 .nav.nav-red .drop-menu a {
   color: #fff;
 }
-.nav.nav-red a:hover,
-.nav.nav-red .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-red a.active,
-.nav.nav-red .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-red a.band,
-.nav.nav-red .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-red .drop:hover > a,
-.nav.nav-red .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
-}
 .nav.nav-green,
 .nav.nav-green .drop-menu {
   background-color: #4caf50;
@@ -2980,22 +2958,6 @@ label {
 .nav.nav-green a,
 .nav.nav-green .drop-menu a {
   color: #fff;
-}
-.nav.nav-green a:hover,
-.nav.nav-green .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-green a.active,
-.nav.nav-green .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-green a.band,
-.nav.nav-green .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-green .drop:hover > a,
-.nav.nav-green .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
 }
 .nav.nav-purple,
 .nav.nav-purple .drop-menu {
@@ -3005,22 +2967,6 @@ label {
 .nav.nav-purple .drop-menu a {
   color: #fff;
 }
-.nav.nav-purple a:hover,
-.nav.nav-purple .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-purple a.active,
-.nav.nav-purple .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-purple a.band,
-.nav.nav-purple .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-purple .drop:hover > a,
-.nav.nav-purple .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
-}
 .nav.nav-indigo,
 .nav.nav-indigo .drop-menu {
   background-color: #3f51b5;
@@ -3028,22 +2974,6 @@ label {
 .nav.nav-indigo a,
 .nav.nav-indigo .drop-menu a {
   color: #fff;
-}
-.nav.nav-indigo a:hover,
-.nav.nav-indigo .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-indigo a.active,
-.nav.nav-indigo .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-indigo a.band,
-.nav.nav-indigo .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-indigo .drop:hover > a,
-.nav.nav-indigo .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
 }
 .nav.nav-blue,
 .nav.nav-blue .drop-menu {
@@ -3053,22 +2983,6 @@ label {
 .nav.nav-blue .drop-menu a {
   color: #fff;
 }
-.nav.nav-blue a:hover,
-.nav.nav-blue .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-blue a.active,
-.nav.nav-blue .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-blue a.band,
-.nav.nav-blue .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-blue .drop:hover > a,
-.nav.nav-blue .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
-}
 .nav.nav-cyan,
 .nav.nav-cyan .drop-menu {
   background-color: #00bcd4;
@@ -3076,22 +2990,6 @@ label {
 .nav.nav-cyan a,
 .nav.nav-cyan .drop-menu a {
   color: #fff;
-}
-.nav.nav-cyan a:hover,
-.nav.nav-cyan .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-cyan a.active,
-.nav.nav-cyan .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-cyan a.band,
-.nav.nav-cyan .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-cyan .drop:hover > a,
-.nav.nav-cyan .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
 }
 .nav.nav-teal,
 .nav.nav-teal .drop-menu {
@@ -3101,22 +2999,6 @@ label {
 .nav.nav-teal .drop-menu a {
   color: #fff;
 }
-.nav.nav-teal a:hover,
-.nav.nav-teal .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-teal a.active,
-.nav.nav-teal .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-teal a.band,
-.nav.nav-teal .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-teal .drop:hover > a,
-.nav.nav-teal .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
-}
 .nav.nav-lime,
 .nav.nav-lime .drop-menu {
   background-color: #cddc39;
@@ -3124,22 +3006,6 @@ label {
 .nav.nav-lime a,
 .nav.nav-lime .drop-menu a {
   color: #fff;
-}
-.nav.nav-lime a:hover,
-.nav.nav-lime .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-lime a.active,
-.nav.nav-lime .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-lime a.band,
-.nav.nav-lime .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-lime .drop:hover > a,
-.nav.nav-lime .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
 }
 .nav.nav-yellow,
 .nav.nav-yellow .drop-menu {
@@ -3149,22 +3015,6 @@ label {
 .nav.nav-yellow .drop-menu a {
   color: #fff;
 }
-.nav.nav-yellow a:hover,
-.nav.nav-yellow .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-yellow a.active,
-.nav.nav-yellow .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-yellow a.band,
-.nav.nav-yellow .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-yellow .drop:hover > a,
-.nav.nav-yellow .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
-}
 .nav.nav-amber,
 .nav.nav-amber .drop-menu {
   background-color: #ffc107;
@@ -3172,22 +3022,6 @@ label {
 .nav.nav-amber a,
 .nav.nav-amber .drop-menu a {
   color: #fff;
-}
-.nav.nav-amber a:hover,
-.nav.nav-amber .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-amber a.active,
-.nav.nav-amber .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-amber a.band,
-.nav.nav-amber .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-amber .drop:hover > a,
-.nav.nav-amber .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
 }
 .nav.nav-orange,
 .nav.nav-orange .drop-menu {
@@ -3197,22 +3031,6 @@ label {
 .nav.nav-orange .drop-menu a {
   color: #fff;
 }
-.nav.nav-orange a:hover,
-.nav.nav-orange .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-orange a.active,
-.nav.nav-orange .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-orange a.band,
-.nav.nav-orange .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-orange .drop:hover > a,
-.nav.nav-orange .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
-}
 .nav.nav-brown,
 .nav.nav-brown .drop-menu {
   background-color: #795548;
@@ -3220,22 +3038,6 @@ label {
 .nav.nav-brown a,
 .nav.nav-brown .drop-menu a {
   color: #fff;
-}
-.nav.nav-brown a:hover,
-.nav.nav-brown .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-brown a.active,
-.nav.nav-brown .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-brown a.band,
-.nav.nav-brown .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-brown .drop:hover > a,
-.nav.nav-brown .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
 }
 .nav.nav-blue-grey,
 .nav.nav-blue-grey .drop-menu {
@@ -3245,22 +3047,6 @@ label {
 .nav.nav-blue-grey .drop-menu a {
   color: #fff;
 }
-.nav.nav-blue-grey a:hover,
-.nav.nav-blue-grey .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-blue-grey a.active,
-.nav.nav-blue-grey .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-blue-grey a.band,
-.nav.nav-blue-grey .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-blue-grey .drop:hover > a,
-.nav.nav-blue-grey .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
-}
 .nav.nav-light-blue,
 .nav.nav-light-blue .drop-menu {
   background-color: #03a9f4;
@@ -3268,22 +3054,6 @@ label {
 .nav.nav-light-blue a,
 .nav.nav-light-blue .drop-menu a {
   color: #fff;
-}
-.nav.nav-light-blue a:hover,
-.nav.nav-light-blue .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-light-blue a.active,
-.nav.nav-light-blue .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-light-blue a.band,
-.nav.nav-light-blue .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-light-blue .drop:hover > a,
-.nav.nav-light-blue .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
 }
 .nav.nav-deep-purple,
 .nav.nav-deep-purple .drop-menu {
@@ -3293,22 +3063,6 @@ label {
 .nav.nav-deep-purple .drop-menu a {
   color: #fff;
 }
-.nav.nav-deep-purple a:hover,
-.nav.nav-deep-purple .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-deep-purple a.active,
-.nav.nav-deep-purple .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-deep-purple a.band,
-.nav.nav-deep-purple .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-deep-purple .drop:hover > a,
-.nav.nav-deep-purple .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
-}
 .nav.nav-light-green,
 .nav.nav-light-green .drop-menu {
   background-color: #8bc34a;
@@ -3317,22 +3071,6 @@ label {
 .nav.nav-light-green .drop-menu a {
   color: #fff;
 }
-.nav.nav-light-green a:hover,
-.nav.nav-light-green .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-light-green a.active,
-.nav.nav-light-green .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-light-green a.band,
-.nav.nav-light-green .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-light-green .drop:hover > a,
-.nav.nav-light-green .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
-}
 .nav.nav-deep-orange,
 .nav.nav-deep-orange .drop-menu {
   background-color: #ff5722;
@@ -3340,22 +3078,6 @@ label {
 .nav.nav-deep-orange a,
 .nav.nav-deep-orange .drop-menu a {
   color: #fff;
-}
-.nav.nav-deep-orange a:hover,
-.nav.nav-deep-orange .drop-menu a:hover {
-  background-color: rgba(255,255,255,0.35);
-}
-.nav.nav-deep-orange a.active,
-.nav.nav-deep-orange .drop-menu a.active {
-  background-color: rgba(0,0,0,0.1);
-}
-.nav.nav-deep-orange a.band,
-.nav.nav-deep-orange .drop-menu a.band {
-  background-color: rgba(0,0,0,0.3);
-}
-.nav.nav-deep-orange .drop:hover > a,
-.nav.nav-deep-orange .drop-menu .drop:hover > a {
-  background-color: rgba(255,255,255,0.35);
 }
 .absolute {
   position: absolute;
