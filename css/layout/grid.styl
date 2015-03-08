@@ -21,17 +21,16 @@
   display inline
 
 for n in 1..12
-  if f == 12
-    .grid-u-{n}
-      width (n/f) * 100 + '%'
+  .grid-u-{n}
+    width (n/12) * 100 + '%'
 
-    .grid-ml-{n}
-      margin-left (n/f) * 100 + '%'
+  .grid-ml-{n}
+    margin-left (n/12) * 100 + '%'
 
   // AVG Grid
-  .grid-avg-{f}
+  .grid-avg-{n}
     > li
-      width (1/f) * 100 + '%'
+      width (1/n) * 100 + '%'
 
 @media (max-width: 767px)
   [class*=grid-u-]
