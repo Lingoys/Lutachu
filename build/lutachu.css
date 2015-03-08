@@ -2370,6 +2370,9 @@ blockquote p:last-child {
   border: 1px solid;
   background-color: rgba(255,255,255,0.4);
 }
+.btn.btn-ghost:visited {
+  color: inherit;
+}
 .btn.btn-xl {
   font-size: 1.4rem;
 }
