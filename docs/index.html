@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lutachu Framework</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="../build/lutachu.min.css">
+  <link rel="stylesheet" type="text/css" href="./src/docs.css">
+  <style type="text/css">
+    #index {
+      color: #fff;
+      min-height: 100%;
+      position: relative;
+      background: url(./src/hoshi.jpg) center right fixed;
+      background-size: cover;
+
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
+    }
+
+    #index h1 {
+      color: #fff;
+      height: 4em;
+      font-size: 6em;
+      padding-top: 2em;
+      overflow: hidden;
+      font-weight: normal;
+      margin-bottom: -.5em;
+    }
+
+    #index p {
+      margin-top: 0;
+      font-size: 20px;
+      margin-left: 6px;
+    }
+
+    #index .copyright {
+      left: -8px;
+      bottom: 0;
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 5px 0;
+      position: absolute;
+      color: rgba(255, 255, 255, .6);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+    }
+
+    #index .copyright p {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    #index .copyright a {
+      color: rgba(255, 255, 255, .6);
+      text-decoration: none;
+    }
+
+    #index .copyright a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 720px) {
+      #index {
+        padding-bottom: 1.5em;
+      }
+
+      #index .copyright {
+        display: none;
+      }
+
+      #nav {
+        display: none;
+      }
+
+      #index h1 {
+        height: 3em;
+        padding-top: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="index">
+    <div id="nav" class="nav fixed">
+      <nav class="container">
+        <a class="band">Lutachu</a>
+
+        <div class="right">
+          <a href="./getting-start.html">Getting Started</a>
+          <a>CSS</a>
+          <a>Components</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <h1>Lutachu</h1>
+      <p>初心を忘れず、始終を得れ。</p>
+      <a style="margin-left: 5px;" href="./getting-start.html" class="btn color-white btn-ghost radius">Get Started</a>
+    </div>
+    
+    <div class="copyright">
+      <div class="container">
+      <p>&copy; 2015 <a href="http://rya.so" target="_blank">Rakume</a> @ Lingoys!Art / Made with <3</p>
+      <p><a href="http://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=36633503" target="_blank">「逢いたいと願う」（36633503）/「Y-K」のイラスト</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

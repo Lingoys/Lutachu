@@ -1,0 +1,36 @@
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  background-color: #FAFAFA;
+}
+
+#nav a {
+  color: #fff;
+}
+
+#content {
+  padding: 2em 0 4em;
+}
+
+#footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  padding: 1.5em 0;
+  background: #3c3c3c;
+  position: absolute;
+}
+
+#footer p {
+  margin-bottom: 0;
+}
+
+#footer a {
+  color: #fff;
+}
