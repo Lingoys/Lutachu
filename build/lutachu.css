@@ -1358,7 +1358,9 @@ q {
 }
 body {
   color: #222223;
-  font: 400 16px/1.82 "Segoe UI", "Lucida Grande", Helvetica, "Droid Sans", "Source Han Sans CN", "Source Han Sans", "wenquanyi micro hei", "roboto", "NotoSans CJK", "Microsoft Jhenghei", "Microsoft YaHei", "Hiragino Sans GB", "Hiragino Sans GB W3", FreeSans, Arimo, sans-serif;
+  font-weight: 400;
+  line-height: 1.82;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, "Droid Sans", "Source Han Sans CN", "Source Han Sans", "wenquanyi micro hei", "roboto", "NotoSans CJK", "Microsoft Jhenghei", "Microsoft YaHei", "Hiragino Sans GB", "Hiragino Sans GB W3", FreeSans, Arimo, sans-serif;
 }
 body,
 article,
