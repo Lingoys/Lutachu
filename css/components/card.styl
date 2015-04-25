@@ -1,13 +1,12 @@
 // ===============================================
-// Lutachu CSS / Card.styl                      ||
-// Card Box                                     ||
+// Components / Card.styl                       ||
+//                                              ||
 // =============================================||
-// Made by Rakume<i@fake.moe> 2015-02-21 18:02  ||
-// Last Update: 2015-02-21 20:12 @ Rakume       ||
+// Copyright 2015 @ Rakume<i@fake.moe>          ||
 // MIT License                                  ||
 // ===============================================
 
-.card
+.m-card
   padding 0
   background #fff
   border-radius 3px
@@ -15,7 +14,7 @@
   padding-bottom 50px
   box-shadow 0 1px 3px 1px rgba(0, 0, 0, .26)
 
-  .card-rich
+  .m-card-rich
     margin 0 -1px
     min-height 50px
     position relative
@@ -24,7 +23,7 @@
       margin 0
       border-top-radius 3px
 
-    .card-title
+    .m-card-title
       left 0
       bottom 0
       color #fff
@@ -36,32 +35,32 @@
       font-weight normal
       text-shadow 1px 1px 1px rgba(0, 0, 0, .3)
 
-  * + .card-rich
+  * + .m-card-rich
     img
       border-top-radius 0
 
-  .card-head
+  .m-card-head
     padding .8em 1.5em 0
 
-    .card-title
+    .m-card-title
       font-size 1.8em
       margin-bottom 0
 
-    .card-subhead
+    .m-card-subhead
       margin-top -.8em
       margin-bottom .8em
 
-  .card-content
+  .m-card-content
     padding .8em 1.5em
     color color['grey']
 
-  * + .card-content
+  * + .m-card-content
     padding-top 0
 
-  .card-head + .card-content
+  .m-card-head + .m-card-content
     margin-top -.8em
 
-  .card-bar
+  .m-card-bar
     left 0
     bottom 0
     width 100%

@@ -1,31 +1,13 @@
 // ===============================================
-// Lutachu CSS / Typography.styl                ||
-// Typography System                            ||
+// Layout / Typograhpy.styl                     ||
+//                                              ||
 // =============================================||
-// Made by Rakume<i@fake.moe> 2015-02-19 02:36  ||
-// Last Update: 2015-03-13 20:50 @ Rakume       ||
+// Copyright 2015 @ Rakume<i@fake.moe>          ||
 // MIT License                                  ||
 // ===============================================
 
-*,
-*:before
-*:after
-  -webkit-box-sizing border-box
-  -moz-box-sizing border-box
-  box-sizing border-box
-
-body
-  color color-normal
-  font-weight 400
-  line-height 1.82
-  font-family font-family
-
-body,
-article,
-summary
-  counter-reset lutitleh2 lutitleh3 lutitleh4 lutitleh5 lutitleh6
-
-// Titles
+a
+  color: color['link'];
 
 h1,
 h2,
@@ -33,8 +15,7 @@ h3,
 h4,
 h5,
 h6
-  color color-normal
-  font-family font-family
+  color: color['normal'];
 
 h1
   margin-top 0
@@ -57,43 +38,45 @@ h6
  * Code From Entry CSS
  */
 
-.title-counter
+.m-text-counter
+  counter-reset titleh2 titleh3 titleh4 titleh5 titleh6
+
   h1
     text-align center
 
   h2
-    counter-reset lutitleh3 lutitleh4 lutitleh5 lutitleh6
+    counter-reset titleh3 titleh4 titleh5 titleh6
 
     &:before
-      content counter(lutitleh2) '\3000'
-      content counter(lutitleh2, cjk-ideographic) '、'
-      counter-increment lutitleh2
+      content counter(titleh2) '\3000'
+      content counter(titleh2, cjk-ideographic) '、'
+      counter-increment titleh2
 
   h3
-      counter-reset lutitleh4 lutitleh5 lutitleh6
+      counter-reset titleh4 titleh5 titleh6
 
       &:before
-        content counter(lutitleh2) '.' counter(lutitleh3) '\3000'
-        counter-increment lutitleh3
+        content counter(titleh2) '.' counter(titleh3) '\3000'
+        counter-increment titleh3
 
   h4
-    counter-reset lutitleh5 lutitleh6
+    counter-reset titleh5 titleh6
 
     &:before
-      content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '\3000'
-      counter-increment lutitleh4
+      content counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '\3000'
+      counter-increment titleh4
 
   h5
-    counter-reset lutitleh6
+    counter-reset titleh6
 
     &:before
-      content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '.' counter(lutitleh5) '\3000'
-      counter-increment lutitleh5
+      content counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '.' counter(titleh5) '\3000'
+      counter-increment titleh5
 
   h6
     &:before
-      content counter(lutitleh2) '.' counter(lutitleh3) '.' counter(lutitleh4) '.' counter(lutitleh5) '.' counter(lutitleh6) '\3000'
-      counter-increment lutitleh6
+      content counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '.' counter(titleh5) '.' counter(titleh6) '\3000'
+      counter-increment titleh6
 
   h6
     font-weight 500
@@ -103,7 +86,7 @@ p
   margin-bottom 1.46em
   letter-spacing .2px
 
-  &.text-author
+  &.m-text-author
     display block
     text-align right
     font-weight 800
@@ -111,7 +94,7 @@ p
     &:before
       content '——' !important
 
-.text-indent p:before
+.m-text-indent p:before
   content '\3000\3000'
   display inline
 
@@ -234,9 +217,13 @@ h6
 
 // Key Board Log
 kbd
-  padding 2px 4px
-  font-size 90%
-  color #fff
-  background-color #333
-  border-radius 3px
-  box-shadow inset 0 -1px 0 rgba(0, 0, 0, .25)
+  color: #fff;
+  font-size: 90%;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background-color: #333;
+  font-family: font-family['monospace'];
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25);
+  
+  kbd
+    padding: 0;

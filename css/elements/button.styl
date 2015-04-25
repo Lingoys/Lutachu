@@ -1,111 +1,113 @@
 // ===============================================
-// Lutachu CSS / Button.styl                    ||
-// Button Style                                 ||
+// Elements / Button.styl                       ||
+//                                              ||
 // =============================================||
-// Made by Rakume<i@fake.moe> 2015-02-19 21:55  ||
-// Last Update: 2015-02-21 19:26 @ Rakume       ||
+// Copyright 2015 @ Rakume<i@fake.moe>          ||
 // MIT License                                  ||
 // ===============================================
 
-// Normal, Hover, Active
-
 btn-bgcolor(n, l = 6, d = 4)
   &
-    background-color n
+    background-color: n;
 
   &:hover
-    background-color lighten(n, l)
-    box-shadow 1px 1px 3px rgba(0, 0, 0, .2)
+    background-color: lighten(n, l);
 
-  &.btn-active,
+  &.z-active,
   &:active
-    background-color darken(n, d)
-    box-shadow 1px 1px 3px rgba(0, 0, 0, .4)
+    background-color: darken(n, d);
 
-  &.btn-disabled,
+  &.z-disabled,
   &[disabled]
     &,
     &:hover,
     &:active
-      border 0
-      opacity .6
-      background n
-      box-shadow none
-      cursor not-allowed
+      border: 0;
+      opacity: .6;
+      background: n;
+      box-shadow: none;
+      cursor: not-allowed;
 
-.btn
-  border 0
-  outline 0
-  border 0
-  color #fff
-  cursor pointer
-  text-align center
-  padding .35em 1.2em
-  text-decoration none
-  color color-btn
-  line-height 1.5em
-  display inline-block
-  vertical-align middle
-  btn-bgcolor lighten(color['grey'], 22)
-  transition background .4s ease, box-shadow .1s linear
+.m-btn
+  border: 0;
+  outline: 0;
+  margin: .225em;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 1.5em;
+  padding: .35em 1.2em;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .4);
+  transition: background .4s ease
+  
+  &:hover
+    box-shadow: 0 0px 3px rgba(0, 0, 0, .4);
+  
+  &:active,
+  &:focus
+    background-color: #f5f5f5;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
 
   [class*=icon-]:before
     transform scale(1.2)
 
-  &.btn-default,
-  &.btn-primary,
-  &.btn-secondary,
-  &.btn-success,
-  &.btn-warning,
-  &.btn-error
+  &.z-primary,
+  &.z-secondary,
+  &.z-success,
+  &.z-warning,
+  &.z-error
     color #fff
 
     [class*=icon-]:before
       color #fff
 
-  &.btn-default
-    btn-bgcolor darken(color['grey'], 26)
+  &.z-primary
+    btn-bgcolor #198ac8
 
-  &.btn-primary
-    btn-bgcolor color['blue']
+  &.z-secondary
+    btn-bgcolor #4eb3e9
 
-  &.btn-secondary
-    btn-bgcolor color['light-blue']
+  &.z-success
+    btn-bgcolor #19c856
 
-  &.btn-success
-    btn-bgcolor color['green']
+  &.z-error
+    btn-bgcolor #E63752
 
-  &.btn-error
-    btn-bgcolor color['red']
+  &.z-warning
+    btn-bgcolor #E8CB2C
 
-  &.btn-warning
-    btn-bgcolor color['orange']
-
-  &.btn-ghost
-    border 1px solid
-    background-color transparent
+  &.z-ghost
+    color: #fff;
+    box-shadow: none;
+    border: 1px solid;
+    background-color: transparent;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .4);
 
     &:hover
-      color inherit
-      border 1px solid
-      background-color rgba(255, 255, 255, .2)
+      color: #fff;
+      border: 1px solid;
+      background-color rgba(255, 255, 255, .6)
 
     &:active
-      color inherit
-      border 1px solid
-      background-color rgba(255, 255, 255, .4)
+      color: #fff;
+      border: 1px solid;
+      background-color rgba(255, 255, 255, .8)
 
     &:visited
-      color inherit
+      color: #fff;
 
-  &.btn-xl
-    font-size 1.4rem
+  &.z-xl
+    font-size 150%
 
-  &.btn-lg
-    font-size 1.2rem
+  &.z-lg
+    font-size 125%
 
-  &.btn-sm
-    font-size .8rem
+  &.z-sm
+    font-size 75%
 
-  &.btn-xs
-    font-size .6rem
+  &.z-xs
+    font-size 50%

@@ -1,60 +1,60 @@
 // ===============================================
-// Lutachu CSS / Code.styl                      ||
-// Code Block                                   ||
+// Elements / Code.styl                         ||
+//                                              ||
 // =============================================||
-// Made by Rakume<i@fake.moe> 2015-02-19 21:44  ||
-// Last Update: 2015-02-20 15:39 @ Rakume       ||
+// Copyright 2015 @ Rakume<i@fake.moe>          ||
 // MIT License                                  ||
 // ===============================================
 
 tt,
+code,
+pre
+  font-family: font-family['monospace'];
+
+tt,
 code
-  font-size .8em
-  margin: 0 .3em
-  padding .1em .3em
-  border-radius 3px
-  word-break break-all
-  color color-code
-  background background-code
-  border 1px solid color-border
+  font-size: .8em;
+  margin: 0 .3em;
+  padding: .1em .5em;
+  border-radius: 3px;
+  word-break: break-all;
+  background: color['light-grey'];
+  border: 1px solid color['grey'];
 
 pre
-  display block
-  overflow auto
-  margin 1.6em 0
-  font-size .9em
-  line-height 1.5
-  padding .5em .8em
-  color color-pre
-  background background-pre
-  border-left width-border solid color-border
+  display block;
+  overflow auto;
+  margin 1.6em 0;
+  font-size .9em;
+  line-height 1.5;
+  padding-left: 1.3rem;
+  color: color['gray'];
+  border-left: 2px solid color['grey'];
 
   code,
   tt
-    padding 0
-    border none
-    font-size 1em
-    background none
-    color color-pre
+    padding: 0;
+    border: none;
+    font-size: 1rem;
+    background: none;
 
 blockquote
-  padding-left 1.3em
-  margin 0 0 1.6em 0
-  font-size .9em
-  line-height 1.62
-  color color-blockquote
-  border-left width-border solid color-border
+  padding-left: 1.3rem;
+  margin: 0 0 1.6rem 0;
+  font-size: .9rem;
+  line-height: 1.62;
+  color: color['gray'];
+  border-left: 2px solid color['grey'];
 
   small
-    color color-blockquote-small
-    display block
-    text-align right
+    color: color['grey'];
+    display: block;
+    text-align: right;
 
   a
-    color color-blockquote
+    color: color['grey'];
 
   p
-    margin-bottom .5em
-
-  p:last-child
-    margin-bottom 0
+    margin-bottom: .5em;
+    &:last-child
+      margin-bottom: 0;

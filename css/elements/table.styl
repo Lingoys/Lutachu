@@ -1,18 +1,17 @@
 // ===============================================
-// Lutachu CSS / Table.styl                     ||
-// Table Style                                  ||
+// Elements / Table.styl                        ||
+//                                              ||
 // =============================================||
-// Made by Rakume<i@fake.moe> 2015-02-19 21:28  ||
-// Last Update: 2015-02-20 15:39 @ Rakume       ||
+// Copyright 2015 @ Rakume<i@fake.moe>          ||
 // MIT License                                  ||
 // ===============================================
 
-.table
-  width 100%
-  font-size .9em
-  margin-bottom 1.5em
-  border-spacing 0
-  border-collapse separate
+.m-table
+  width: 100%;
+  font-size: .9em;
+  margin-bottom: 1.5em;
+  border-spacing: 0;
+  border-collapse: separate;
 
   > thead,
   > tbody,
@@ -20,26 +19,30 @@
     > tr
       > th,
       > td
-        padding .7rem
-        line-height 1.6
-        vertical-align top
-        border-top 1px solid color-border
+        padding: .7rem;
+        line-height: 1.6;
+        vertical-align: top;
+        border-top: 1px solid color['light-gray'];
+
+        &[scope="row"]
+          color: color['gray'];
 
   > thead
     > tr
       > th,
       > td
-        border-top 0
-        vertical-align bottom
-        border-bottom 1px solid color-border
+        color: color['gray'];
+        border-top: 0;
+        vertical-align: bottom;
+        border-bottom: 1px solid color['light-gray'];
 
   > tbody + tbody
     > tr:first-child
       > td
-        border-top 2px solid color-border
+        border-top: 2px solid color['grey'];
 
-  &.table-bordered
-    border 1px solid color-border
+  &.z-bordered
+    border: 1px solid color['light-gray'];
 
     > thead,
     > tbody,
@@ -47,30 +50,27 @@
       > tr
         > th,
         > td
-          border-left 1px solid color-border
+          border-left: 1px solid color['light-gray'];
 
         > th:first-child,
         > td:first-child
-          border-left 0
+          border-left: 0;
 
-  &.table-radius
-    border-radius 3px
-
-  &.table-striped
+  &.z-striped
     > tbody
       > tr:nth-child(odd)
         > th,
         > td
-          background-color background-th-odd
+          background-color: color['light-grey'];
 
-  &.table-hover
+  &.z-hover
     > tbody
       > tr:hover
         > th,
         > td
-          background-color background-th
+          background-color: color['dark-grey'];
 
-  &.table-center
+  &.z-center
     th,
     td
       text-align center
@@ -78,7 +78,7 @@
   > thead,
   > tbody,
   > tfoot
-    > tr.lu-active
+    > tr.z-active
       > th,
       > td
         background-color background-th-mark

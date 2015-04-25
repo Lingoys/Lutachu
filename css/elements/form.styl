@@ -1,9 +1,8 @@
 // ===============================================
-// Lutachu CSS / Form.styl                      ||
-// Form                                         ||
+// Elements / Form.styl                         ||
+//                                              ||
 // =============================================||
-// Made by Rakume<i@fake.moe> 2015-02-20 16:53  ||
-// Last Update: 2015-02-21 19:27 @ Rakume       ||
+// Copyright 2015 @ Rakume<i@fake.moe>          ||
 // MIT License                                  ||
 // ===============================================
 
@@ -23,88 +22,91 @@ input[type=tel],
 input[type=color],
 select,
 textarea
-  width 100%
-  outline none
-  display block
-  max-width 100%
-  background #fff
-  padding .5em .8em
-  margin-bottom .75em
-  border 1px solid color-border
+  width: 100%;
+  outline: none;
+  display: block;
+  max-width: 100%;
+  background: #fff;
+  padding: .5em .8em;
+  border-radius: 2px;
+  margin-bottom: .75em;
+  border: 1px solid color['grey'];
 
   &.disabled,
   &[disabled]
-    cursor not-allowed
-    color #999
-    border-color #DDD
-    background-color #f9f9f9
+    cursor: not-allowed;
+    color: #999;
+    border-color: #ddd;
+    background-color: #f9f9f9;
+    
+    &:active,
+    &:focus
+      border-color: #ddd;
 
   &:active,
   &:focus
-    border-color color['blue']
+    border-color: color['gray'];
+
+textarea
+  padding: .2em .8em;
 
 label,
 option
   &.disabled,
   &[disabled]
-    cursor not-allowed
-    color #999
-    border-color #DDD
-    background-color #f9f9f9
+    cursor: not-allowed;
+    color: #999;
+    border-color: #DDD;
+    background-color: #f9f9f9;
 
 label
-  display block
-  margin-bottom .2rem
+  margin-bottom: .2rem;
 
-.radius
+.z-radius
   input,
   select,
   textarea,
   option,
   button,
   a.btn
-    border-radius 3px
+    border-radius: 5px;
 
 .form-group
-  padding 0
-  border 0
-  margin-bottom .75em
+  padding: 0;
+  border: 0;
+  margin-bottom: .25em;
 
   input
-    margin 0
-    border-radius 0
-    border-bottom 0
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 0;
 
     &:active,
     &:focus
-      position relative
-      margin-bottom -1px
-      border-bottom 1px solid color['blue']
+      margin-bottom: -1px;
+      position: relative;
+      border-bottom: 1px solid color['gray'];
 
     &:last-child
-      border-bottom 1px solid color-border
+      border-bottom: 1px solid color['grey'];
 
       &:active,
       &:focus
-        margin-bottom 0
-        border-bottom-color color['blue']
+        margin-bottom: 0;
+        border-bottom-color: color['gray'];
 
-  &.radius
+  &.z-radius
+    &:first-child
+      border-top-radius: 5px;
 
-      &:first-child
-        border-top-radius 3px
+    &:last-child
+      border-bottom-radius: 5px;
 
-      &:last-child
-        border-bottom-radius 3px
+.z-radius.form-group,
+.z-radius .form-group
+  input
+    &:first-child
+      border-top-radius: 5px;
 
-.radius
-
-  .form-group
-
-    input
-
-      &:first-child
-        border-top-radius 3px
-
-      &:last-child
-        border-bottom-radius 3px
+    &:last-child
+      border-bottom-radius: 5px;

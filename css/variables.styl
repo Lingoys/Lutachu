@@ -1,75 +1,30 @@
 // ===============================================
-// Lutachu CSS / Variables.styl                 ||
-// Framework's Variables                        ||
+// Variables.styl                               ||
+//                                              ||
 // =============================================||
-// Made by Rakume<i@fake.moe> 2015-02-18 22:12  ||
-// Last Update: 2015-03-13 20:49 @ Rakume       ||
+// Copyright 2015 @ Rakume<i@fake.moe>          ||
 // MIT License                                  ||
 // ===============================================
 
-/* Typography */
-font-family = "Segoe UI", "Lucida Grande", Helvetica,  "Droid Sans", "Source Han Sans CN", "Source Han Sans", "wenquanyi micro hei", "roboto", "NotoSans CJK", "Microsoft Jhenghei", "Microsoft YaHei", "Hiragino Sans GB", "Hiragino Sans GB W3", FreeSans, Arimo, sans-serif
-font-family-serif     = Georgia, "Times New Roman", Times, SimSun, serif
-font-family-kai       = Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, serif
-font-family-monospace = "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace
-
-/* Color */
-// Colors From Material Design
-color = {
-  red:    #F44336
-  green:  #E91E63
-  purple: #9C27B0
-  indigo: #3F51B5
-  blue:   #2196F3
-  cyan:   #00BCD4
-  teal:   #009688
-  green:  #4CAF50
-  lime:   #CDDC39
-  yellow: #FFEB38
-  amber:  #FFC107
-  orange: #FF9800
-  brown:  #795548
-  grey:   #9E9E9E
-  black:  #000000
-  white:  #FFFFFF
-
-  blue-grey:   #707D8B
-  light-blue:  #03A9F4
-  deep-purple: #673AB7
-  light-green: #8BC34A
-  deep-orange: #FF5722
+font-family = {
+  normal: unquote('"Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif'),
+  serif: unquote('Georgia, "Times New Roman", Times, SimSun, serif'),
+  kai: unquote('Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, serif'),
+  monospace: unquote('"Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace')
 }
 
-color-normal = #222223
-color-border = #ddd
+color = {
+  normal: #222,
+  link: #333,
 
-color-link   = #555555
-color-code   = #808080
-color-pre    = #4C4C4C
-color-bquote = #666664
-color-btn    = #444444
-color-mark   = color-normal
-
-color-btn-primary  = #FFF
-color-link-hover   = color-normal
-color-bquote-small = #999
-color-border-dark  = darken(color-border, 2)
-
-background-mark = #FFA
-
-// Background
-background-pre  = #F8F8F8
-background-code = #F9F9F7
-
-// Table Background
-background-th      = darken(color-border, .05)
-background-th-mark = #FFA
-background-th-odd  = lighten(color-border, 7)
-
-/* Width */
-width-border = 2px
+  gray: #888,
+  grey: #ddd,
+  light-gray: #dbdbdb,
+  light-grey: #f7f7f7,
+  dark-grey: #e8e8e8
+}
 
 // Media queries
-mq-mobile = "screen and (max-width: 479px)"
-mq-tablet = "screen and (min-width: 480px) and (max-width: 767px)"
-mq-normal = "screen and (min-width: 768px)"
+mq-mobile = 'screen and (max-width: 479px)'
+mq-tablet = 'screen and (min-width: 480px) and (max-width: 767px)'
+mq-normal = 'screen and (min-width: 768px)'
