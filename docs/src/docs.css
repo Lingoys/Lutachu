@@ -9,6 +9,10 @@ body {
   background-color: #FAFAFA;
 }
 
+.container {
+  max-width: 90%;
+}
+
 #nav a {
   color: #fff;
 }
