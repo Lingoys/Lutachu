@@ -7,60 +7,91 @@
 // ===============================================
 
 .m-card
-  padding 0
-  background #fff
-  border-radius 3px
-  position relative
-  padding-bottom 50px
-  box-shadow 0 1px 3px 1px rgba(0, 0, 0, .26)
+  padding: 0;
+  background: #fff;
+  margin-bottom: 1em;
+  border-radius: 2px;
+  position: relative;
+  padding-bottom: .8em;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .2);
 
-  .m-card-rich
-    margin 0 -1px
-    min-height 50px
-    position relative
+  &.z-rich .s-head
+    padding: 0;
+    margin: 0 -1px;
+    min-height: 50px;
+    position: relative;
+    margin-bottom: 1.8em;
 
-    img
-      margin 0
-      border-top-radius 3px
+    img,
+    .s-rich-img img,
+    img.s-rich-img
+      margin: 0;
+      border-top-radius: 3px;
 
-    .m-card-title
-      left 0
-      bottom 0
-      color #fff
-      width 100%
-      padding 0 .8em
-      font-size 1.8em
-      position absolute
-      margin-bottom .6em
-      font-weight normal
-      text-shadow 1px 1px 1px rgba(0, 0, 0, .3)
+    .s-title,
+    .s-subtitle
+      left: 0;
+      bottom: 0;
+      color: #fff;
+      width: 100%;
+      padding: 0 .8em;
+      font-size: 1.8em;
+      position: absolute;
+      margin-bottom: .6em;
+      font-weight: normal;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+      
+    .s-subtitle
+      left: auto;
+      right: 0;
+      font-size: 1em;
+      text-align: right;
+      margin-bottom: 1.4em;
 
-  * + .m-card-rich
-    img
-      border-top-radius 0
+  &.z-radius.z-rich .s-head
+    img,
+    .s-rich-img img,
+    img.s-rich-img
+      border-top-radius: 5px;
 
-  .m-card-head
-    padding .8em 1.5em 0
+  * + .s-rich-img
+    border-top-radius: 0;
 
-    .m-card-title
-      font-size 1.8em
-      margin-bottom 0
+  .s-head
+    padding: .8em 1.5em 1em;
 
-    .m-card-subhead
-      margin-top -.8em
-      margin-bottom .8em
+    .s-title
+      font-size: 1.8em;
+      margin-bottom: 0;
 
-  .m-card-content
-    padding .8em 1.5em
-    color color['grey']
+    .s-subtitle
+      margin-top: -.8em;
+      margin-bottom: 0;
+      
+    .s-rich-img
+      margin: .8em -1.5em .8em;
+      text-align: center;
 
-  * + .m-card-content
+      img
+        margin: 0;
+
+    img.s-rich-img
+      margin: .8em 0;
+  
+  .s-rich-img + .s-head
+    padding-top: .4em;
+
+  .s-content
+    padding: .8em 1.5em;
+    color: color['normal'];
+
+  * + .s-content
     padding-top 0
 
-  .m-card-head + .m-card-content
+  .s-head + .s-content
     margin-top -.8em
 
-  .m-card-bar
+  .s-bar
     left 0
     bottom 0
     width 100%

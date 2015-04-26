@@ -18,92 +18,95 @@ h6
   color: color['normal'];
 
 h1
-  margin-top 0
+  margin-top: 0;
 
 h2
-  font-size 1.5em
-  margin .83em 0
+  font-size: 1.5em;
+  margin: .83em 0;
 
 h3
-  font-size 1.17em
-  margin 1em 0
+  font-size: 1.17em;
+  margin: 1em 0;
 
 h4,
 h5,
 h6
-  font-size 1em
-  margin 1.6em 0 1em 0
+  font-size: 1em;
+  margin: 1.6em 0 1em 0;
 
 /*
  * Code From Entry CSS
  */
 
 .m-text-counter
-  counter-reset titleh2 titleh3 titleh4 titleh5 titleh6
+  counter-reset: titleh2 titleh3 titleh4 titleh5 titleh6;
 
   h1
-    text-align center
+    text-align: center;
 
   h2
-    counter-reset titleh3 titleh4 titleh5 titleh6
+    counter-reset: titleh3 titleh4 titleh5 titleh6;
 
     &:before
-      content counter(titleh2) '\3000'
-      content counter(titleh2, cjk-ideographic) '、'
-      counter-increment titleh2
+      content: counter(titleh2) '\3000';
+      content: counter(titleh2, cjk-ideographic) '、';
+      counter-increment: titleh2;
 
   h3
-      counter-reset titleh4 titleh5 titleh6
+      counter-reset: titleh4 titleh5 titleh6;
 
       &:before
-        content counter(titleh2) '.' counter(titleh3) '\3000'
-        counter-increment titleh3
+        content: counter(titleh2) '.' counter(titleh3) '\3000';
+        counter-increment: titleh3;
 
   h4
-    counter-reset titleh5 titleh6
+    counter-reset: titleh5 titleh6;
 
     &:before
-      content counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '\3000'
-      counter-increment titleh4
+      content: counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '\3000';
+      counter-increment: titleh4;
 
   h5
-    counter-reset titleh6
+    counter-reset: titleh6;
 
     &:before
-      content counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '.' counter(titleh5) '\3000'
-      counter-increment titleh5
+      content: counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '.' counter(titleh5) '\3000';
+      counter-increment: titleh5;
 
   h6
     &:before
-      content counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '.' counter(titleh5) '.' counter(titleh6) '\3000'
-      counter-increment titleh6
+      content: counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '.' counter(titleh5) '.' counter(titleh6) '\3000';
+      counter-increment: titleh6;
 
   h6
-    font-weight 500
+    font-weight: 500;
 
 p
-  margin-top 0
-  margin-bottom 1.46em
-  letter-spacing .2px
+  margin-top: 0;
+  margin-bottom: 1.46em;
+  letter-spacing: .2px;
 
   &.m-text-author
-    display block
-    text-align right
-    font-weight 800
+    display: block;
+    text-align: right;
+    font-weight: 800;
 
     &:before
-      content '——' !important
+      content: '——' !important;
 
 .m-text-indent p:before
-  content '\3000\3000'
-  display inline
+  content: '\3000\3000';
+  display: inline;
 
 a
-  -moz-text-decoration-color rgba(0, 0, 0, .6)
-  text-decoration-color rgba(0, 0, 0, .6)
+  -moz-text-decoration-color: rgba(0, 0, 0, .6);
+  text-decoration-color: rgba(0, 0, 0, .6);
 
   img
-    border 0
+    border: 0;
+
+img
+  max-width: 100%;
 
 // Symbol
 
@@ -111,96 +114,96 @@ b,
 em,
 cite,
 strong
-  color color-normal
-  font-weight 700
+  color: color['normal'];
+  font-weight: 700;
 
 em,
 cite
-  font-style normal
+  font-style: normal;
 
 em
-  font-style inherit
-  font-weight inherit
-  text-decoration inherit
-  -webkit-text-emphasis filled circle
-  -moz-text-emphasis filled circle
-  -ms-text-emphasis filled circle
-  text-emphasis filled circle
-  -webkit-text-emphasis-position under
-  -moz-text-emphasis-position under
-  -ms-text-emphasis-position under
-  text-emphasis-position under
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  -webkit-text-emphasis: filled circle;
+  -moz-text-emphasis: filled circle;
+  -ms-text-emphasis: filled circle;
+  text-emphasis: filled circle;
+  -webkit-text-emphasis-position: under;
+  -moz-text-emphasis-position: under;
+  -ms-text-emphasis-position: under;
+  text-emphasis-position: under;
 
 i
-  color color-normal
-  font-style italic
+  color: color['normal'];
+  font-style: italic;
 
 img
-  margin .2em 0
+  margin: .2em 0;
 
 sub,
 sup
   a
-    text-decoration none
+    text-decoration: none;
 
 hr
-  width 15%
-  display block
-  border 0 none
-  margin 2em auto
-  border-top width-border solid color-border
+  width: 15%;
+  display: block;
+  border: 0 none;
+  margin: 2em auto;
+  border-top: 2px solid color['gray'];
 
 // List
 
 ul,
 ol
-  margin 0 0 24px 6px
-  padding-left 24px
+  margin: 0 0 24px 6px;
+  padding-left: 24px;
 
 ul
-  list-style-type square
+  list-style-type: square;
 
 ol
-  list-style-type decimal
+  list-style-type: decimal;
 
 li
-  margin-bottom .2em
+  margin-bottom: .2em;
 
   ul,
   ol
-    margin-top 0
-    margin-bottom 0
-    margin-left 14px
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 14px;
 
   ul
-    list-style-type disc
+    list-style-type: disc;
 
     ul
-      list-style-type circle
+      list-style-type: circle;
 
   p
-    margin .4em 0 .6em
+    margin: .4em 0 .6em;
 
     &:before
-      content none
+      content: none;
 
 // DT
 
 dl
-  margin-bottom .2em
+  margin-bottom: .2em;
 
 dt
-  padding 0
-  font-weight 800
+  padding: 0;
+  font-weight: 800;
 
 dd
-  margin-left 0
+  margin-left: 0;
 
 dt + dd
-  margin-top .2em
+  margin-top: .2em;
 
 dd + dt
-  margin-top .6em
+  margin-top: .6em;
 
 // Title ~ *
 h1,
@@ -210,10 +213,10 @@ h4,
 h5,
 h6
   + *
-    margin-top -.8em
+    margin-top: -.8em;
 
 [draggable]
-  cursor move
+  cursor: move;
 
 // Key Board Log
 kbd
