@@ -6,7 +6,7 @@
 // MIT License                                  ||
 // ===============================================
 
-.row
+.m-grid
   center()
   clearfix()
 
@@ -14,25 +14,44 @@
   margin-left -1em
   margin-right -1em
 
-[class*=grid-u-]
+[class=m-grid-u]
   float left
   padding 0 1em
   display inline
 
-for n in 1..12
-  .grid-u-{n}
-    width (n/12) * 100 + '%'
+.m-grid-u
+  @media mq-normal
+    for n in 1..12
+      &.z-n{n}
+        width (n/12) * 100 + '%'
 
-  .grid-ml-{n}
-    margin-left (n/12) * 100 + '%'
+      &.z-ml-n{n}
+        margin-left (n/12) * 100 + '%'
+  
+      // AVG Grid
+      &.z-avg-n{n}
+        width (1/n) * 100 + '%'
+  
+  @media mq-tablet
+    for n in 1..12
+      &.z-t{n}
+        width (n/12) * 100 + '%'
 
-  // AVG Grid
-  .grid-avg-{n}
-    > li
-      width (1/n) * 100 + '%'
+      &.z-ml-t{n}
+        margin-left (n/12) * 100 + '%'
+  
+      // AVG Grid
+      &.z-avg-t{n}
+        width (1/n) * 100 + '%'
 
-@media (max-width: 767px)
-  [class*=grid-u-]
-    display block
-    float none
-    width auto
+  @media mq-mobile
+    for n in 1..12
+      &.z-m{n}
+        width (n/12) * 100 + '%'
+
+      &.z-ml-m{n}
+        margin-left (n/12) * 100 + '%'
+  
+      // AVG Grid
+      &.z-avg-m{n}
+        width (1/n) * 100 + '%'
