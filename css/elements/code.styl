@@ -18,8 +18,8 @@ code
   padding: .1em .5em;
   border-radius: 3px;
   word-break: break-all;
-  background: color['light-grey'];
-  border: 1px solid color['grey'];
+  background: color['background-code'];
+  border: 1px solid color['border-normal'];
 
 pre
   display block;
@@ -28,8 +28,11 @@ pre
   font-size .9em;
   line-height 1.5;
   padding-left: 1.3rem;
-  color: color['gray'];
-  border-left: 2px solid color['grey'];
+  color: color['dark-grey'];
+  border-left: 2px solid color['border-normal'];
+
+  &:hover
+    border-left-color: color['border-focus'];
 
   code,
   tt
@@ -43,16 +46,16 @@ blockquote
   margin: 0 0 1.6rem 0;
   font-size: .9rem;
   line-height: 1.62;
-  color: color['gray'];
-  border-left: 2px solid color['grey'];
+  color: color['dark-grey'];
+  border-left: 2px solid color['border-normal'];
 
   small
-    color: color['grey'];
+    color: color['link-grey'];
     display: block;
     text-align: right;
 
   a
-    color: color['grey'];
+    color: color['link-grey'];
 
   p
     margin-bottom: .5em;
