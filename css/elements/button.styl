@@ -14,9 +14,6 @@
 BtnColor(c, t)
   color: t;
   background-color: c;
-  
-    [class*=icon-]:before
-      color: t;
 
   &.hover,
   &:hover
@@ -56,17 +53,18 @@ Btn(c, t)
   vertical-align: middle;
   box-shadow: 0 0 1px rgba(0, 0, 0, .4);
   transition: background .4s ease, box-shadow .2s ease;
-  btn-bgcolor: c t;
+  BtnColor: c t;
+
+  [class*=icon-]:before
+    color: t;
+    transform: scale(1.2);
 
   &:hover
     box-shadow: 0 0px 3px rgba(0, 0, 0, .4);
 
   &.active,
-  &:active,
+  &:active
     box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
-  
-  [class*=icon-]:before
-    transform: scale(1.2);
 
 .btn
   Btn: #fff #222;
