@@ -9,29 +9,30 @@
 @import "variables";
 @import "mixins";
 
-/* Libraries */
-@import "libraries/normalize";
-@import "libraries/print";
+// Base
+// ==============================================
+@import "base/normalize";  // Normalize Style
+@import "base/print";        // @media Print
+@import "base/foundation";   // Foundation
 
-/* Font */
-@import "fonts/foundation";
+// Layout
+// ==============================================
+@import "layout/grid";       // Grid System
+@import "layout/typography"; // Typography
 
-/* Layout */
-@import "layout/grid";
-@import "layout/typography";
+// Elements
+// ==============================================
+@import "elements/code";     // Block Code
+@import "elements/button";   // Button
+@import "elements/form";     // Input, Form
+@import "elements/table";    // Table
 
-/* Elements */
-@import "elements/code";
-@import "elements/button";
-@import "elements/form";
-@import "elements/table";
-
-/* Components */
+// Components
+// ==============================================
 @import "components/acomment";
 @import "components/card";
 @import "components/poem";
 @import "components/msg";
 @import "components/nav";
 
-// Utillyties
 @import "utillyties";

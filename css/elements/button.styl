@@ -6,34 +6,47 @@
 // MIT License                                  ||
 // ===============================================
 
-btn-bgcolor(n, l = 6, d = 4)
-  &
-    background-color: n;
+// Let's Change Button's Color
+// ==============================================
+// Variables: c: background color
+//            t: text color
 
+BtnColor(c, t)
+  color: t;
+  background-color: c;
+  
+    [class*=icon-]:before
+      color: t;
+
+  &.hover,
   &:hover
-    background-color: lighten(n, l);
+    background-color: lighten(c, 6);
 
-  &.z-active,
+  &.active,
   &:active
-    background-color: darken(n, d);
+    background-color: darken(c, 4);
 
-  &.z-disabled,
+  &.disabled,
   &[disabled]
     &,
     &:hover,
     &:active
       border: 0;
       opacity: .6;
-      background: n;
+      background: c;
       box-shadow: none;
       cursor: not-allowed;
 
-.m-btn
+// Create A Button
+// ==============================================
+// Variables: c: background color
+//            t: text color
+
+Btn(c, t)
   border: 0;
   outline: 0;
   margin: .225em;
   cursor: pointer;
-  background: #fff;
   border-radius: 2px;
   text-align: center;
   line-height: 1.5em;
@@ -42,56 +55,51 @@ btn-bgcolor(n, l = 6, d = 4)
   display: inline-block;
   vertical-align: middle;
   box-shadow: 0 0 1px rgba(0, 0, 0, .4);
-  transition: background .4s ease, box-shadow .2s ease
-  
+  transition: background .4s ease, box-shadow .2s ease;
+  btn-bgcolor: c t;
+
   &:hover
     box-shadow: 0 0px 3px rgba(0, 0, 0, .4);
-  
+
+  &.active,
   &:active,
-  &:focus
-    background-color: #f5f5f5;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
-
+  
   [class*=icon-]:before
-    transform scale(1.2)
+    transform: scale(1.2);
 
-  &.z-primary,
-  &.z-secondary,
-  &.z-success,
-  &.z-warning,
-  &.z-error
-    color #fff
+.btn
+  Btn: #fff #222;
 
-    [class*=icon-]:before
-      color #fff
+  &.btn-primary
+    BtnColor: #198ac8 #fff;
 
-  &.z-primary
-    btn-bgcolor #198ac8
+  &.btn-secondary
+    BtnColor: #4eb3e9 #fff;
 
-  &.z-secondary
-    btn-bgcolor #4eb3e9
+  &.btn-success
+    BtnColor: #19c856 #fff;
 
-  &.z-success
-    btn-bgcolor #19c856
+  &.btn-error
+    BtnColor: #E63752 #fff;
 
-  &.z-error
-    btn-bgcolor #E63752
+  &.btn-warning
+    BtnColor: #E8CB2C #fff;
 
-  &.z-warning
-    btn-bgcolor #E8CB2C
-
-  &.z-ghost
+  &.btn-ghost
     color: #fff;
     box-shadow: none;
     border: 1px solid;
     background-color: transparent;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, .6);
 
+    &.hover,
     &:hover
       color: #fff;
       border: 1px solid;
       background-color rgba(255, 255, 255, .3)
 
+    &.active,
     &:active
       color: #fff;
       border: 1px solid;
@@ -100,13 +108,13 @@ btn-bgcolor(n, l = 6, d = 4)
     &:visited
       color: #fff;
 
-  &.z-xl
+  &.btn-xl
     font-size 150%
 
-  &.z-lg
+  &.btn-lg
     font-size 125%
 
-  &.z-sm
+  &.btn-sm
     font-size 75%
 
   &.z-xs
