@@ -6,7 +6,7 @@
 // MIT License                                  ||
 // ===============================================
 
-.m-card
+.card
   padding: 0;
   background: #fff;
   margin-bottom: 1em;
@@ -15,7 +15,7 @@
   padding-bottom: .8em;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .2);
 
-  &.z-rich .s-head
+  &.card-rich .card-head
     padding: 0;
     margin: 0 -1px;
     min-height: 50px;
@@ -23,13 +23,13 @@
     margin-bottom: 1.8em;
 
     img,
-    .s-rich-img img,
-    img.s-rich-img
+    .card-rich-img img,
+    img.card-rich-img
       margin: 0;
       border-top-radius: 3px;
 
-    .s-title,
-    .s-subtitle
+    .card-title,
+    .card-subtitle
       left: 0;
       bottom: 0;
       color: #fff;
@@ -41,62 +41,63 @@
       font-weight: normal;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
       
-    .s-subtitle
+    .card-subtitle
       left: auto;
       right: 0;
       font-size: 1em;
       text-align: right;
       margin-bottom: 1.4em;
 
-  &.z-radius.z-rich .s-head
+  &.z-radius.z-rich .card-head
     img,
-    .s-rich-img img,
-    img.s-rich-img
+    .card-rich-img img,
+    img.card-rich-img
       border-top-radius: 5px;
 
-  * + .s-rich-img
+  * + .card-rich-img
     border-top-radius: 0;
 
-  .s-head
+  .card-head
     padding: .8em 1.5em 1em;
 
-    .s-title
+    .card-title
       font-size: 1.8em;
       margin-bottom: 0;
 
-    .s-subtitle
+    .card-subtitle
       margin-top: -.8em;
       margin-bottom: 0;
       
-    .s-rich-img
+    .card-rich-img
       margin: .8em -1.5em .8em;
       text-align: center;
 
       img
         margin: 0;
 
-    img.s-rich-img
+    img.card-rich-img
       margin: .8em 0;
   
-  .s-rich-img + .s-head
+  .card-rich-img + .card-head
     padding-top: .4em;
 
-  .s-content
+  .card-content
     padding: .8em 1.5em;
     color: color['normal'];
+    line-height: 1.825;
 
-  * + .s-content
+  * + .card-content
     padding-top: 0;
 
-  .s-head + .s-content
+  .card-head + .card-content
     margin-top: -.8em;
 
-  .s-bar
-    left: 0;
-    bottom: 0;
+  .card-bar
     width: 100%;
-    height: 50px;
     padding: 0 1.5em;
     line-height: 50px;
-    position: absolute;
-    border-top: 1px solid color['gray'];
+    margin-bottom: -.8em;
+    border-top: 1px solid color['border-normal'];
+    
+    .btn
+      margin: 1em .5em 1em 0;

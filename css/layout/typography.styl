@@ -34,11 +34,7 @@ h6
   font-size: 1em;
   margin: 1.6em 0 1em 0;
 
-/*
- * Code From Entry CSS
- */
-
-.m-text-counter
+.text-counter
   counter-reset: titleh2 titleh3 titleh4 titleh5 titleh6;
 
   h1
@@ -86,7 +82,7 @@ p
   margin-bottom: 1.46em;
   letter-spacing: .2px;
 
-  &.m-text-author
+  &.text-author
     display: block;
     text-align: right;
     font-weight: 800;
@@ -94,7 +90,7 @@ p
     &:before
       content: '——' !important;
 
-.m-text-indent p:before
+.text-indent p:before
   content: '\3000\3000';
   display: inline;
 
@@ -151,7 +147,7 @@ hr
   display: block;
   border: 0 none;
   margin: 2em auto;
-  border-top: 2px solid color['gray'];
+  border-top: 2px solid color['border-normal'];
 
 // List
 
