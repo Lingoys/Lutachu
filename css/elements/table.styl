@@ -6,7 +6,7 @@
 // MIT License                                  ||
 // ===============================================
 
-.m-table
+.table
   width: 100%;
   font-size: .9em;
   margin-bottom: 1.5em;
@@ -22,7 +22,7 @@
         padding: .7rem;
         line-height: 1.6;
         vertical-align: top;
-        border-top: 1px solid color['light-gray'];
+        border-top: 1px solid color['border-light'];
 
         &[scope="row"]
           color: color['gray'];
@@ -34,15 +34,15 @@
         color: color['gray'];
         border-top: 0;
         vertical-align: bottom;
-        border-bottom: 1px solid color['light-gray'];
+        border-bottom: 1px solid color['border-light'];
 
   > tbody + tbody
     > tr:first-child
       > td
-        border-top: 2px solid color['grey'];
+        border-top: 2px solid color['border-normal'];
 
-  &.z-bordered
-    border: 1px solid color['light-gray'];
+  &.table-bordered
+    border: 1px solid color['border-light'];
 
     > thead,
     > tbody,
@@ -50,35 +50,36 @@
       > tr
         > th,
         > td
-          border-left: 1px solid color['light-gray'];
+          border-left: 1px solid color['border-light'];
 
         > th:first-child,
         > td:first-child
           border-left: 0;
 
-  &.z-striped
+  &.table-striped
     > tbody
       > tr:nth-child(odd)
         > th,
         > td
-          background-color: color['light-grey'];
+          background-color: color['background-table'];
 
-  &.z-hover
+  &.table-hover
     > tbody
       > tr:hover
         > th,
         > td
-          background-color: color['dark-grey'];
+          background-color: color['background-table-hover'];
 
-  &.z-center
+  &.table-center
     th,
     td
-      text-align center
+      text-align: center
 
   > thead,
   > tbody,
   > tfoot
-    > tr.z-active
+    > tr.table-active
       > th,
       > td
-        background-color background-th-mark
+        border-left-color: color['border-mark'] !important;
+        background-color: color['background-table-mark'] !important;
