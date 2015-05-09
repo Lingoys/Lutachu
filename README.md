@@ -1,5 +1,8 @@
-What's Lutachu?
+Lutachu
 ===
+[![Build Status](https://travis-ci.org/lingoys/Lutachu.svg?branch=master)](https://travis-ci.org/lingoys/Lutachu)
+
+## What's Lutachu?
 Lutachu is a front-end framework based on [Stylus](https://github.com/stylus/stylus). It can make you easier and faster to build a website.
 
 ## Building
@@ -11,7 +14,7 @@ git clone https://github.com/lingoys/Lutachu.git
 cd Lutachu
 npm install
 gulp
-```
+``
 
 ## Browser Support and Testing
 * Latest Stable: Firefox, Chrome, Safari
@@ -22,8 +25,6 @@ gulp
 Search for existing and closed issues, then if it's not addressed yet, [open a new issue](https://github.com/lingoys/lutachu/issues/new).
 
 ## License
-Thanks to projects for making this thing happen.
-
 This software is free to use under [the MIT License](https://github.com/lingoys/lutachu/blob/master/LICENSE).
 
-The documention is free to use under [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/) 
+The documentation is free to use under [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/) 
