@@ -13,7 +13,7 @@
 
 // fi-path = "//dn-staticfile.qbox.me/foundicons/3.0.0/"
 fi-path = "./fonts/"
-fi-prefix = "m-icon-"
+fi-prefix = "icon-"
 
 @font-face
   font-family: "foundation-icons";
@@ -342,5 +342,5 @@ fi-fonts = {
 }
 
 for i in fi-fonts  
-  .{fi-prefix}{i}
+  .{fi-prefix}{i}:before
     content: fi-fonts[i];
