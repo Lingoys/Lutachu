@@ -16,9 +16,9 @@ gulp
 ```
 
 ## Browser Support and Testing
-* Latest Stable: Firefox, Chrome, Safari
+* Latest Stable: Firefox, Chrome, Safari, Opera
 * IE 10+
-* Android 4.*
+* Android 4.*, 5.0
 
 ## Bugs and feature reporting
 Search for existing and closed issues, then if it's not addressed yet, [open a new issue](https://github.com/lingoys/lutachu/issues/new).
