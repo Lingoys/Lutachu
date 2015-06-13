@@ -1,7 +1,35 @@
-// ===============================================
-// Components / Nav.styl                        ||
-//                                              ||
-// =============================================||
-// Copyright 2015 @ Rakume<i@fake.moe>          ||
-// MIT License                                  ||
-// ===============================================
+// ============================================================================
+// Components / Nav.styl                                                     ||
+//                                                                           ||
+// ==========================================================================||
+// Copyright 2015 @ Rakume<i@fake.moe> & Awc Cho<orancho@outllok.com>        ||
+// MIT License                                                               ||
+// ============================================================================
+
+nav
+  background-color rgba(0, 0, 0, 0.4)
+  width 100%
+  top 0
+  z-index 1000
+  
+  a 
+    line-height 3rem
+    color: #fff
+    text-decoration none
+    
+  a.nav-band
+    font-weight bold
+    
+  .container
+    min-height 3rem
+    
+  ul.nav-group
+    margin 0 !important
+    li
+      list-style none
+      float left
+      margin 0
+      padding 0 20px
+      
+      &:hover
+        background-color rgba(0, 0, 0, 1)
