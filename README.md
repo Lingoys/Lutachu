@@ -14,7 +14,7 @@ git clone https://github.com/lingoys/Lutachu.git
 cd Lutachu
 npm install
 gulp
-``
+```
 
 ## Browser Support and Testing
 * Latest Stable: Firefox, Chrome, Safari
