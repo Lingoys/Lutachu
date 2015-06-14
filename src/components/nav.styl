@@ -2,34 +2,42 @@
 // Components / Nav.styl                                                     ||
 //                                                                           ||
 // ==========================================================================||
-// Copyright 2015 @ Rakume<i@fake.moe> & Awc Cho<orancho@outllok.com>        ||
+// Copyright 2015 @ Rakume<i@fake.moe> & Awc Cho<orancho@outlook.com>        ||
 // MIT License                                                               ||
 // ============================================================================
 
 nav
-  background-color rgba(0, 0, 0, 0.4)
-  width 100%
-  top 0
-  z-index 1000
-  
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, .4);
+
+  &.fixed
+    position: fixed;
+    top: 0;
+    left: 0;
+
   a 
-    line-height 3rem
-    color: #fff
-    text-decoration none
-    
+    line-height: 3rem;
+    color: #fff;
+    text-decoration: none;
+
   a.nav-band
-    font-weight bold
-    
+    font-weight: bold;
+
   .container
-    min-height 3rem
-    
+    min-height: 3rem;
+
   ul.nav-group
     margin 0 !important
+
     li
-      list-style none
-      float left
-      margin 0
-      padding 0 20px
-      
+      float: left;
+      margin: 0;
+      padding: 0 20px;
+      list-style: none;
+
       &:hover
-        background-color rgba(0, 0, 0, 1)
+        background-color: rgba(0, 0, 0, .2);
+
+      &.active
+        background-color: rgba(0, 0, 0, .6);
