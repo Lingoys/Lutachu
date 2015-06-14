@@ -22,36 +22,36 @@
 .grid-u
   @media mq-normal
     for n in 1..12
-      &.z-n{n}
+      &.u-n{n}
         width (n/12) * 100 + '%'
 
-      &.z-ml-n{n}
+      &.u-ml-n{n}
         margin-left (n/12) * 100 + '%'
   
       // AVG Grid
-      &.z-avg-n{n}
+      &.u-avg-n{n}
         width (1/n) * 100 + '%'
   
   @media mq-tablet
     for n in 1..12
-      &.z-t{n}
+      &.u-t{n}
         width (n/12) * 100 + '%'
 
-      &.z-ml-t{n}
+      &.u-ml-t{n}
         margin-left (n/12) * 100 + '%'
   
       // AVG Grid
-      &.z-avg-t{n}
+      &.u-avg-t{n}
         width (1/n) * 100 + '%'
 
   @media mq-mobile
     for n in 1..12
-      &.z-m{n}
+      &.u-m{n}
         width (n/12) * 100 + '%'
 
-      &.z-ml-m{n}
+      &.u-ml-m{n}
         margin-left (n/12) * 100 + '%'
   
       // AVG Grid
-      &.z-avg-m{n}
+      &.u-avg-m{n}
         width (1/n) * 100 + '%'
