@@ -7,37 +7,38 @@
 // ============================================================================
 
 nav
-  width: 100%;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, .4);
+  width: 100%
+  z-index: 1000
+  background-color: rgba(0, 0, 0, .4)
 
   &.fixed
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed
+    top: 0
+    left: 0
 
   a 
-    line-height: 3rem;
-    color: #fff;
-    text-decoration: none;
+    line-height: 3rem
+    color: #fff
+    text-decoration: none
 
   a.nav-band
-    font-weight: bold;
+    font-weight: 600
 
   .container
-    min-height: 3rem;
+    min-height: 3rem
 
   ul.nav-group
-    margin 0 !important
+    margin: 0 !important
 
     li
-      float: left;
-      margin: 0;
-      padding: 0 20px;
-      list-style: none;
+      float: left
+      margin: 0
+      padding: 0 20px
+      list-style: none
 
       &:hover
-        background-color: rgba(0, 0, 0, .2);
+        background-color: rgba(0, 0, 0, .2)
 
-      &.active
-        background-color: rgba(0, 0, 0, .6);
+      &.active,
+      &:active
+        background-color: rgba(0, 0, 0, .6)
