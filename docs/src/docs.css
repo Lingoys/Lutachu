@@ -13,8 +13,18 @@ body {
   max-width: 90%;
 }
 
+#nav {
+  height: 60px;
+  line-height: 60px;
+  background-color: #00A397;
+}
+
 #nav a {
   color: #fff;
+}
+
+#nav a.nav-band {
+  font-size: 120%;
 }
 
 #content {
@@ -32,6 +42,7 @@ body {
 }
 
 #footer p {
+  font-size: 85%;
   margin-bottom: 0;
 }
 
