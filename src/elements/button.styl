@@ -12,27 +12,27 @@
 //            t: text color
 
 BtnColor(c, t)
-  color: t;
-  background-color: c;
+  color: t
+  background-color: c
 
   &.hover,
   &:hover
-    background-color: lighten(c, 6);
+    background-color: lighten(c, 6)
 
   &.active,
   &:active
-    background-color: darken(c, 4);
+    background-color: darken(c, 4)
 
   &.disabled,
   &[disabled]
     &,
     &:hover,
     &:active
-      border: 0;
-      opacity: .6;
-      background: c;
-      box-shadow: none;
-      cursor: not-allowed;
+      border: 0
+      opacity: .6
+      background: c
+      box-shadow: none
+      cursor: not-allowed
 
 // Create A Button
 // ==============================================
@@ -40,81 +40,81 @@ BtnColor(c, t)
 //            t: text color
 
 Btn(c, t)
-  border: 0;
-  outline: 0;
-  margin: .225em;
-  cursor: pointer;
-  border-radius: 3px;
-  text-align: center;
-  line-height: 1.5em;
-  padding: .35em 1.2em;
-  text-decoration: none;
-  display: inline-block;
-  vertical-align: middle;
-  box-shadow: 0 0 1px rgba(0, 0, 0, .4);
-  transition: background .4s ease, box-shadow .2s ease;
-  BtnColor: c t;
+  border: 0
+  outline: 0
+  margin: .225em
+  cursor: pointer
+  border-radius: 3px
+  text-align: center
+  line-height: 1.5em
+  padding: .35em 1.2em
+  text-decoration: none
+  display: inline-block
+  vertical-align: middle
+  box-shadow: 0 0 1px rgba(0, 0, 0, .4)
+  transition: background .4s ease, box-shadow .2s ease
+  BtnColor: c t
 
   [class*=icon-]:before
-    color: t;
-    transform: scale(1.2);
+    color: t
+    transform: scale(1.2)
 
   &:hover
-    box-shadow: 0 0px 3px rgba(0, 0, 0, .4);
+    box-shadow: 0 0px 3px rgba(0, 0, 0, .4)
 
   &.active,
   &:active
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .4)
 
 .btn
-  Btn: #fff color['normal'];
+  Btn: #fff color-normal
 
   &.btn-primary
-    BtnColor: color['primary'] #fff;
+    BtnColor: color-primary #fff
 
   &.btn-secondary
-    BtnColor: color['secondary'] #fff;
+    BtnColor: color-secondary #fff
 
   &.btn-success
-    BtnColor: color['success'] #fff;
+    BtnColor: color-success #fff
 
   &.btn-error
-    BtnColor: color['error'] #fff;
+    BtnColor: color-error #fff
 
   &.btn-warning
-    BtnColor: color['warning'] #fff;
+    BtnColor: color-warning #fff
 
   &.btn-ghost
-    color: #fff;
-    box-shadow: none;
-    border: 1px solid;
-    background-color: transparent;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, .6);
-    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, .6);
+    color: #fff
+    box-shadow: none
+    border: 1px solid
+    background-color: transparent
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .6)
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, .6)
 
     &.hover,
     &:hover
-      color: #fff;
-      border: 1px solid;
-      background-color: rgba(0, 0, 0, .3);
+      color: #fff
+      border: 1px solid
+      background-color: rgba(0, 0, 0, .3)
 
     &.active,
     &:active
-      color: #fff;
-      border: 1px solid;
-      background-color: rgba(0, 0, 0, .6);
+      color: #fff
+      border: 1px solid
+      background-color: rgba(0, 0, 0, .6)
 
     &:visited
-      color: #fff;
+      color: #fff
 
   &.btn-xl
-    font-size: 150%;
+    font-size: 150%
 
   &.btn-lg
-    font-size: 125%;
+    font-size: 125%
 
   &.btn-sm
-    font-size: 75%;
+    font-size: 75%
 
   &.btn-xs
-    font-size: 50%;
+    font-size: 50%

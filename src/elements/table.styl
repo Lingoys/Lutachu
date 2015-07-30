@@ -7,11 +7,11 @@
 // ===============================================
 
 .table
-  width: 100%;
-  font-size: .9em;
-  margin-bottom: 1.5em;
-  border-spacing: 0;
-  border-collapse: separate;
+  width: 100%
+  font-size: .9em
+  margin-bottom: 1.5em
+  border-spacing: 0
+  border-collapse: separate
 
   > thead,
   > tbody,
@@ -19,30 +19,30 @@
     > tr
       > th,
       > td
-        padding: .7rem;
-        line-height: 1.6;
-        vertical-align: top;
-        border-top: 1px solid color['border-light'];
+        padding: .7rem
+        line-height: 1.6
+        vertical-align: top
+        border-top: 1px solid color-border-light
 
         &[scope="row"]
-          color: color['gray'];
+          color: color-gray
 
   > thead
     > tr
       > th,
       > td
-        color: color['gray'];
-        border-top: 0;
-        vertical-align: bottom;
-        border-bottom: 1px solid color['border-light'];
+        color: color-gray
+        border-top: 0
+        vertical-align: bottom
+        border-bottom: 1px solid color-border-light
 
   > tbody + tbody
     > tr:first-child
       > td
-        border-top: 2px solid color['border-normal'];
+        border-top: 2px solid color-border-normal
 
   &.table-bordered
-    border: 1px solid color['border-light'];
+    border: 1px solid color-border-light
 
     > thead,
     > tbody,
@@ -50,25 +50,25 @@
       > tr
         > th,
         > td
-          border-left: 1px solid color['border-light'];
+          border-left: 1px solid color-border-light
 
         > th:first-child,
         > td:first-child
-          border-left: 0;
+          border-left: 0
 
   &.table-striped
     > tbody
       > tr:nth-child(odd)
         > th,
         > td
-          background-color: color['background-table'];
+          background-color: color-background-table
 
   &.table-hover
     > tbody
       > tr:hover
         > th,
         > td
-          background-color: color['background-table-hover'];
+          background-color: color-background-table-hover
 
   &.table-center
     th,
@@ -81,5 +81,5 @@
     > tr.table-active
       > th,
       > td
-        border-left-color: color['border-mark'] !important;
-        background-color: color['background-table-mark'] !important;
+        border-left-color: color-border-mark !important
+        background-color: color-background-table-mark !important
