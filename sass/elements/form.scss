@@ -28,7 +28,7 @@ textarea {
   max-width: 100%;
   background: #fff;
   padding: .5em .8em;
-  border-radius: 2px;
+  @include border-radius(2px);
   margin-bottom: .75em;
   border: 1px solid $color-border-normal;
 
@@ -77,7 +77,7 @@ label {
   option,
   button,
   a.btn {
-    border-radius: 5px;
+    @include border-radius(5px);
   }
 }
 
@@ -89,7 +89,7 @@ label {
   input {
     margin: 0;
     border-bottom: 0;
-    border-radius: 2px;
+    @include border-radius(2px);
 
     &:active,
     &:focus {
@@ -111,11 +111,11 @@ label {
 
   &.form-radius {
     &:first-child {
-      border-top-radius: 5px;
+      @include border-top-radius(5px);
     }
 
     &:last-child {
-      border-bottom-radius: 5px;
+      @include border-bottom-radius(5px);
     }
   }
 }
@@ -124,11 +124,11 @@ label {
 .form-radius .form-group {
   input {
     &:first-child {
-      border-top-radius: 5px;
+      @include border-top-radius(5px);
     }
 
     &:last-child {
-      border-bottom-radius: 5px;
+      @include border-bottom-radius(5px);
     }
   }
 }

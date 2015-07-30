@@ -17,7 +17,7 @@ code {
   font-size: .8em;
   margin: 0 .3em;
   padding: .1em .5em;
-  border-radius: 3px;
+  @include border-radius(3px);
   word-break: break-all;
   background: $color-background-code;
   border: 1px solid $color-border-normal;
@@ -32,7 +32,7 @@ pre {
   padding-left: 1.3rem;
   color: $color-dark-grey;
   border-left: 2px solid $color-border-normal;
-  transition: .2s ease border;
+  @include transition(.2s ease border);
 
   &:hover {
     border-left-color: $color-border-focus;
