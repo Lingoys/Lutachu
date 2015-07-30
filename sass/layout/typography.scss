@@ -53,53 +53,53 @@ h6 {
 }
 
 .text-counter {
-  counter-reset: titleh2 titleh3 titleh4 titleh5 titleh6;
+  counter-reset: ch2 ch3 ch4 ch5 ch6;
 
   h1 {
     text-align: center;
   }
 
   h2 {
-    counter-reset: titleh3 titleh4 titleh5 titleh6;
+    counter-reset: ch3 ch4 ch5 ch6;
 
     &:before {
-      content: counter(titleh2) '\3000';
-      content: counter(titleh2, cjk-ideographic) '、';
-      counter-increment: titleh2;
+      content: counter(ch2) '\3000';
+      content: counter(ch2, cjk-ideographic) '、';
+      counter-increment: ch2;
     }
   }
 
   h3 {
-      counter-reset: titleh4 titleh5 titleh6;
+      counter-reset: ch4 ch5 ch6;
 
       &:before {
-        content: counter(titleh2) '.' counter(titleh3) '\3000';
-        counter-increment: titleh3;
+        content: counter(ch2) '.' counter(ch3) '\3000';
+        counter-increment: ch3;
       }
     }
 
   h4 {
-    counter-reset: titleh5 titleh6;
+    counter-reset: ch5 ch6;
 
     &:before {
-      content: counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '\3000';
-      counter-increment: titleh4;
+      content: counter(ch2) '.' counter(ch3) '.' counter(ch4) '\3000';
+      counter-increment: ch4;
     }
   }
 
   h5 {
-    counter-reset: titleh6;
+    counter-reset: ch6;
 
     &:before {
-      content: counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '.' counter(titleh5) '\3000';
-      counter-increment: titleh5;
+      content: counter(ch2) '.' counter(ch3) '.' counter(ch4) '.' counter(ch5) '\3000';
+      counter-increment: ch5;
     }
   }
 
   h6 {
     &:before {
-      content: counter(titleh2) '.' counter(titleh3) '.' counter(titleh4) '.' counter(titleh5) '.' counter(titleh6) '\3000';
-      counter-increment: titleh6;
+      content: counter(ch2) '.' counter(ch3) '.' counter(ch4) '.' counter(ch5) '.' counter(ch6) '\3000';
+      counter-increment: ch6;
     }
   }
 
