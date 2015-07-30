@@ -4,7 +4,7 @@ var gulp   = require('gulp'),
     stylus = require('gulp-stylus'),
     rename = require('gulp-rename'),
     minifycss    = require('gulp-minify-css'),
-    livereload   = require('gulp-lifereload'),
+    livereload   = require('gulp-livereload'),
     autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('clean', function() {
@@ -23,7 +23,7 @@ gulp.task('stylus', function() {
     .pipe(livereload());
 });
 
-gulp.taks('sass', function() {
+gulp.task('scss', function() {
   return gulp.src('sass/lutachu.scss')
     .pipe(sass())
     .pipe(gulp.dest('dist'))
@@ -45,7 +45,7 @@ gulp.task('default', ['clean'], function() {
 
 gulp.task('sass', ['clean'], function() {
   gulp.start('scss', 'fonts');
-}
+});
 
 gulp.task('watch', function() {
   gulp.watch('src/', ['stylus']);
