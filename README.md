@@ -24,6 +24,6 @@ gulp
 Search for existing and closed issues, then if it's not addressed yet, [open a new issue](https://github.com/lingoys/lutachu/issues/new).
 
 ## License
-This software is free to use under [the MIT License](https://github.com/lingoys/lutachu/blob/master/LICENSE).
+This software is free to use under [the MIT License](https://github.com/lingoys/lutachu/blob/master/LICENSE.md).
 
 The documentation is free to use under [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/) 
