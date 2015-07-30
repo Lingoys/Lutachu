@@ -10,30 +10,6 @@
 // CSS 3
 // -----------------------------------------------------------------------------
 
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-  }
-}
-@-o-keyframes spin {
-  0% {
-    -o-transform: rotate(0deg);
-  }
-  100% {
-    -o-transform: rotate(359deg);
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -43,55 +19,25 @@
   }
 }
 
-@mixin vendor($prop, $args...) {
-  -webkit-#{$prop}: $args;
-  -moz-#{$prop}: $args;
-  #{$prop}: $args;
-}
-
 // Border Radius
-@mixin border-radius($args...) {
-  @include vendor('border-radius', $args);
-}
-
 @mixin border-top-radius($n) {
-  @include border-radius($n $n 0 0);
+  border-radius: $n $n 0 0;
 }
 
 @mixin border-right-radius($n) {
-  @include border-radius(0 $n $n 0);
+  border-radius: 0 $n $n 0;
 }
 
 @mixin border-bottom-radius($n) {
-  @include border-radius(0 0 $n $n);
+  border-radius: 0 0 $n $n;
 }
 
 @mixin border-left-radius($n) {
-  @include border-radius(0 $n $n 0);
-}
-
-// Transform
-@mixin transform($args...) {
-  @include vendor('transform', $args);
-}
-
-// Animation
-@mixin animation($args...) {
-  @include vendor('animation', $args);
-}
-
-// Transition
-@mixin transition($args...) {
-  @include vendor('transition', $args);
-}
-
-// Box-Shadow
-@mixin box-shadow($args...) {
-  @include vendor('box-shadow', $args);
+  border-radius: 0 $n $n 0;
 }
 
 @mixin spin($v) {
-  @include animation(spin $v infinite linear);
+  animation: spin $v infinite linear;
 }
 
 // Float

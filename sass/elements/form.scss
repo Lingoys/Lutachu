@@ -29,7 +29,7 @@ textarea {
   max-width: 100%;
   background: #fff;
   padding: .5em .8em;
-  @include border-radius(2px);
+  border-radius: 3px;
   margin-bottom: .75em;
   border: 1px solid $color-border-normal;
 
@@ -78,7 +78,7 @@ label {
   option,
   button,
   a.btn {
-    @include border-radius(5px);
+    border-radius: 5px;
   }
 }
 
@@ -90,7 +90,7 @@ label {
   input {
     margin: 0;
     border-bottom: 0;
-    @include border-radius(2px);
+    border-radius: 3px;
 
     &:active,
     &:focus {

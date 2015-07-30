@@ -93,6 +93,6 @@
   }
 }
 
-.z-radius {
-  @include border-radius(5px);
+.radius {
+  border-radius: 5px;
 }

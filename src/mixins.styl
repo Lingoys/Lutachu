@@ -16,15 +16,7 @@
   100%
     transform rotate(359deg)
 
-vendor(prop, args)
-  -webkit-{prop} args
-  -moz-{prop} args
-  {prop} args
-
 // Border Radius
-
-border-radius()
-  vendor('border-radius', arguments)
 
 border-top-radius(n)
   border-radius n n 0 0
@@ -37,22 +29,6 @@ border-bottom-radius(n)
 
 border-left-radius(n)
   border-radius n 0 0 n
-
-// Transform
-transform()
-  vendor('transform', arguments)
-
-// Animation
-animation()
-  vendor('animation', arguments)
-
-// Transition
-transition()
-  vendor('transition', arguments)
-
-// Box-Shadow
-box-shadow()
-  vendor('box-shadow', arguments)
 
 spin(v)
   animation spin v infinite linear
