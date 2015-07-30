@@ -9,7 +9,7 @@
 .acommets {
   position: relative;
 
-  @media #{mq-tablet} {
+  @media #{$mq-tablet} {
     width: 80%;
   }
 }

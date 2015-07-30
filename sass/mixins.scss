@@ -9,12 +9,36 @@
 // CSS 3
 // -----------------------------------------------------------------------------
 
-@keyframes spin {
+@-moz-keyframes spin {
   0% {
-    @include transform(rotate(0deg));
+    -moz-transform: rotate(0deg);
   }
   100% {
-    @include transform(rotate(359deg));
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
   }
 }
 

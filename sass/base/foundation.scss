@@ -26,7 +26,7 @@ $fi-prefix: "icon-";
   font-style: normal;
 }
 
-[class*=#{fi-prefix}] {
+[class*=#{$fi-prefix}] {
   display: inline-block;
 
   &:before {

@@ -318,7 +318,7 @@ figure {
   }
 }
 
-@media #{mq-mobile} {
+@media #{$mq-mobile} {
   figure {
     &.left,
     &.right {

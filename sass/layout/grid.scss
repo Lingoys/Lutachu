@@ -22,7 +22,7 @@
 }
 
 .grid-u {
-  @media #{mq-normal} {
+  @media #{$mq-normal} {
     @for $n from 1 through 12 {
       &.u-n#{$n} {
         width: ($n/12) * 100 + '%';
@@ -39,7 +39,7 @@
     }
   }
 
-  @media #{mq-tablet} {
+  @media #{$mq-tablet} {
     @for $n from 1 through 12 {
       &.u-t#{$n} {
         width: ($n/12) * 100 + '%';
@@ -56,7 +56,7 @@
     }
   }
 
-  @media #{mq-mobile} {
+  @media #{$mq-mobile} {
     @for $n from 1 through 12 {
       &.u-m#{$n} {
         width: ($n/12) * 100 + '%';
