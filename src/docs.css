@@ -1,0 +1,51 @@
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  background-color: #FAFAFA;
+}
+
+.container {
+  max-width: 90%;
+}
+
+#nav {
+  height: 60px;
+  line-height: 60px;
+  background-color: #00A397;
+}
+
+#nav a {
+  color: #fff;
+}
+
+#nav a.nav-band {
+  font-size: 120%;
+}
+
+#content {
+  padding: 2em 0 4em;
+}
+
+#footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  padding: 1.5em 0;
+  background: #3c3c3c;
+  position: absolute;
+}
+
+#footer p {
+  font-size: 85%;
+  margin-bottom: 0;
+}
+
+#footer a {
+  color: #fff;
+}
