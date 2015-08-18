@@ -24,7 +24,6 @@
     color: #fff;
 
     text-decoration: none;
-    transition: .3s ease;
   }
 
   a.nav-band {
@@ -42,6 +41,7 @@
       float: left;
       margin: 0;
       list-style: none;
+      transition: .3s ease;
 
       a {
         display: block;
