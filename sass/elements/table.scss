@@ -14,12 +14,12 @@
   border-spacing: 0;
   border-collapse: separate;
 
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
+  thead,
+  tbody,
+  tfoot {
+    tr {
+      th,
+      td {
         padding: .7rem;
         line-height: 1.6;
         vertical-align: top;
@@ -32,10 +32,10 @@
     }
   }
 
-  > thead {
-    > tr {
-      > th,
-      > td {
+  thead {
+    tr {
+      th,
+      td {
         color: $color-grey;
         border-top: 0;
         vertical-align: bottom;
@@ -44,9 +44,9 @@
     }
   }
 
-  > tbody + tbody {
-    > tr:first-child {
-      > td {
+  tbody + tbody {
+    tr:first-child {
+      td {
         border-top: 2px solid $color-border-normal;
       }
     }
@@ -55,17 +55,17 @@
   &.table-bordered {
     border: 1px solid $color-border-light;
 
-    > thead,
-    > tbody,
-    > tfoot {
-      > tr {
-        > th,
-        > td {
+    thead,
+    tbody,
+    tfoot {
+      tr {
+        th,
+        td {
           border-left: 1px solid $color-border-light;
         }
 
-        > th:first-child,
-        > td:first-child {
+        th:first-child,
+        td:first-child {
           border-left: 0;
         }
       }
@@ -73,10 +73,10 @@
   }
 
   &.table-striped {
-    > tbody {
-      > tr:nth-child(odd) {
-        > th,
-        > td {
+    tbody {
+      tr:nth-child(odd) {
+        th,
+        td {
           background-color: $color-background-table;
         }
       }
@@ -84,10 +84,10 @@
   }
 
   &.table-hover {
-    > tbody {
-      > tr:hover {
-        > th,
-        > td {
+    tbody {
+      tr:hover {
+        th,
+        td {
           background-color: $color-background-table-hover;
         }
       }
@@ -101,12 +101,12 @@
     }
   }
 
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr.table-active {
-      > th,
-      > td {
+  thead,
+  tbody,
+  tfoot {
+    tr.table-active {
+      th,
+      td {
         border-left-color: $color-border-mark !important;
         background-color: $color-background-table-mark !important;
       }

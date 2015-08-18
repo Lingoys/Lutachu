@@ -8,7 +8,7 @@
 // MIT License                                   ||
 // ================================================
 
-nav {
+.nav {
   width: 100%;
   z-index: 1000;
   background-color: rgba(0, 0, 0, .4);
@@ -22,7 +22,9 @@ nav {
   a {
     line-height: 3rem;
     color: #fff;
+
     text-decoration: none;
+    transition: .3s ease;
   }
 
   a.nav-band {
