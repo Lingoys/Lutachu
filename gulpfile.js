@@ -48,11 +48,11 @@ gulp.task('sass', ['clean'], function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/', ['stylus']);
+  gulp.watch('src/**/*.styl', ['stylus']);
   livereload.listen();
 });
 
 gulp.task('watch-sass', function() {
-  gulp.watch('sass/', ['scss']);
+  gulp.watch('sass/**/*.scss', ['scss']);
   livereload.listen();
 });
