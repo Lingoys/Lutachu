@@ -3,7 +3,7 @@
   Inlined to avoid the additional HTTP request:
   http://www.phpied.com/delay-loading-your-print-css/
 ========================================================================== */
-@media print 
+@media print
   *,
   *:before,
   *:after
@@ -13,13 +13,13 @@
     text-shadow: none !important;
 
   a,
-  a:visited 
+  a:visited
     text-decoration: underline;
 
-  a[href]:after 
+  a[href]:after
     content: " (" attr(href) ")";
 
-  abbr[title]:after 
+  abbr[title]:after
     content: " (" attr(title) ")";
 
   /*
@@ -27,37 +27,37 @@
    * or use the `javascript:` pseudo protocol
    */
   a[href^="#"]:after,
-  a[href^="javascript:"]:after 
+  a[href^="javascript:"]:after
     content: "";
 
   pre,
-  blockquote 
+  blockquote
     page-break-inside: avoid;
 
   /*
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-  thead 
+  thead
     display: table-header-group;
 
   tr,
-  img 
+  img
     page-break-inside: avoid;
 
-  img 
+  img
     max-width: 100% !important;
 
   p,
   h2,
-  h3 
+  h3
     orphans: 3;
     widows: 3;
 
   h2,
-  h3 
+  h3
     page-break-after: avoid;
-  
+
   .commet
     position: static;
     margin-right: 0;
