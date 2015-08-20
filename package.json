@@ -1,5 +1,6 @@
 {
-  "name": "Lutachu",
+  "name": "lutachu",
+  "title": "Lutachu Framework",
   "author": "Lingoys!Art",
   "homepage": "http://github.com/lingoys/lutachu",
   "description": "A CSS Framework based on Stylus.",
@@ -7,7 +8,8 @@
   "keywords": [
     "CSS",
     "Framework",
-    "Stylus"
+    "Stylus",
+    "Sass"
   ],
   "repository": {
     "type": "git",
@@ -16,6 +18,7 @@
   "bugs": {
     "url": "https://github.com/lingoys/Lutachu/issues"
   },
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-clean": "^0.3.1",
@@ -25,9 +28,5 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-stylus": "^2.0.1"
-  },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/lingoys/Lutachu/blob/master/LICENSE"
   }
 }
