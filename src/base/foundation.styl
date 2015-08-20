@@ -11,6 +11,8 @@
  * MIT License
  */
 
+@import "../mixins/common"
+
 // fi-path = "//dn-staticfile.qbox.me/foundicons/3.0.0/"
 fi-path = "./fonts/"
 fi-prefix = "icon-"
@@ -343,4 +345,4 @@ fi-fonts = {
 
 for i in fi-fonts
   .{fi-prefix}{i}:before
-    content: fi-fonts[i];
+    content: fi-fonts[i]

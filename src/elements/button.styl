@@ -6,65 +6,8 @@
 // MIT License                                  ||
 // ===============================================
 
-// Let's Change Button's Color
-// ==============================================
-// Variables: c: background color
-//            t: text color
-
-BtnColor(c, t)
-  color: t
-  background-color: c
-
-  &.hover,
-  &:hover
-    background-color: lighten(c, 6)
-
-  &.active,
-  &:active
-    background-color: darken(c, 4)
-
-  &.disabled,
-  &[disabled]
-    &,
-    &:hover,
-    &:active
-      border: 0
-      opacity: .6
-      background: c
-      box-shadow: none
-      cursor: not-allowed
-
-// Create A Button
-// ==============================================
-// Variables: c: background color
-//            t: text color
-
-Btn(c, t)
-  border: 0
-  outline: 0
-  margin: .225em
-  cursor: pointer
-  border-radius: 3px
-  text-align: center
-  line-height: 1.5em
-  padding: .35em 1.2em
-  text-decoration: none
-  display: inline-block
-  vertical-align: middle
-  box-shadow: 0 0 1px rgba(0, 0, 0, .4)
-  transition: background .4s ease, box-shadow .2s ease
-  BtnColor: c t
-
-  [class*=icon-]:before
-    color: t
-    transform: scale(1.2)
-
-  &:hover
-    box-shadow: 0 0px 3px rgba(0, 0, 0, .4)
-
-  &.active,
-  &:active
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .4)
+@import "../variables"
+@import "../mixins/button"
 
 .btn
   Btn: #fff color-normal
