@@ -6,11 +6,12 @@
 // MIT License                                  ||
 // ===============================================
 
-// Button Color
-// ==============================================
-// Variables: c: background color
-//            t: text color
-
+/**
+ * Button color
+ *
+ * @param background color
+ * @param text color
+ */
 BtnColor(c, t)
   color: t
   background-color: c
@@ -34,25 +35,31 @@ BtnColor(c, t)
       box-shadow: none
       cursor: not-allowed
 
-// Create A Button
-// ==============================================
-// Variables: c: background color
-//            t: text color
-
+/**
+ * Create a button
+ *
+ * @param c background color
+ * @param t text color
+ */
 Btn(c, t)
   border: 0
   outline: 0
+
   margin: .225em
   cursor: pointer
   border-radius: 3px
+
   text-align: center
   line-height: 1.5em
   padding: .35em 1.2em
+
   text-decoration: none
   display: inline-block
   vertical-align: middle
+
   box-shadow: 0 0 1px rgba(0, 0, 0, .4)
   transition: background .4s ease, box-shadow .2s ease
+
   BtnColor: c t
 
   [class*=icon-]:before
