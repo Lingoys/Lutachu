@@ -24,14 +24,24 @@ h3,
 h4,
 h5,
 h6
-  font-weight: 100
   line-height: 1.625
 
   margin-top: 1.2em
   margin-bottom: .6em
+  font-weight: normal
 
   color: color-normal
   font-family: font-family-sans-serif
+
+  + *,
+  + p
+    margin-top: 0
+
+  + hr
+    width: 100%
+
+    border-top-width: 1px
+    margin-top: 0
 
 h1
   font-size: 2em
@@ -48,8 +58,9 @@ h4
 h5,
 h6
   font-size: 1em
+  font-weight: bold
 
-.text-counter
+.text-counter:lang(zh)
   counter-reset: ch2 ch3 ch4 ch5 ch6
 
   h1
@@ -58,7 +69,7 @@ h6
   h2
     counter-reset: ch3 ch4 ch5 ch6
 
-    &:before
+    &:::before
       content: counter(ch2) '\3000'
       content: counter(ch2, cjk-ideographic) '、'
       counter-increment: ch2
@@ -66,26 +77,26 @@ h6
   h3
       counter-reset: ch4 ch5 ch6
 
-      &:before
+      &::before
         content: counter(ch2) '.' counter(ch3) '\3000'
         counter-increment: ch3
 
   h4
     counter-reset: ch5 ch6
 
-    &:before
+    &::before
       content: counter(ch2) '.' counter(ch3) '.' counter(ch4) '\3000'
       counter-increment: ch4
 
   h5
     counter-reset: ch6
 
-    &:before
+    &::before
       content: counter(ch2) '.' counter(ch3) '.' counter(ch4) '.' counter(ch5) '\3000'
       counter-increment: ch5
 
   h6
-    &:before
+    &::before
       content: counter(ch2) '.' counter(ch3) '.' counter(ch4) '.' counter(ch5) '.' counter(ch6) '\3000'
       counter-increment: ch6
 
@@ -109,10 +120,10 @@ p
     text-align: right
     font-weight: 800
 
-    &:before
+    &::before
       content: '——' !important
 
-.text-indent p:before
+.text-indent p::before
   content: '\3000\3000'
   display: inline
 
@@ -151,13 +162,8 @@ em
   font-style: inherit
   font-weight: inherit
   text-decoration: inherit
-  -webkit-text-emphasis: filled circle
-  -moz-text-emphasis: filled circle
-  -ms-text-emphasis: filled circle
+
   text-emphasis: filled circle
-  -webkit-text-emphasis-position: under
-  -moz-text-emphasis-position: under
-  -ms-text-emphasis-position: under
   text-emphasis-position: under
 
 i
@@ -222,8 +228,17 @@ ol li
   p
     margin: .4em 0 .6em
 
-    &:before
+    &::before
       content: none
+
+/*
+ * Quotes
+ */
+q, q:lang(en), q:lang(zh-CN)
+  quote: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019"
+
+q:lang(zh)
+  quote: "\300c" "\300d" "\300e" "\300f" "\300c" "\300d" "\300e" "\300f" "\300c" "\300d" "\300e" "\300f"
 
 // DT
 
@@ -250,9 +265,12 @@ dd + dt
 kbd
   color: #fff
   font-size: 90%
+
   padding: 2px 4px
   border-radius: 3px
+
   background-color: #333
+
   font-family: font-family-monospace
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25)
 
@@ -269,10 +287,12 @@ figure
     width: 50%
 
   figcaption:after
-    content: ''
+    content: ""
     width: 15%
+
     display: block
     margin: 1em auto .2em
+
     color: color-dark-grey
     border-bottom: 1px solid color-border-normal
 
