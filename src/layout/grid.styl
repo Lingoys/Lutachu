@@ -6,8 +6,9 @@
 // MIT License                                  ||
 // ===============================================
 
-@import "../variables"
-@import "../mixins/common"
+@require "../variables"
+@require "../mixins/common"
+@require "../mixins/grid"
 
 .grid
   center()
@@ -17,44 +18,24 @@
   margin-left: -1em
   margin-right: -1em
 
-[class=grid-u]
+[class=u-]
   float: left
   padding: 0 1em
   display: inline
 
-.grid-u
-  @media mq-normal
-    for n in 1..12
-      &.u-n{n}
-        width: (n/12) * 100 + '%'
+make-grid()
 
-      &.u-ml-n{n}
-        margin-left: (n/12) * 100 + '%'
+@media mq-mobile
+  make-grid-normal(12, u-mobile)
+  make-grid-offset(12, u-offset-mobile)
+  make-grid-avg(9, u-avg-mobile)
 
-      // AVG Grid
-      &.u-avg-n{n}
-        width: (1/n) * 100 + '%'
+@media mq-tablet
+  make-grid-normal(12, u-tablet)
+  make-grid-offset(12, u-offset-tablet)
+  make-grid-avg(9, u-avg-tablet)
 
-  @media mq-tablet
-    for n in 1..12
-      &.u-t{n}
-        width: (n/12) * 100 + '%'
-
-      &.u-ml-t{n}
-        margin-left: (n/12) * 100 + '%'
-
-      // AVG Grid
-      &.u-avg-t{n}
-        width: (1/n) * 100 + '%'
-
-  @media mq-mobile
-    for n in 1..12
-      &.u-m{n}
-        width: (n/12) * 100 + '%'
-
-      &.u-ml-m{n}
-        margin-left: (n/12) * 100 + '%'
-
-      // AVG Grid
-      &.u-avg-m{n}
-        width: (1/n) * 100 + '%'
+@media mq-normal
+  make-grid-normal(12, u-normal)
+  make-grid-offset(12, u-offset-normal)
+  make-grid-avg(9, u-avg-normal)
