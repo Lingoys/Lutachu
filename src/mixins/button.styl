@@ -12,7 +12,7 @@
  * @param background color
  * @param text color
  */
-BtnColor(c, t)
+btnColor(c, t)
   color: t
   background-color: c
 
@@ -41,7 +41,7 @@ BtnColor(c, t)
  * @param c background color
  * @param t text color
  */
-Btn(c, t)
+makeBtn(c, t)
   border: 0
   outline: 0
 
@@ -60,7 +60,7 @@ Btn(c, t)
   box-shadow: 0 0 1px rgba(0, 0, 0, .4)
   transition: background .4s ease, box-shadow .2s ease
 
-  BtnColor: c t
+  btnColor: c t
 
   [class*=icon-]:before
     color: t
