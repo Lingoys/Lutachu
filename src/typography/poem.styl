@@ -11,7 +11,7 @@
 // Horizontal Poem
 // ==============================================
 
-.poem-hc
+.poem-horizontal
   text-align: center
   margin: 2em 0
 
@@ -32,15 +32,16 @@
 // Vertical Poem
 // ==============================================
 
-.poem-lr,
-.poem-rl
+.poem-vertical-left,
+.poem-vertical-right
   display: block
   white-space: pre-line
   margin: 2em auto
   line-height: 1.4em
   letter-spacing: 3px
-  writing-mode: vertical-rl
+
   -webkit-writing-mode: vertical-rl
+          writing-mode: vertical-rl
 
   h1,
   h2,
@@ -60,6 +61,9 @@
     .poem-author
       font-size: 60%
 
+  q
+    quote: "\300c" "\300d" "\300e" "\300f" "\300c" "\300d" "\300e" "\300f" "\300c" "\300d" "\300e" "\300f"
+
   p
     margin: 0 -.3em
     text-align: left
@@ -72,6 +76,6 @@
     &:before
       content: none
 
-.poem-lr
+.poem-vertical-left
   writing-mode: vertical-lr
   -webkit-writing-mode: vertical-lr

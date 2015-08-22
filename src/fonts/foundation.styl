@@ -11,7 +11,12 @@
  * MIT License
  */
 
-@require "../mixins/common"
+@keyframes spin
+  0%
+    transform rotate(0deg)
+
+  100%
+    transform rotate(360deg)
 
 // fi-path = "//dn-staticfile.qbox.me/foundicons/3.0.0/"
 fi-path = "./fonts/"
@@ -54,7 +59,7 @@ fi-prefix = "icon-"
 
 // Spin
 .{fi-prefix}spin
-  spin 2s
+  animation: spin 2s infinite linear
 
 // Font
 fi-fonts = {
@@ -344,5 +349,5 @@ fi-fonts = {
 }
 
 for i in fi-fonts
-  .{fi-prefix}{i}:before
+  .{fi-prefix}{i}::before
     content: fi-fonts[i]
