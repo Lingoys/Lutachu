@@ -1,11 +1,11 @@
 ## What's Lutachu
-Lutachu is a front-end framework based on [Stylus](https://github.com/stylus/stylus). It makes building a website easier.
+Lutachu is a front-end framework based on [Stylus](https://github.com/stylus/stylus). It makes website building easier.
 
 ## Download
-Before building, you need to excute `npm intall` to install dependencies.
+Before building, you need to execute `npm intall` to install dependencies.
 
 ### Source Code
-Lutachu uses [gulp.js](http://gulpjs.com/) to build.
+Lutachu uses [gulp.js](http://gulpjs.com/) for building.
 ```
 git clone https://github.com/lingoys/Lutachu.git
 ```
@@ -107,11 +107,11 @@ Copy the HTML below to begin working with Lutachu.
 ```
 
 ## Bugs and feature reporting
-Search for existing and closed issues, then if it's not addressed yet, [open a new issue](https://github.com/lingoys/lutachu/issues/new).
+Search for existing and closed issues, if it's not addressed yet, [open a new issue](https://github.com/lingoys/lutachu/issues/new).
 
 ## License
-This software is free to use under [the MIT License](https://github.com/lingoys/Lutachu/blob/master/LICENSE.md)
+This software is free to use under [the MIT License](https://github.com/lingoys/Lutachu/blob/master/LICENSE.md).
 
-The documentation is free to use under [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/) 
+The documentation is free to use under [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/).
 
 Enjoy!
