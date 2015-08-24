@@ -14,7 +14,16 @@ gulp.task('clean', function() {
 });
 
 gulp.task('stylus', function() {
-  return gulp.src('src/**/*.styl')
+  return gulp.src([
+      'src/normalize.styl',
+      'src/fonts/*.styl',
+      'src/layout/*.styl',
+      'src/typograhpy/*.styl',
+      'src/elements/*.styl',
+      'src/components/*.styl',
+      'src/utillyties.styl',
+      'src/print.styl'
+    ])
     .pipe(stylus())
     .pipe(autoprefixer(['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']))
     .pipe(concat('lutachu.css'))
