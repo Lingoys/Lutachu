@@ -16,11 +16,11 @@ table
   &.table
     width: 100%
 
-  thead,
-  tbody,
+  thead
+  tbody
   tfoot
     tr
-      th,
+      th
       td
         padding: .7rem
         line-height: 1.6
@@ -40,7 +40,6 @@ table
     tr
       th,
       td
-        color: color-gray
         border-top: 0
         vertical-align: bottom
         border-bottom: 1px solid color-border-light
@@ -50,37 +49,36 @@ table
       td
         border-top: 2px solid color-border-normal
 
-.table
-  &.table-bordered
-    border: 1px solid color-border-light
+.table-bordered
+  border: 1px solid color-border-light
 
-    thead,
-    tbody,
-    tfoot
-      tr
-        th,
-        td
-          border-left: 1px solid color-border-light
+  thead
+  tbody
+  tfoot
+    tr
+      th
+      td
+        border-left: 1px solid color-border-light
 
-        th:first-child,
-        td:first-child
-          border-left: 0
+    th:first-child
+    td:first-child
+      border-left: 0
 
-  &.table-striped
-    tbody
-      tr:nth-child(odd)
-        th,
-        td
-          background-color: color-background-table
+.table-striped
+  tbody
+    tr:nth-child(odd)
+      th
+      td
+        background-color: color-background-table
 
-  &.table-hover
-    tbody
-      tr:hover
-        th,
-        td
-          background-color: color-background-table-hover
+.table-hover
+  tbody
+    tr:hover
+      th
+      td
+        background-color: color-background-table-hover
 
-  &.table-center
-    th,
-    td
-      text-align: center
+.table-center
+  th
+  td
+    text-align: center
