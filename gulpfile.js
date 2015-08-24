@@ -16,9 +16,10 @@ gulp.task('clean', function() {
 gulp.task('stylus', function() {
   return gulp.src([
       'src/normalize.styl',
+      'src/typography/typography.styl',
       'src/fonts/*.styl',
       'src/layout/*.styl',
-      'src/typograhpy/*.styl',
+      'src/typography/*.styl',
       'src/elements/*.styl',
       'src/components/*.styl',
       'src/utillyties.styl',
