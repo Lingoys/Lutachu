@@ -1,6 +1,6 @@
 var gulp   = require('gulp'),
+    del    = require('del'),
     sass   = require('gulp-sass'),
-    clean  = require('gulp-clean'),
     concat = require('gulp-concat'),
     stylus = require('gulp-stylus'),
     rename = require('gulp-rename'),
@@ -9,8 +9,7 @@ var gulp   = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('clean', function() {
-  return gulp.src(['dist'], {read: false})
-    .pipe(clean());
+  return del('dist');
 });
 
 gulp.task('stylus', function() {
