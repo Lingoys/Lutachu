@@ -10,7 +10,7 @@ var gulp   = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('clean', function() {
-  return del('dist');
+  return del(['dist/fonts', 'dist/*']);
 });
 
 gulp.task('stylus', function() {
