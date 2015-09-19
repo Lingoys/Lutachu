@@ -25,8 +25,8 @@ gulp.task('stylus', function() {
       'src/utillyties.styl',
       'src/print.styl'
     ])
-    .pipe(sourcemaps.init())
     .pipe(stylus())
+    .pipe(sourcemaps.init())
     .pipe(autoprefixer(['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']))
     .pipe(concat('lutachu.css'))
     .pipe(gulp.dest('dist'))
@@ -39,8 +39,8 @@ gulp.task('stylus', function() {
 
 gulp.task('scss', function() {
   return gulp.src('sass/lutachu.scss')
-    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(sourcemaps.init())
     .pipe(autoprefixer(['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']))
     .pipe(gulp.dest('dist'))
     .pipe(minifycss())
