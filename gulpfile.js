@@ -22,7 +22,7 @@ gulp.task('stylus', function() {
       'src/typography/**/*.styl',
       'src/elements/*.styl',
       'src/components/*.styl',
-      'src/utillyties.styl',
+      'src/utilities.styl',
       'src/print.styl'
     ])
     .pipe(stylus())
