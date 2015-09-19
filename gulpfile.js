@@ -19,7 +19,7 @@ gulp.task('stylus', function() {
       'src/typography/typography.styl',
       'src/fonts/*.styl',
       'src/layout/*.styl',
-      'src/typography/*.styl',
+      'src/typography/**/*.styl',
       'src/elements/*.styl',
       'src/components/*.styl',
       'src/utillyties.styl',
