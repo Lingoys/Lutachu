@@ -10,60 +10,68 @@
 @require "../mixins/button"
 
 .btn
-  makeBtn: #fff color-normal
+  make-button: #fff
 
-  &.btn-primary
-    btnColor: color-primary #fff
+  [class*=icon-]:before
+    margin-right: .5em
+    transform: scale(1.5)
 
-  &.btn-secondary
-    btnColor: color-secondary #fff
+.btn-primary
+  set-button-color: color-primary
 
-  &.btn-success
-    btnColor: color-success #fff
+.btn-secondary
+  set-button-color: color-secondary
 
-  &.btn-error
-    btnColor: color-error #fff
+.btn-success
+  set-button-color: color-success
 
-  &.btn-warning
-    btnColor: color-warning #fff
+.btn-error
+  set-button-color: color-error
 
-  &.btn-ghost
-    color: #fff
-    box-shadow: none
+.btn-warning
+  set-button-color: color-warning
 
-    border: 2px solid
-    background-color: transparent
+.btn-ghost
+  color: #fff
 
-    border-radius: 3px
+  border: 2px solid
+  border-radius: 5px
+  background-color: transparent
 
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, .6)
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .6)
+
+  &
+  &.hover
+  &:hover
+  &.active
+  &:active
     box-shadow: inset 0px 0px 2px rgba(0, 0, 0, .6)
 
-    &.hover,
-    &:hover
-      color: #fff
+  &.hover
+  &:hover
+    color: #fff
 
-      border: 2px solid
-      background-color: rgba(0, 0, 0, .3)
+    border: 2px solid
+    background-color: rgba(0, 0, 0, .3)
 
-    &.active,
-    &:active
-      color: #fff
+  &.active
+  &:active
+    color: #fff
 
-      border: 2px solid
-      background-color: rgba(0, 0, 0, .6)
+    border: 2px solid
+    background-color: rgba(0, 0, 0, .6)
 
-    &:visited
-      color: #fff
+  &:visited
+    color: #fff
 
-  &.btn-xl
-    font-size: 150%
+.btn-xl
+  font-size: 1.5em
 
-  &.btn-lg
-    font-size: 125%
+.btn-lg
+  font-size: 1.25em
 
-  &.btn-sm
-    font-size: 75%
+.btn-sm
+  font-size: .75em
 
-  &.btn-xs
-    font-size: 50%
+.btn-xs
+  font-size: .5em
