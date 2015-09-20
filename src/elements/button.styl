@@ -32,37 +32,22 @@
   set-button-color: color-warning
 
 .btn-ghost
-  color: #fff
+  make-ghost-button: #fff
 
-  border: 2px solid
-  border-radius: 5px
-  background-color: transparent
+  &.btn-primary
+    set-ghost-button-color: color-primary
 
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, .6)
+  &.btn-secondary
+    set-ghost-button-color: color-secondary
 
-  &
-  &.hover
-  &:hover
-  &.active
-  &:active
-    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, .6)
+  &.btn-success
+    set-ghost-button-color: color-success
 
-  &.hover
-  &:hover
-    color: #fff
+  &.btn-error
+    set-ghost-button-color: color-error
 
-    border: 2px solid
-    background-color: rgba(0, 0, 0, .3)
-
-  &.active
-  &:active
-    color: #fff
-
-    border: 2px solid
-    background-color: rgba(0, 0, 0, .6)
-
-  &:visited
-    color: #fff
+  &.btn-warning
+    set-ghost-button-color: color-warning
 
 .btn-xl
   font-size: 1.5em

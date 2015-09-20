@@ -7,7 +7,39 @@
 // ===============================================
 
 /**
- * Button color
+ * Create a normal button
+ *
+ * @param color background color
+ */
+make-button(color)
+  border: 0
+  outline: 0
+
+  cursor: pointer
+  border-radius: 3px
+
+  text-align: center
+  line-height: 1.5em
+  text-decoration: none
+
+  padding: .35em 1.2em
+  display: inline-block
+  vertical-align: middle
+
+  box-shadow: 0 0 1px rgba(0, 0, 0, .4)
+  transition: background .4s ease, box-shadow .2s ease
+
+  set-button-color: color
+
+  &:hover
+    box-shadow: 0 0px 3px rgba(0, 0, 0, .4)
+
+  &.active
+  &:active
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .4)
+
+/**
+ * Set color of normal button
  *
  * @param color background color
  */
@@ -41,33 +73,45 @@ set-button-color(color)
       cursor: not-allowed
 
 /**
- * Create a button
+ * Create a ghost button
  *
  * @param color background color
  */
-make-button(color)
-  border: 0
-  outline: 0
+make-ghost-button(color)
+  color: color
 
-  cursor: pointer
-  border-radius: 3px
+  border: 1px solid
+  background-color: transparent
 
-  text-align: center
-  line-height: 1.5em
-  text-decoration: none
+  text-shadow: none
+  box-shadow: none
 
-  padding: .35em 1.2em
-  display: inline-block
-  vertical-align: middle
-
-  box-shadow: 0 0 1px rgba(0, 0, 0, .4)
-  transition: background .4s ease, box-shadow .2s ease
-
-  set-button-color: color
-
+  &.hover
   &:hover
-    box-shadow: 0 0px 3px rgba(0, 0, 0, .4)
+    box-shadow: none
+    background-color: rgba(0, 0, 0, .3)
 
   &.active
   &:active
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .4)
+    box-shadow: none
+    background-color: rgba(0, 0, 0, .6)
+
+  &:visited
+    color: #fff
+
+/**
+ * Change color of ghost button
+ *
+ * @param color button color
+ */
+set-ghost-button-color(color)
+  color: color
+
+  if dark(color)
+    &:hover
+    &.hover
+      background: rgba(255, 255, 255, .5)
+
+    &:active
+    &.active
+      background: rgba(255, 255, 255, .8)
