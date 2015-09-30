@@ -29,6 +29,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-stylus": "^2.0.1"
+    "gulp-stylus": "^2.0.1",
+    "yargs": "^3.25.0"
   }
 }
