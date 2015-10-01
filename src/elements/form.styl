@@ -9,55 +9,57 @@
 @require "../variables"
 @require "../mixins/box"
 
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=url],
-input[type=date],
-input[type=month],
-input[type=time],
-input[type=datetime],
-input[type=datetime-local],
-input[type=week],
-input[type=number],
-input[type=search],
-input[type=tel],
-input[type=color],
-select,
+input[type="text"]
+input[type="password"]
+input[type="email"]
+input[type="url"]
+input[type="date"]
+input[type="month"]
+input[type="time"]
+input[type="datetime"]
+input[type="datetime-local"]
+input[type="week"]
+input[type="number"]
+input[type="search"]
+input[type="tel"]
+input[type="color"]
+select
 textarea
-  width: 100%
-  outline: none
-  display: block
+input:not([type])
   max-width: 100%
-  background: #fff
+
+  outline: none
+  display: inline-block
+
   padding: .5em .8em
-  border-radius: 3px
   margin-bottom: .75em
+
+  background: #fff
   border: 1px solid color-border-normal
 
-  &.disabled,
+  border-radius: 3px
+
+  &:focus
+    border-color: color-border-normal
+
   &[disabled]
     cursor: not-allowed
+  
     color: #999
+
     border-color: #ddd
     background-color: #f9f9f9
 
-    &:active,
-    &:focus
-      border-color: #ddd
-
-  &:active,
-  &:focus
-    border-color: color-border-normal
+input[type="color"]
+  padding: .2em .5em
 
 textarea
   padding: .2em .8em
 
-label,
 option
-  &.disabled,
   &[disabled]
     cursor: not-allowed
+
     color: #999
     border-color: #DDD
     background-color: #f9f9f9
@@ -66,50 +68,43 @@ label
   margin-bottom: .2rem
 
 .form-radius
-  input,
-  select,
-  textarea,
-  option,
-  button,
-  a.btn
+  input
+  select
+  textarea
+  option
+  button
+  .btn
     border-radius: 5px
 
 .form-group
-  padding: 0
   border: 0
+
+  padding: 0
   margin-bottom: .25em
 
   input
     margin: 0
+
     border-bottom: 0
     border-radius: 3px
 
-    &:active,
     &:focus
-      margin-bottom: -1px
       position: relative
+
+      margin-bottom: -1px
       border-bottom: 1px solid color-border-normal
 
     &:last-child
       border-bottom: 1px solid color-border-normal
 
-      &:active,
       &:focus
         margin-bottom: 0
         border-bottom-color: color-border-focus
 
   &.form-radius
-    &:first-child
-      border-top-radius: 5px
+    input
+      &:first-child
+        border-top-radius: 5px
 
-    &:last-child
-      border-bottom-radius: 5px
-
-.form-radius.form-group,
-.form-radius .form-group
-  input
-    &:first-child
-      border-top-radius: 5px
-
-    &:last-child
-      border-bottom-radius: 5px
+      &:last-child
+        border-bottom-radius: 5px
