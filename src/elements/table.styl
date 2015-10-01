@@ -13,38 +13,35 @@ table
   border-spacing: 0
   border-collapse: collapse
 
-  thead
-  tbody
-  tfoot
-    tr
-      th
-      td
-        padding: .7rem
-        line-height: 1.6
-        vertical-align: top
-        border-top: 1px solid color-border-light
+  th
+  td
+    padding: .7rem
+    
+    line-height: 1.6    
+    vertical-align: top
 
-        &[scope="row"]
-          color: color-gray
+    border-top: 1px solid color-border-light
 
-    tr.table-active
-      th
-      td
-        border-left-color: color-border-mark !important
-        background-color: color-background-table-mark !important
+    &[scope="row"]
+      color: color-gray
 
   thead
-    tr
-      th
-      td
-        border-top: 0
-        vertical-align: bottom
-        border-bottom: 1px solid color-border-light
+    th
+    td
+      border-top: 0
+      vertical-align: bottom
+      border-bottom: 1px solid color-border-light
 
   tbody + tbody
     tr:first-child
       td
         border-top: 2px solid color-border-normal
+
+tr.active
+  th
+  td
+    border-left-color: color-border-mark !important
+    background-color: color-background-table-mark !important        
 
 .table
   width: 100%
@@ -52,16 +49,11 @@ table
 .table-bordered
   border: 1px solid color-border-light
 
-  thead
-  tbody
-  tfoot
-    tr
-      th
-      td
-        border-left: 1px solid color-border-light
+  th
+  td
+    border-left: 1px solid color-border-light
 
-    th:first-child
-    td:first-child
+    &:first-child
       border-left: 0
 
 .table-striped
