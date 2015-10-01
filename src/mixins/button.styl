@@ -34,9 +34,22 @@ make-button(color)
   &:hover
     box-shadow: 0 0px 3px rgba(0, 0, 0, .4)
 
-  &.active
   &:active
     box-shadow: 0 1px 3px rgba(0, 0, 0, .4)
+
+  &[disabled]
+    &
+    &:hover
+    &:active
+      opacity: .6
+
+      border: 0
+
+      box-shadow: none
+      cursor: not-allowed
+
+      .icon-spin::before
+        animation-play-state: paused
 
 /**
  * Set color of normal button
@@ -51,26 +64,11 @@ set-button-color(color)
 
   background-color: color
 
-  &.hover
   &:hover
     background-color: lighten(color, 6)
 
-  &.active
   &:active
     background-color: darken(color, 4)
-
-  &.disabled
-  &[disabled]
-    &
-    &:hover
-    &:active
-      opacity: .6
-
-      border: 0
-      background: color
-
-      box-shadow: none
-      cursor: not-allowed
 
 /**
  * Create a ghost button
@@ -84,12 +82,10 @@ make-ghost-button(color)
   text-shadow: none
   box-shadow: 0 0 0 1px
 
-  &.hover
   &:hover
     box-shadow: 0 0 0 1px
     background-color: rgba(0, 0, 0, .3)
 
-  &.active
   &:active
     box-shadow: 0 0 0 1px
     background-color: rgba(0, 0, 0, .6)
@@ -107,9 +103,7 @@ set-ghost-button-color(color)
 
   if dark(color)
     &:hover
-    &.hover
       background: rgba(255, 255, 255, .3)
 
     &:active
-    &.active
       background: rgba(255, 255, 255, .6)
