@@ -37,19 +37,6 @@ gulp.task('stylus', function() {
     .pipe(livereload());
 });
 
-gulp.task('scss', function() {
-  return gulp.src('sass/lutachu.scss')
-    .pipe(sass())
-    .pipe(autoprefixer(['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']))
-    .pipe(sourcemaps.init())
-    .pipe(gulp.dest('dist'))
-    .pipe(minifycss())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('dist'))
-    .pipe(livereload());
-});
-
 gulp.task('fonts', function() {
   return gulp.src('fonts/**')
     .pipe(gulp.dest('dist/fonts'));
@@ -65,10 +52,5 @@ gulp.task('sass', ['clean'], function() {
 
 gulp.task('watch', function() {
   gulp.watch('src/**/*.styl', ['stylus']);
-  livereload.listen();
-});
-
-gulp.task('watch-sass', function() {
-  gulp.watch('sass/**/*.scss', ['scss']);
   livereload.listen();
 });
