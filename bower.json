@@ -1,0 +1,26 @@
+{
+  "name": "Lutachu",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Lingoys/Lutachu",
+  "authors": [
+    "Lingoys!Art"
+  ],
+  "description": "A CSS Framework based on Stylus.",
+  "main": "src/lutachu.styl",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "CSS",
+    "Framework",
+    "Stylus",
+    "Sass"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "docs",
+    "dist"
+  ]
+}
