@@ -14,6 +14,7 @@ body {
 }
 
 #nav {
+  border: none;
   background-color: #00A397;
 }
 
@@ -23,13 +24,11 @@ body {
 
 #nav a.nav-band {
   float: left;
-  display: block;
-
   font-size: 120%;
 }
 
-#content {
-  padding: 2em 0 4em;
+#main {
+  padding: 4em 0;
 }
 
 #footer {
