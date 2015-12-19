@@ -1,6 +1,8 @@
 Lutachu
 ===
+![Bower version](https://img.shields.io/badge/bower-1.0.0-blue.svg)
 [![Build Status](https://travis-ci.org/lingoys/Lutachu.svg?branch=master)](https://travis-ci.org/lingoys/Lutachu)
+[![devDependency Status](https://david-dm.org/lingoys/lutachu/dev-status.svg)](https://david-dm.org/lingoys/lutachu#info=devDependencies)
 
 ## What's Lutachu?
 Lutachu is a front-end framework based on [Stylus](https://github.com/stylus/stylus). It makes building a website easier.
