@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  background-color: #FAFAFA;
+  background: #FAFAFA;
 }
 
 .container {
@@ -22,6 +22,9 @@ body {
 }
 
 #nav a.nav-band {
+  float: left;
+  display: block;
+
   font-size: 120%;
 }
 
