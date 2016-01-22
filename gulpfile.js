@@ -1,6 +1,5 @@
 var gulp   = require('gulp'),
     del    = require('del'),
-    sass   = require('gulp-sass'),
     concat = require('gulp-concat'),
     stylus = require('gulp-stylus'),
     rename = require('gulp-rename'),
@@ -44,10 +43,6 @@ gulp.task('fonts', function() {
 
 gulp.task('default', ['clean'], function() {
   gulp.start('stylus', 'fonts');
-});
-
-gulp.task('sass', ['clean'], function() {
-  gulp.start('scss', 'fonts');
 });
 
 gulp.task('watch', function() {
