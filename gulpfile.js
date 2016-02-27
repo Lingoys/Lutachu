@@ -1,5 +1,4 @@
 var gulp   = require('gulp'),
-    del    = require('del'),
     concat = require('gulp-concat'),
     stylus = require('gulp-stylus'),
     rename = require('gulp-rename'),
@@ -7,10 +6,6 @@ var gulp   = require('gulp'),
     minifycss    = require('gulp-minify-css'),
     livereload   = require('gulp-livereload'),
     autoprefixer = require('gulp-autoprefixer');
-
-gulp.task('clean', function() {
-  return del('dist/**/*.*');
-});
 
 gulp.task('stylus', function() {
   return gulp.src([
@@ -41,7 +36,7 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('default', ['clean'], function() {
+gulp.task('default', function() {
   gulp.start('stylus', 'fonts');
 });
 
