@@ -8,13 +8,13 @@ Lutachu
 Lutachu is a front-end framework based on [Stylus](https://github.com/stylus/stylus). It makes building a website easier.
 
 ## Building
-Lutachu uses [gulp.js](http://gulpjs.com) for building.
+Lutachu uses [NPM](https://www.npmjs.com) Scripts for building.
 
 ```
 git clone https://github.com/lingoys/Lutachu.git
 cd Lutachu
 npm install
-gulp
+npm run build
 ```
 
 ## Browser Support and Testing
