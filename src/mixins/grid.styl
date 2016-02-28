@@ -2,45 +2,26 @@
 // Mixins / Grid.styl                           ||
 //                                              ||
 // =============================================||
-// Copyright 2015 @ Rakume<i@fake.moe>          ||
+// Since 2015 @ Rakume<i@fake.moe>              ||
 // MIT License                                  ||
 // ===============================================
 
-calc-grid-normal(index, columns)
-  width: (index / columns)%
+calc-grid(index, columns, mode = grid)
+  if mode is grid
+    flex: none
+    width: (index / columns) * 100%
 
-calc-grid-offset(index, columns)
-  margin-left: (index / columns)%
+  if mode is offset
+    margin-left: (index / columns) * 100%
 
-calc-grid-avg(index)
-  width: (1 / index)%
+make-grid(mode = grid, columns = 12, query = null)
+  prefix = mode is offset ? '-offset' : '-'
+  query = '-' + query if query is not null
 
-grid(index, columns = 12, type = normal)
-  if type == normal
-    calc-grid-normal(index, columns)
-
-  else if type == offset
-    calc-grid-normal(index, columns)
-
-  else if type == avg
-    calc-grid-avg(index, columns)
-
-make-grid-normal(columns = 12, prefix = u-all, query = null)
   for index in 1..columns
-    .{prefix}-{index}
-      calc-grid-normal(index, columns)
+    .column.u{prefix}{index}{query}
+      calc-grid(index, columns, mode)
 
-make-grid-offset(columns = 12, prefix = u-offset, query = null)
-  for index in 1..columns
-    .{prefix}-{index}
-      calc-grid-offset(index, columns)
-
-make-grid-avg(columns = 9, prefix = u-avg, query = null)
-  for index in 1..columns
-    .{prefix}-{index}
-      calc-grid-avg(index)
-
-make-grid()
-  make-grid-normal()
-  make-grid-offset()
-  make-grid-avg()
+grid(columns = 12, query = null)
+  make-grid(grid, columns, query)
+  make-grid(offset, columns, query)

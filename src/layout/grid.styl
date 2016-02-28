@@ -2,7 +2,7 @@
 // Layout / Grid.styl                           ||
 //                                              ||
 // =============================================||
-// Copyright 2015 @ Rakume<i@fake.moe>          ||
+// Since 2015 @ Rakume<i@fake.moe>              ||
 // MIT License                                  ||
 // ===============================================
 
@@ -10,32 +10,30 @@
 @require "../mixins/box"
 @require "../mixins/grid"
 
-.grid
-  center()
-  clearfix()
+.row
+  display: flex
 
-  margin-top: 1em
-  margin-left: -1em
-  margin-right: -1em
+  &.-multiline
+    flex-wrap: wrap
 
-[class=u-]
-  float: left
-  padding: 0 1em
-  display: inline
+  &.-gapless
+    .column
+      padding: 0
 
-make-grid()
+  .column
+    padding: 0 1rem
+
+.column
+  flex: 1
+  padding: 1rem
+
+grid()
 
 @media mq-mobile
-  make-grid-normal(12, u-mobile)
-  make-grid-offset(12, u-offset-mobile)
-  make-grid-avg(9, u-avg-mobile)
+  grid(12, mobile)
 
 @media mq-tablet
-  make-grid-normal(12, u-tablet)
-  make-grid-offset(12, u-offset-tablet)
-  make-grid-avg(9, u-avg-tablet)
+  grid(12, tablet)
 
-@media mq-normal
-  make-grid-normal(12, u-normal)
-  make-grid-offset(12, u-offset-normal)
-  make-grid-avg(9, u-avg-normal)
+@media mq-desktop
+  grid(12, desktop)
