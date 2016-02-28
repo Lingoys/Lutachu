@@ -13,50 +13,27 @@
   make-button: #fff
 
   [class*=icon-]
-    margin-right: .5em
-    transform: scale(1.5)
+    font-size: 150%
 
-  &.-primary
-    set-button-color: color-primary
+  color-name = primary secondary success error warning
+  color-value = color-primary color-secondary color-success color-error color-warning
 
-  &.-secondary
-    set-button-color: color-secondary
-
-  &.-success
-    set-button-color: color-success
-
-  &.-error
-    set-button-color: color-error
-
-  &.-warning
-    set-button-color: color-warning
+  for color, i in color-name
+    &.-{color}
+      set-button-color: color-value[i]
 
   &.-ghost
     make-ghost-button: #fff
 
-    &.-primary
-      set-ghost-button-color: color-primary
+    for color, i in color-name
+      &.-{color}
+        set-ghost-button-color: color-value[i]
 
-    &.-secondary
-      set-ghost-button-color: color-secondary
+  &.-large
+    font-size: 130%
 
-    &.-success
-      set-ghost-button-color: color-success
+  &.-medium
+    font-size: 110%
 
-    &.-error
-      set-ghost-button-color: color-error
-
-    &.-warning
-      set-ghost-button-color: color-warning
-
-  &.-xl
-    font-size: 1.5em
-
-  &.-lg
-    font-size: 1.25em
-
-  &.-sm
-    font-size: .75em
-
-  &.-xs
-    font-size: .5em
+  &.-small
+    font-size: 80%
