@@ -31,14 +31,16 @@ make-button(color)
   set-button-color: color
 
   &[disabled]
+  &.-disabled
     opacity: .6
-
     border: 0
 
-    box-shadow: none
     cursor: not-allowed
 
-    .icon-spin::before
+    -webkit-user-select: none
+            user-select: none
+
+    .icon-spin
       animation-play-state: paused
 
 /**
@@ -61,6 +63,7 @@ set-button-color(color)
     background-color: darken(color, 4)
 
   &[disabled]
+  &.-disabled
     background-color: color
 
 /**
