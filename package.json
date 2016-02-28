@@ -12,21 +12,26 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/lingoys/Lutachu.git"
+    "url": "git+https://github.com/Lingoys/Lutachu.git"
   },
   "bugs": {
-    "url": "https://github.com/lingoys/Lutachu/issues"
+    "url": "https://github.com/Lingoys/Lutachu/issues"
   },
   "license": "MIT",
+  "scripts": {
+    "autoprefixer": "postcss --use autoprefixer --output dist/lutachu.css dist/lutachu.css",
+    "autoprefixer-min": "postcss --use autoprefixer --output dist/lutachu.min.css dist/lutachu.min.css",
+    "build": "npm run clean && npm run fonts && npm run build-stylus && npm run build-stylus-min && npm run autoprefixer && npm run autoprefixer-min",
+    "build-stylus": "stylus ./src/lutachu.styl --out dist",
+    "build-stylus-min": "stylus --compress --sourcemap ./src/lutachu.styl --out dist/lutachu.min.css",
+    "clean": "rm -rf dist",
+    "fonts": "cp -a fonts dist",
+    "pre-push": "npm run build",
+    "start": "npm run build-stylus -- --watch"
+  },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-minify-css": "^1.2.3",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylus": "^2.3.0"
+    "autoprefixer": "^6.3.3",
+    "postcss-cli": "^2.5.1",
+    "stylus": "^0.53.0"
   }
 }
