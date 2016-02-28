@@ -8,8 +8,16 @@
 
 @require "../variables"
 
+html
+  font-size: 62.5%
+
 body
-  font-weight: 400
+  font-size: 1.6em
+  font-weight: 300
+
+  letter-spacing: .01em
+
+  line-height: 1.6
 
   color: color-normal
   font-family: font-family-normal
@@ -22,9 +30,6 @@ body
   display: inline
 
 p
-  margin-top: 0
-  margin-bottom: 1em
-
   line-height: 1.86
 
   word-break: break-all
@@ -46,7 +51,16 @@ a
 img
   max-width: 100%
 
-// Symbol
+pre
+blockquote
+dl
+figure
+table
+p
+ul
+ol
+form
+  margin-bottom: 2.5rem
 
 b
 cite
@@ -87,9 +101,6 @@ dfn[title]
   cursor: help
   border-bottom: 1px dotted
 
-dl
-  margin-bottom: .2em
-
 dt
   padding: 0
   font-weight: 800
@@ -111,6 +122,14 @@ mark
 
   background: #FFFCC4
   border-bottom: 1px solid #ffedce
+
+tt
+kbd
+code
+pre
+samp
+  font-size: 1em
+  font-family: font-family-monospace
 
 kbd
   color: #fff
