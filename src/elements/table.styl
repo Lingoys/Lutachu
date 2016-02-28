@@ -2,7 +2,7 @@
 // Elements / Table.styl                        ||
 //                                              ||
 // =============================================||
-// Copyright 2015 @ Rakume<i@fake.moe>          ||
+// Since 2015 @ Rakume<i@fake.moe>              ||
 // MIT License                                  ||
 // ===============================================
 
@@ -16,8 +16,8 @@ table
   th
   td
     padding: .7rem
-    
-    line-height: 1.6    
+
+    line-height: 1.6
     vertical-align: top
 
     border-top: 1px solid color-border-light
@@ -41,12 +41,12 @@ tr.active
   th
   td
     border-left-color: color-border-mark !important
-    background-color: color-background-table-mark !important        
+    background-color: color-background-table-mark !important
 
 .table
   width: 100%
 
-.table-bordered
+.-bordered
   border: 1px solid color-border-light
 
   th
@@ -56,26 +56,26 @@ tr.active
     &:first-child
       border-left: 0
 
-.table-striped
+.-striped
   tbody
     tr:nth-child(odd)
       th
       td
         background-color: color-background-table
 
-.table-hover
+.-hover
   tbody
     tr:hover
       th
       td
         background-color: color-background-table-hover
 
-.table-center
+.-center
   th
   td
     text-align: center
 
-.table-responsive
+.-responsive
   min-hieght: .01%
   overflow-x: auto
 

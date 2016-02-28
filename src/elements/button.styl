@@ -2,61 +2,61 @@
 // Elements / Button.styl                       ||
 //                                              ||
 // =============================================||
-// Copyright 2015 @ Rakume<i@fake.moe>          ||
+// Since 2015 @ Rakume<i@fake.moe>              ||
 // MIT License                                  ||
 // ===============================================
 
 @require "../variables"
 @require "../mixins/button"
 
-.btn
+.button
   make-button: #fff
 
   [class*=icon-]
     margin-right: .5em
     transform: scale(1.5)
 
-.btn-primary
+.-primary
   set-button-color: color-primary
 
-.btn-secondary
+.-secondary
   set-button-color: color-secondary
 
-.btn-success
+.-success
   set-button-color: color-success
 
-.btn-error
+.-error
   set-button-color: color-error
 
-.btn-warning
+.-warning
   set-button-color: color-warning
 
-.btn-ghost
+.-ghost
   make-ghost-button: #fff
 
-  &.btn-primary
+  &.-primary
     set-ghost-button-color: color-primary
 
-  &.btn-secondary
+  &.-secondary
     set-ghost-button-color: color-secondary
 
-  &.btn-success
+  &.-success
     set-ghost-button-color: color-success
 
-  &.btn-error
+  &.-error
     set-ghost-button-color: color-error
 
-  &.btn-warning
+  &.-warning
     set-ghost-button-color: color-warning
 
-.btn-xl
+.-xl
   font-size: 1.5em
 
-.btn-lg
+.-lg
   font-size: 1.25em
 
-.btn-sm
+.-sm
   font-size: .75em
 
-.btn-xs
+.-xs
   font-size: .5em

@@ -2,7 +2,7 @@
 // Components / Card.styl                       ||
 //                                              ||
 // =============================================||
-// Copyright 2015 @ Rakume<i@fake.moe>          ||
+// Since 2015 @ Rakume<i@fake.moe>              ||
 // MIT License                                  ||
 // ===============================================
 
@@ -17,7 +17,7 @@
   padding-bottom: .8em
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .2)
 
-  &.card-rich .card-head
+  &.-rich .header
     padding: 0
     margin: 0 -1px
     min-height: 50px
@@ -25,13 +25,13 @@
     margin-bottom: 1.8em
 
     img,
-    .card-rich-img img,
-    img.card-rich-img
+    .rich-img img,
+    img.rich-img
       margin: 0
       border-top-radius: 3px
 
-    .card-title,
-    .card-subtitle
+    .title,
+    .subtitle
       left: 0
       bottom: 0
       color: #fff
@@ -43,61 +43,61 @@
       font-weight: normal
       text-shadow: 1px 1px 1px rgba(0, 0, 0, .3)
 
-    .card-subtitle
+    .subtitle
       left: auto
       right: 0
       font-size: 1em
       text-align: right
       margin-bottom: 1.4em
 
-  &.z-radius.z-rich .card-head
+  &.-radius.-rich .header
     img,
-    .card-rich-img img,
-    img.card-rich-img
+    .rich-img img,
+    img.rich-img
       border-top-radius: 5px
 
-  * + .card-rich-img
+  * + .rich-img
     border-top-radius: 0
 
-  .card-head
+  .header
     padding: .8em 1.5em 1em
 
-    .card-title
+    .title
       font-size: 1.8em
       margin-bottom: 0
 
-    .card-subtitle
+    .subtitle
       margin-top: -.8em
       margin-bottom: 0
 
-    .card-rich-img
+    .rich-img
       margin: .8em -1.5em .8em
       text-align: center
 
       img
         margin: 0
 
-    img.card-rich-img
+    img.rich-img
       margin: .8em 0
 
-  .card-rich-img + .card-head
+  .rich-img + .header
     padding-top: .4em
 
-  .card-content
+  .content
     padding: .8em 1.5em
     color: color-normal
     line-height: 1.825
 
-  img + .card-header
+  img + .header
     margin-top: 0
 
-  * + .card-content
+  * + .content
     padding-top: 0
 
-  .card-head + .card-content
+  .header + .content
     margin-top: -.8em
 
-  .card-bar
+  .bar
     width: 100%
     padding: 0 1.5em
     line-height: 50px
@@ -105,5 +105,5 @@
     border-top: 1px solid color-border-normal
     background: color-background-bar
 
-    .btn
+    .button
       margin: 1em .5em 1em 0

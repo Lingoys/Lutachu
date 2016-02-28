@@ -2,7 +2,7 @@
 // Elements / Form.styl                         ||
 //                                              ||
 // =============================================||
-// Copyright 2015 @ Rakume<i@fake.moe>          ||
+// Since 2015 @ Rakume<i@fake.moe>              ||
 // MIT License                                  ||
 // ===============================================
 
@@ -44,7 +44,7 @@ input:not([type])
 
   &[disabled]
     cursor: not-allowed
-  
+
     color: #999
 
     border-color: #ddd
@@ -67,7 +67,7 @@ option
 label
   margin-bottom: .2rem
 
-.form-radius
+.-radius
   input
   select
   textarea
@@ -76,7 +76,7 @@ label
   .btn
     border-radius: 5px
 
-.form-group
+.group
   border: 0
 
   padding: 0
@@ -101,7 +101,7 @@ label
         margin-bottom: 0
         border-bottom-color: color-border-focus
 
-  &.form-radius
+  &.-radius
     input
       &:first-child
         border-top-radius: 5px
