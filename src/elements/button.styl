@@ -13,6 +13,7 @@
   make-button: #fff
 
   [class*=icon-]
+    margin-right: .5rem
     font-size: 150%
 
   color-name = primary secondary success error warning
@@ -22,12 +23,12 @@
     &.-{color}
       set-button-color: color-value[i]
 
-  &.-ghost
-    make-ghost-button: #fff
+  &.-outlined
+    make-outlined-button: #fff
 
     for color, i in color-name
       &.-{color}
-        set-ghost-button-color: color-value[i]
+        set-outlined-button-color: color-value[i]
 
   &.-large
     font-size: 130%

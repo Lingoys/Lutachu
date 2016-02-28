@@ -2,7 +2,7 @@
 // Mixins / Button.styl                         ||
 //                                              ||
 // =============================================||
-// Copyright 2015 @ Rakume<i@fake.moe>          ||
+// Since 2015 @ Rakume<i@fake.moe>              ||
 // MIT License                                  ||
 // ===============================================
 
@@ -22,20 +22,13 @@ make-button(color)
   line-height: 1.5em
   text-decoration: none
 
-  padding: .35em 1.2em
+  padding: .5rem 1.2rem
   display: inline-block
   vertical-align: middle
 
-  box-shadow: 0 0 1px rgba(0, 0, 0, .4)
-  transition: background .4s ease, box-shadow .2s ease
+  transition: background .4s ease
 
   set-button-color: color
-
-  &:hover
-    box-shadow: 0 0px 3px rgba(0, 0, 0, .4)
-
-  &:active
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .4)
 
   &[disabled]
     opacity: .6
@@ -71,34 +64,31 @@ set-button-color(color)
     background-color: color
 
 /**
- * Create a ghost button
+ * Create a outlined button
  *
  * @param color background color
  */
-make-ghost-button(color)
+make-outlined-button(color)
   color: color
   background-color: transparent
 
-  text-shadow: none
   box-shadow: 0 0 0 1px inset
 
   &:hover
-    box-shadow: 0 0 0 1px inset
     background-color: rgba(0, 0, 0, .3)
 
   &:active
-    box-shadow: 0 0 0 1px inset
     background-color: rgba(0, 0, 0, .6)
 
   &:visited
     color: #fff
 
 /**
- * Change color of ghost button
+ * Change color of outlined button
  *
  * @param color button color
  */
-set-ghost-button-color(color)
+set-outlined-button-color(color)
   color: color
 
   if dark(color)
