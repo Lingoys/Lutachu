@@ -12,7 +12,7 @@
 // ==============================================
 
 .poem
-  &.-horizontal
+  &.is-horizontal
     text-align: center
     margin: 2em 0
 
@@ -22,7 +22,7 @@
       &:before
         content: none
 
-    .poem-author
+    .author
       display: block
       text-align: right
       font-weight: 800
@@ -33,7 +33,7 @@
   // Vertical Poem
   // ==============================================
 
-  &.-vertical
+  &.is-vertical
     display: block
     white-space: pre-line
     margin: 2em auto
@@ -48,7 +48,7 @@
     h4
     h5
     h6
-    .poem-title
+    .title
       margin: 0
       margin-left: -.5rem
       font-weight: bold
@@ -71,10 +71,10 @@
       &:before
         content: none
 
-  &.-left
+  &.is-left
     -webkit-writing-mode: vertical-lr
     writing-mode: vertical-lr
 
-  &.-right
+  &.is-right
     -webkit-writing-mode: vertical-rl
     writing-mode: vertical-rl

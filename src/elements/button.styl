@@ -21,10 +21,10 @@
   color-value = color-primary color-secondary color-success color-error color-warning
 
   for color, i in color-name
-    &.-{color}
+    &.is-{color}
       set-button-color: color-value[i]
 
-  &.-outlined
+  &.is-outlined
     make-outlined-button: #fff
     border: 0
 
@@ -32,11 +32,11 @@
       &.-{color}
         set-outlined-button-color: color-value[i]
 
-  &.-large
+  &.is-large
     font-size: 130%
 
-  &.-medium
+  &.is-medium
     font-size: 110%
 
-  &.-small
+  &.is-small
     font-size: 80%

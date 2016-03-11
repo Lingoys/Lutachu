@@ -19,7 +19,7 @@ make-grid(mode = grid, columns = 12, query = null)
   query = '-' + query if query is not null
 
   for index in 1..columns
-    .column.u{prefix}{index}{query}
+    .column.is{prefix}{index}{query}
       calc-grid(index, columns, mode)
 
 grid(columns = 12, query = null)
