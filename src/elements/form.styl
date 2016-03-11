@@ -37,7 +37,7 @@ input:not([type])
   background: #fff
   border: 1px solid color-border-normal
 
-  border-radius: 3px
+  border-radius: border-radius-width
 
   &:focus
     border-color: color-border-normal
@@ -67,14 +67,14 @@ option
 label
   margin-bottom: .2rem
 
-.-radius
+.is-radius
   input
   select
   textarea
   option
   button
   .btn
-    border-radius: 5px
+    border-radius: border-radius-width
 
 .group
   border: 0
@@ -86,7 +86,7 @@ label
     margin: 0
 
     border-bottom: 0
-    border-radius: 3px
+    border-radius: border-radius-width
 
     &:focus
       position: relative
@@ -101,7 +101,7 @@ label
         margin-bottom: 0
         border-bottom-color: color-border-focus
 
-  &.-radius
+  &.is-radius
     input
       &:first-child
         border-top-radius: 5px
