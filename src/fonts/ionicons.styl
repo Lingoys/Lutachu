@@ -1,0 +1,55 @@
+/**
+ * Fonts / Ionicons.styl
+ *
+ * @since 2.0
+ * @author Rakume Hayashi<h@rakume.com>
+ * @license MIT License
+ */
+
+@require "variables"
+
+/**
+ * Font face
+ */
+@font-face
+  font-family: "Ionicons"
+  src: url(ion-path + "ionicons.eot?v=" + ion-version)
+  src: url(ion-path + "ionicons.eot?v=" + ion-version + "#iefix") format("embedded-opentype"),
+       url(ion-path + "ionicons.ttf?v=" + ion-version) format("truetype"),
+       url(ion-path + "ionicons.woff?v=" + ion-version) format("woff"),
+       url(ion-path + "ionicons.svg?v=" + ion-version + "#Ionicons") format("svg")
+
+  font-weight: normal
+  font-style: normal
+
+/**
+ * Icons
+ */
+[class*={ion-prefix}]
+  display: inline-block;
+  font-family: "Ionicons"
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  text-rendering: auto
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+for i in ion-icons
+  .{ion-prefix}{i}::before
+    content: ion-icons[i]
+
+/**
+ * Utilities
+ */
+.{ion-prefix}sm
+  font-size 75%
+
+.{ion-prefix}md
+  font-size 125%
+
+.{ion-prefix}lg
+  font-size 150%
