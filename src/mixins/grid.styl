@@ -1,12 +1,12 @@
-// ===============================================
-// Mixins / Grid.styl                           ||
-//                                              ||
-// =============================================||
-// Since 2015 @ Rakume<i@fake.moe>              ||
-// MIT License                                  ||
-// ===============================================
+/**
+ * Mixins / Grid.styl
+ *
+ * @since 1.0
+ * @author Rakume Hayashi<h@rakume.com>
+ * @license MIT License
+ */
 
-calc-grid(index, columns, mode = grid)
+grid(index, columns, mode = grid)
   if mode is grid
     flex: none
     width: (index / columns) * 100%
@@ -14,14 +14,14 @@ calc-grid(index, columns, mode = grid)
   if mode is offset
     margin-left: (index / columns) * 100%
 
-make-grid(mode = grid, columns = 12, query = null)
+make-grid-set(mode = grid, columns = 12, query = null)
   prefix = mode is offset ? '-offset' : '-'
   query = '-' + query if query is not null
 
   for index in 1..columns
     .column.is{prefix}{index}{query}
-      calc-grid(index, columns, mode)
+      grid(index, columns, mode)
 
-grid(columns = 12, query = null)
-  make-grid(grid, columns, query)
-  make-grid(offset, columns, query)
+make-grid(columns = 12, query = null)
+  make-grid-set(grid, columns, query)
+  make-grid-set(offset, columns, query)

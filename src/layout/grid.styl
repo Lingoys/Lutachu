@@ -1,10 +1,10 @@
-// ===============================================
-// Layout / Grid.styl                           ||
-//                                              ||
-// =============================================||
-// Since 2015 @ Rakume<i@fake.moe>              ||
-// MIT License                                  ||
-// ===============================================
+/**
+ * Layout / Grid.styl
+ *
+ * @since 1.0
+ * @author Rakume Hayashi<h@rakume.com>
+ * @license MIT License
+ */
 
 @require "../variables"
 @require "../mixins/box"
@@ -25,13 +25,13 @@
   flex: 1
   padding: 1rem
 
-grid()
+make-grid()
 
 @media mq-mobile
-  grid(12, mobile)
+  make-grid(12, mobile)
 
 @media mq-tablet
-  grid(12, tablet)
+  make-grid(12, tablet)
 
 @media mq-desktop
-  grid(12, desktop)
+  make-grid(12, desktop)

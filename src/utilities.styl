@@ -1,16 +1,17 @@
-// ===============================================
-// Utilities.styl                               ||
-//                                              ||
-// =============================================||
-// Since 2015 @ Rakume<i@fake.moe>              ||
-// MIT License                                  ||
-// ===============================================
+/**
+ * Utilities.styl
+ *
+ * @since 1.0
+ * @author Rakume Hayashi<h@rakume.com>
+ * @license MIT License
+ */
 
 @require "variables"
 @require "mixins/box"
 
-// Position
-
+/**
+ * Position
+ */
 .is-absolute
   position: absolute
 
@@ -20,8 +21,9 @@
 .is-fixed
   position: fixed
 
-// Float
-
+/**
+ * Floating
+ */
 .left
   float: left !important
 
@@ -31,13 +33,15 @@
 .clearfix
   clearfix()
 
-// Text & Block
-
+/**
+ * Text & Block
+ */
 .center
   center()
 
-// Display
-
+/**
+ * Display
+ */
 .is-block
   display: block !important
 
@@ -51,8 +55,9 @@
   display: none !important
   visibility: hidden !important
 
-// Font-family
-
+/**
+ * Font families
+ */
 .is-serif
   font-family: font-family-serif
 
@@ -78,12 +83,18 @@
     padding-left: 1em
     padding-right: 1em
 
+/**
+ * Radius
+ */
 .is-radius
   border-radius: border-radius-width
 
 .is-circle
   border-radius: 99999999px
 
+/**
+ * Others
+ */
 .is-spin
   animation: 1s spin infinite
 

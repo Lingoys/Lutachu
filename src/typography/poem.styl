@@ -1,17 +1,17 @@
-// ===============================================
-// Components / Poem.styl                       ||
-//                                              ||
-// =============================================||
-// Since 2015 @ Rakume<i@fake.moe>              ||
-// MIT License                                  ||
-// ===============================================
+/**
+ * Typography / Poem.styl
+ *
+ * @since 1.0
+ * @author Rakume Hayashi<h@rakume.com>
+ * @license MIT License
+ */
 
 @require "../variables"
 
-// Horizontal Poem
-// ==============================================
-
 .poem
+  /**
+   * Horizontal Poem
+   */
   &.is-horizontal
     text-align: center
     margin: 2em 0
@@ -30,9 +30,9 @@
       &:before
         content: '——'
 
-  // Vertical Poem
-  // ==============================================
-
+  /**
+   * Vertical Poem
+   */
   &.is-vertical
     display: block
     white-space: pre-line
