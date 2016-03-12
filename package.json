@@ -32,6 +32,6 @@
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "postcss-cli": "^2.5.1",
-    "stylus": "^0.53.0"
+    "stylus": "^0.54.2"
   }
 }
