@@ -14,100 +14,21 @@
   padding: 0
   background: #fff
 
-  margin-bottom: 1em
-  padding-bottom: .8em
-
   border-radius: border-radius-width
 
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .2)
 
-  &.is-rich .header
-    padding: 0
-    margin: 0 -1px
-    min-height: 50px
-    position: relative
-    margin-bottom: 1.8em
-
-    img,
-    .rich-img img,
-    img.rich-img
+  .card-image
+    figure
       margin: 0
-      border-top-radius: 3px
 
-    .title,
-    .subtitle
-      left: 0
-      bottom: 0
-      color: #fff
+      text-align: inherit
+
+    img
+      margin: 0
+
       width: 100%
-      padding: 0 .8em
-      font-size: 1.8em
-      position: absolute
-      margin-bottom: .6em
-      font-weight: normal
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, .3)
+      display: block
 
-    .subtitle
-      left: auto
-      right: 0
-      font-size: 1em
-      text-align: right
-      margin-bottom: 1.4em
-
-  &.is-radius.is-rich .header
-    img,
-    .rich-img img,
-    img.rich-img
-      border-top-radius: 5px
-
-  * + .rich-img
-    border-top-radius: 0
-
-  .header
-    padding: .8em 1.5em 1em
-
-    .title
-      font-size: 1.8em
-      margin-bottom: 0
-
-    .subtitle
-      margin-top: -.8em
-      margin-bottom: 0
-
-    .rich-img
-      margin: .8em -1.5em .8em
-      text-align: center
-
-      img
-        margin: 0
-
-    img.rich-img
-      margin: .8em 0
-
-  .rich-img + .header
-    padding-top: .4em
-
-  .content
-    padding: .8em 1.5em
-    color: color-normal
-    line-height: 1.825
-
-  img + .header
-    margin-top: 0
-
-  * + .content
-    padding-top: 0
-
-  .header + .content
-    margin-top: -.8em
-
-  .bar
-    width: 100%
-    padding: 0 1.5em
-    line-height: 50px
-    margin-bottom: -.8em
-    border-top: 1px solid color-border-normal
-    background: color-background-bar
-
-    .button
-      margin: 1em .5em 1em 0
+  .card-content
+    padding: 2rem
