@@ -15,7 +15,7 @@ grid(index, columns, mode = grid)
     margin-left: (index / columns) * 100%
 
 make-grid-set(mode = grid, columns = 12, query = null)
-  prefix = mode is offset ? '-offset' : '-'
+  prefix = mode is offset ? '-offset-' : '-'
   query = '-' + query if query is not null
 
   for index in 1..columns
