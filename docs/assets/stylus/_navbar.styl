@@ -1,0 +1,24 @@
+#nav
+  .nav-group
+    line-height: 4.5rem
+
+    li
+      transition: .3s ease
+
+      &:hover
+        background: rgba(0, 0, 0, .1)
+
+      &.is-active
+        background: color-background
+
+    a
+      color: #fff
+
+    [class*=icon-]
+      font-size: 150%
+      margin-right: .3rem
+
+      vertical-align: sub
+
+body:not(.is-home) #nav
+  background: color-navbar

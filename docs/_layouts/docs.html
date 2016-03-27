@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+</head>
+<body class="is-docs">
+  {% include navbar.html %}
+
+  <div id="header">
+    <div class="container">
+      {% include headers.html %}
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="container row is-multiline">
+      <div id="content" class="column is-9 is-12-mobile">
+        {{ content }}
+      </div>
+
+      <div id="sidebar" class="column is-3 is-12-mobile">
+        {% include sidebar.html %}
+      </div>
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ "/assets/js/prism.js" | prepend: site.baseurl }}"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<nav id="nav" class="nav{% if page.layout == "home"%} is-fixed{% endif %}">
+  <div class="container">
+    {% if page.layout != "home" %}
+    <ul class="nav-group">
+      <li class="nav-band"><a href="{{ site.baseurl }}/">Lutachu</a></li>
+      <li {% if page.layout == "docs" %}class="is-active"{% endif %}><a href="{{ site.baseurl }}/getting-started/introduction.html">Documentation</a></li>
+    </ul>
+    {% endif %}
+    <ul class="nav-group is-right">
+      <li><a href="https://github.com/lingoys/lutachu" target="_blank"><i class="icon-social-github"></i> GitHub</a></li>
+    </ul>
+  </div>
+</nav>

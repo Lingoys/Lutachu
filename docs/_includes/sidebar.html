@@ -1,0 +1,27 @@
+<form id="search">
+  <input id="search-input" type="text" placeholder="Search..." autocomplete="off">
+  <div id="search-results"></div>
+</form>
+
+<nav id="toc">
+  {% for group in site.data.nav %}
+    {% assign link = group.pages | first %}
+    {% assign slug = group.title | downcase | replace: ' ', '-' || page.title | downcase | replace: ' ', '-' %}
+
+    <div class="toc-item{% if page.url contains slug%} active{% endif %}">
+      <a class="toc-link" href="{{ site.baseurl }}/{{ group.title | downcase | replace: ' ', '-' }}/{{ link.title | downcase | replace: ' ', '-' || page.title | downcase | replace: ' ', '-'  }}.html">{{ group.title }}</a>
+      <ul class="nav is-multiline">
+        {% for doc in group.pages %}
+        {% assign slug = doc.title | downcase | replace: ' ', '-' | replace:'-&-','-' %}
+        {% capture slug %}/{{ slug }}{% endcapture %}
+
+        <li {% if page.url contains slug %}class="active"{% endif %}>
+          <a href="{{ site.baseurl }}/{{ group.title | downcase | replace: ' ', '-' }}/{{ doc.title | downcase | replace: ' ', '-' | replace:'-&-','-' }}.html">
+            {{ doc.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</nav>

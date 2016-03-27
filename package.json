@@ -21,12 +21,15 @@
   "scripts": {
     "autoprefixer": "postcss --use autoprefixer --output dist/lutachu.css dist/lutachu.css",
     "autoprefixer-min": "postcss --use autoprefixer --output dist/lutachu.min.css dist/lutachu.min.css",
+    "autoprefixer-docs": "postcss --use autoprefixer --output docs/assets/css/docs.min.css docs/assets/css/docs.min.css",
     "build": "npm run clean && npm run fonts && npm run build-stylus && npm run build-stylus-min && npm run autoprefixer && npm run autoprefixer-min",
-    "build-stylus": "stylus ./src/lutachu.styl --out dist",
-    "build-stylus-min": "stylus --compress --sourcemap ./src/lutachu.styl --out dist/lutachu.min.css",
+    "build-docs-stylus": "stylus --compress docs/assets/stylus/docs.styl --out docs/assets/css/docs.min.css",
+    "build-stylus": "stylus src/lutachu.styl --out dist",
+    "build-stylus-min": "stylus --compress --sourcemap src/lutachu.styl --out dist/lutachu.min.css",
     "clean": "rm -rf dist",
     "fonts": "cp -a fonts dist",
     "pre-push": "npm run build",
+    "watch-docs": "npm run build-docs-stylus -- --watch",
     "start": "npm run build-stylus -- --watch"
   },
   "devDependencies": {

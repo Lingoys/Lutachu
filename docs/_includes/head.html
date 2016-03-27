@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="descripition", content="Lutachu, a front-end framework based on Stylus.">
+<meta name="author" content="Hector Lin, Lingoys!Art., and Lutachu contributors">
+
+<title>{% if page.title %}{{ page.title }} - Lutachu{% else %} Lutachu{% endif %}</title>
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+<link rel="stylesheet" href="{{ "/assets/css/lutachu.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ "/assets/css/docs.min.css" | prepend: site.baseurl }}">
