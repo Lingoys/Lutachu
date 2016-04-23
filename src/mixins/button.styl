@@ -21,9 +21,8 @@ make-button(color)
   border-radius: border-radius-width
 
   text-align: center
-  line-height: 1.5em
 
-  padding: .5rem 1.2rem
+  padding: .1em 1em
   display: inline-block
   vertical-align: middle
 
@@ -37,8 +36,6 @@ make-button(color)
     border: 0
 
     cursor: not-allowed
-
-    -webkit-user-select: none
     user-select: none
 
     .icon-spin
@@ -52,11 +49,8 @@ make-button(color)
 set-button-color(color)
   if dark(color)
     color: #fff
-  else
-    color: color-normal
 
   background-color: color
-  box-shadow: none
 
   &:hover
     background-color: lighten(color, 6)
