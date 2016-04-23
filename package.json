@@ -19,22 +19,24 @@
   },
   "license": "MIT",
   "scripts": {
-    "autoprefixer": "postcss --use autoprefixer --output dist/lutachu.css dist/lutachu.css",
-    "autoprefixer-min": "postcss --use autoprefixer --output dist/lutachu.min.css dist/lutachu.min.css",
-    "autoprefixer-docs": "postcss --use autoprefixer --output docs/assets/css/docs.min.css docs/assets/css/docs.min.css",
-    "build": "npm run clean && npm run fonts && npm run build-stylus && npm run build-stylus-min && npm run autoprefixer && npm run autoprefixer-min",
-    "build-docs-stylus": "stylus --compress docs/assets/stylus/docs.styl --out docs/assets/css/docs.min.css",
-    "build-stylus": "stylus src/lutachu.styl --out dist",
-    "build-stylus-min": "stylus --compress --sourcemap src/lutachu.styl --out dist/lutachu.min.css",
-    "clean": "rm -rf dist && mkdir dist",
-    "docs-dist": "rm -rf docs/dist && cp -a dist docs",
-    "fonts": "cp -a fonts dist",
-    "pre-push": "npm run build",
-    "watch-docs": "npm run build-docs-stylus -- --watch",
-    "start": "npm run build-stylus -- --watch"
+    "clean": "rm -rf dist/{*.css}",
+    "clean-docs": "rm -rf docs/dist/{*.css}",
+    "autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+    "dist-docs": "cp -a dist docs",
+    "stylus": "stylus src/lutachu.styl --out dist",
+    "stylus-docs": "stylus --compress docs/assets/stylus/docs.styl --out docs/assets/css",
+    "stylus-min": "stylus --compress --sourcemap src/lutachu.styl --out dist/lutachu.min.css",
+    "build:all": "npm run clean && npm run build:css && npm run build:docs",
+    "build:css": "npm run stylus && npm run stylus-min && npm run autoprefixer",
+    "build:docs": "npm run dist-docs && npm run stylus-docs",
+    "pre-push": "npm run build:all",
+    "watch:css": "onchange 'src/**/*.styl' -- npm run build:css",
+    "watch:docs": "onchange 'docs/**/*.styl' -- npm run build:docs",
+    "start": "npm run watch:stylus"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
+    "onchange": "^2.4.0",
     "postcss-cli": "^2.5.1",
     "stylus": "^0.54.2"
   }
