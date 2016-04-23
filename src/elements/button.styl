@@ -11,6 +11,8 @@
 
 .button
   make-button: #fff
+
+  text-decoration: none
   box-shadow: color-border-light 0 0 0 1px inset
 
   [class*=icon-]
@@ -18,8 +20,8 @@
     display: inline-block
     vertical-align: bottom
 
-  color-name = primary secondary success error warning
-  color-value = color-primary color-secondary color-success color-error color-warning
+  color-name = "primary" "secondary" "success" "error" "warning"
+  color-value = primary secondary success error warning
 
   for color, i in color-name
     &.is-{color}
