@@ -9,9 +9,15 @@
 article
 summary
   a
-    text-decoration-color: rgba(0, 0, 0, .4)
+    text-decoration: underline
 
   p
-    text-justify: ideographic
     text-align: justify
+    text-justify: inter-ideograph /* For IE */
+
     letter-spacing: .3px
+
+  &.text-indent
+    p::before
+      content: "\3000\3000"
+      display: inline
