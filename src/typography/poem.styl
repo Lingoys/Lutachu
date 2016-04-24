@@ -1,0 +1,88 @@
+/**
+ * Typography / Poem.styl
+ *
+ * @since 1.0
+ * @author Rakume Hayashi<h@rakume.com>
+ * @license MIT License
+ */
+
+@require "../variables"
+
+.poem
+  line-height: poem-line-height
+  margin: 2.5rem 0
+
+  overflow: auto
+
+  /**
+   * Horizontal Poem
+   */
+  &:not(.is-vertical)
+    margin: 2em 0
+
+    p
+      margin: 0
+
+      &.poem-paragraph
+        margin: 0 0 2.5rem
+
+    &.is-center
+      text-align: center
+
+      p
+        text-align: center
+
+    .poem-title + .poem-author
+      margin: -1rem 0 2.5rem
+
+  /**
+   * Vertical Poem
+   */
+  &.is-vertical
+    display: block
+    width: 100%
+
+    writing-mode: vertical-rl
+
+    .is-left
+      writing-mode: vertical-lr
+
+      p
+        margin: 0 2.5rem 0 0
+
+      h1, h2, h3, h4, h5, h6
+        margin: 0 2rem 0 0
+
+      .poem-title + .poem-author
+        margin: 0 2rem 0 -1.5rem
+
+    &.is-right
+    &:not(.is-left)
+      p
+        margin: 0 0 0 2.5rem
+
+      h1, h2, h3, h4, h5, h6
+        margin: 0 0 0 2rem
+
+      .poem-title + .poem-author
+        margin: 0 -1.5rem 0 2rem
+
+  &.is-center
+    width: auto
+
+    margin-left: auto
+    margin-right: auto
+
+  blockquote
+    border-left: none
+
+    padding: 0
+    margin: 2.5rem 0
+
+.poem-title
+  font-size: poem-title-font-size
+  font-weight: 600
+
+.poem-author
+  color: poem-author-color
+  font-size: poem-author-font-size
