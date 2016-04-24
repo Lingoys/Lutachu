@@ -9,18 +9,17 @@
 @require "../variables"
 
 table
-  margin-bottom: 1.5em
+  line-height: 1.6
+
+  margin-bottom: 2.5rem
   border-spacing: 0
   border-collapse: collapse
 
   th
   td
-    padding: .7rem
-
-    line-height: 1.6
+    padding: 1rem
     vertical-align: top
-
-    border-top: 1px solid color-border-light
+    border-top: 1px solid table-border-color
 
     &[scope="row"]
       color: color-gray
@@ -28,30 +27,29 @@ table
   thead
     th
     td
-      border-top: 0
       vertical-align: bottom
-      border-bottom: 1px solid color-border-light
+      border-bottom: .2rem solid table-border-color
 
   tbody + tbody
     tr:first-child
       td
-        border-top: 2px solid color-border-normal
+        border-top: .2rem solid table-border-color
 
-tr.active
-  th
-  td
-    border-left-color: color-border-mark !important
-    background-color: color-background-table-mark !important
+  .is-active
+    &
+    & > th
+    & > td
+     background-color: table-active-background
 
 .table
   width: 100%
 
   &.is-bordered
-    border: 1px solid color-border-light
+    border: .1rem solid table-border-color
 
     th
     td
-      border-left: 1px solid color-border-light
+      border-left: .1rem solid table-border-color
 
       &:first-child
         border-left: 0
@@ -59,26 +57,9 @@ tr.active
   &.is-striped
     tbody
       tr:nth-child(odd)
-        th
-        td
-          background-color: color-background-table
+        background-color: table-striped-background
 
   &.is-hover
     tbody
       tr:hover
-        th
-        td
-          background-color: color-background-table-hover
-
-  &.is-center
-    th
-    td
-      text-align: center
-
-  &.is-responsive
-    min-hieght: .01%
-    overflow-x: auto
-
-    @media mq-mobile
-      width: 100%
-      overflow-y: hidden
+        background-color: table-hover-background
