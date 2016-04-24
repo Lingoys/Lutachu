@@ -9,36 +9,34 @@
 @require "../variables"
 
 figure
-  margin: 0
+  text-align: center
 
-article
-  figure
-    text-align: center
+  &.is-full
+    margin-left: -13%
+    margin-right: -13%
 
-    &.left,
-    &.right
-      width: 50%
+    img
+      width: 100%
+
+  &.is-left
+  &.is-right
+    width: 50%
 
   figcaption
-    font-size: 80%
-    margin-top: .5em
+    color: figcaption-color
 
-    &::after
-      content: ""
-      width: 15%
+    font-size: 75%
+    margin-top: .5rem
 
-      display: block
-      margin: 1em auto .2em
+@media mq-non-desktop
+  figure
+    &.is-full
+      margin-left: -4%
+      margin-right: -4%
 
-      color: color-dark-grey
-      border-bottom: 1px solid color-border-normal
+    &.is-left
+    &.is-right
+      margin-left: 0
 
-@media mq-mobile
-  article
-    figure
-      &.left
-      &.right
-        width: 100%
-        margin: 0
-        padding: 1rem 4rem
-        float: none!important
+      float: none !important
+      width: 100% !important
