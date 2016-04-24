@@ -1,0 +1,30 @@
+/**
+ * Components / Labels.styl
+ *
+ * @since 1.0
+ * @author Rakume Hayashi<h@rakume.com>
+ * @license MIT License
+ */
+
+@require "../variables"
+
+.label
+  display: inline
+
+  padding: .1em .3em
+
+  font-size: 1em
+
+  white-space: nowrap
+  vertical-align: baseline
+
+  background-color: label-background
+  border-radius: border-radius-width
+
+  color-name = "primary" "secondary" "success" "error" "warning"
+  color-value = primary secondary success error warning
+
+  for color, i in color-name
+    &.is-{color}
+      color: #fff
+      background: color-value[i]
