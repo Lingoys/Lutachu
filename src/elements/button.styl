@@ -23,12 +23,15 @@
   color-name = "primary" "secondary" "success" "error" "warning"
   color-value = primary secondary success error warning
 
+  &.is-outline
+    make-outlined-button: #fff
+
   for color, i in color-name
     &.is-{color}
       set-button-color: color-value[i]
 
     &.is-{color}-outline
-      set-outlined-button-color: color-value[i]
+      make-outlined-button: color-value[i]
 
   &.is-block
     width: 100%

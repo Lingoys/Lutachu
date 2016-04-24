@@ -74,25 +74,10 @@ make-outlined-button(color)
   box-shadow: 0 0 0 1px inset
 
   &:hover
-    background-color: rgba(0, 0, 0, .3)
+    background: rgba(255, 255, 255, .3)
 
   &:active
-    background-color: rgba(0, 0, 0, .6)
+    background: rgba(255, 255, 255, .6)
 
   &:visited
-    color: #fff
-
-/**
- * Change color of outlined button
- *
- * @param color button color
- */
-set-outlined-button-color(color)
-  color: color
-
-  if dark(color)
-    &:hover
-      background: rgba(255, 255, 255, .3)
-
-    &:active
-      background: rgba(255, 255, 255, .6)
+    color: color
