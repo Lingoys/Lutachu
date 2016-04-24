@@ -25,13 +25,13 @@
   flex: 1
   padding: 1rem
 
-make-grid()
+make-grid(grid-columns)
 
 @media mq-mobile
-  make-grid(12, mobile)
+  make-grid(grid-columns, mobile)
 
 @media mq-tablet
-  make-grid(12, tablet)
+  make-grid(grid-columns, tablet)
 
 @media mq-desktop
-  make-grid(12, desktop)
+  make-grid(grid-columns, desktop)

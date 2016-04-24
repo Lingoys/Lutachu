@@ -8,42 +8,125 @@
 
 /**
  * Font families
+ * =============
  */
-font-family-sans-serif = "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", sans-serif
-font-family-serif      = Georgia, "Times New Roman", Times, SimSun, serif
-font-family-kai        = Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, serif
+font-family-sans-serif = Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", sans-serif
+font-family-serif      = "Times New Roman", Times, SimSun, serif
+font-family-kai        = "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, serif
 font-family-monospace  = 'Source Code Pro', Monaco, Menlo, Consolas, "Courier New", monospace
-font-family-normal = font-family-sans-serif
 
 /**
  * Colors
+ * ======
  */
-color-normal    = #333
-color-dark-grey = #888
-color-link      = #0275d8
-color-link-grey = #bbb
 
-color-primary   = #198ac8
-color-secondary = #16cbdf
-color-success   = #19c870
-color-error     = #c8192a
-color-warning   = #e0ca00
+black = #333
 
-color-background-bar   = #f7f7f7
-color-background-code  = #f7f7f7
-color-background-table = #f7f7f7
-color-background-table-hover = #e8e8e8
-color-background-table-mark  = #ffff85
+gray      = #55595c
+gray-dark = #373a3c
 
-color-border-light  = #dbdbdb
-color-border-normal = #ddd
-color-border-mark   = #eaea90
+gray-light   = #dbdbdb
+gray-lighter = #efefef
+
+link = #0275d8
+
+primary   = #198ac8
+secondary = #16cbdf
+success   = #19c870
+error     = #c8192a
+warning   = #e0ca00
+
+/**
+ * Typography
+ * ============
+ */
+global-color = black
+
+global-font-size   = 1.6rem
+global-font-weight = 400
+global-font-family = font-family-sans-serif
+
+global-line-height = 1.6
+
+/* Headings */
+font-size-h1 = 5rem
+font-size-h2 = 4.2rem
+font-size-h3 = 3.6rem
+font-size-h4 = 3.0rem
+font-size-h5 = 2.4rem
+font-size-h6 = 1.6rem
+
+headings-font-weight = 400
+headings-line-height = 1.1
+
+/* hr Element */
+hr-border-color = gray-light
+
+/* Blockquote */
+blockquote-color = gray
+blockquote-color-dark = gray-dark
+blockquote-link-color = lighten(gray, 20)
+blockquote-font-family = font-family-serif
+
+blockquote-line-height = 1.62
+
+blockquote-border-color = gray-light
+blockquote-border-style = solid
+blockquote-border-width = border-width
+
+/* Code block */
+pre-color = gray
+pre-background-color = #f7f7f7
+
+pre-border-color = gray-light
+pre-border-style = solid
+pre-border-width = border-width
+
+kbd-color = white
+kbd-font-size = 90%
+kbd-background-color = black
+kbd-box-shadow-color = rgba(0, 0, 0, .3)
+
+/* Mark */
+mark-color = black
+mark-background-color = #fffcc4
+mark-border-color     = #ffedce
+
+/* Figure */
+figcaption-color = gray
+
+/* Poem */
+poem-line-height = 1.86
+poem-title-font-size = 2rem
+
+poem-author-color     = gray
+poem-author-font-size = 1.6rem
+
+/**
+ * Elements
+ * ========
+ */
+
+/* Buttons */
+button-border-color = gray-light
+
+/* Tables */
+table-border-color = gray-lighter
+table-hover-background = #f5f5f5
+table-active-background = #f5f5f5
+table-striped-background = #f9f9f9
+
+/* Labels */
+label-background = gray-lighter
 
 /**
  * Others
+ * ======
  */
+grid-columns = 12
+
 border-width = .3rem
-border-radius-width = .3rem
+border-radius-width = border-width
 
 /**
  * Media queries
@@ -52,6 +135,4 @@ mq-mobile = 'screen and (max-width: 40rem)'
 mq-tablet = 'screen and (min-width: 40rem) and (max-width: 80rem)'
 mq-desktop = 'screen and (min-width: 120rem)'
 
-mq-non-mobile = 'screen and (min-width: 40rem)'
-mq-non-tablet = 'screen and (max-width: 40rem) and (min-width: 80rem)'
-mq-non-desktop = 'screen and (max-width: 120rem)'
+mq-non-desktop = 'screen and (max-width: 80rem)'

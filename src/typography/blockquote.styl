@@ -6,17 +6,21 @@
  * @license MIT License
  */
 
+@require "../variables"
+
 blockquote
   padding: 0 1.5rem
   margin-left: 0
 
-  line-height: 1.62
+  color: blockquote-color
 
-  color: color-dark-grey
-  border-left: border-width solid color-border-normal
+  font-family: blockquote-font-family
+  line-height: blockquote-line-height
+
+  border-left: blockquote-border-width blockquote-border-style blockquote-border-color
 
   a
-    color: color-link-grey
+    color: blockquote-link-color
 
   p
     margin-bottom: .5rem
@@ -28,7 +32,7 @@ blockquote
   em
   cite
   strong
-    color: #777
+    color: blockquote-color-dark
 
   & + p
     margin-top: 1em
