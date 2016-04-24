@@ -8,22 +8,28 @@
   box-sizing: border-box
 
 /**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS and IE text size adjust after device orientation change
+ * 1. Set default font size to 62.5%.
+ * 2. Set default font family to sans-serif.
+ * 3. Prevent iOS and IE text size adjust after device orientation change
  *    without disabling user: zoom.
  */
 
 html
-  font-size: sans-serif /* 1 */
-  -ms-text-size-adjust: 100% /* 2 */
-  -webkit-text-size-adjust: 100% /* 2 */
+  font-size: 62.5% /* 1 */
+  font-family: sans-serif /* 2 */
+  -ms-text-size-adjust: 100% /* 3 */
+  -webkit-text-size-adjust: 100% /* 3 */
 
 /**
- * Remove the margin in all browsers (opinionated).
+ * 1. Remove the margin in all browsers (opinionated).
+ * 2. Add font smoothing to Webkit based browers.
  */
 
 body
-  margin: 0
+  margin: 0 /* 1 */
+
+  -webkit-font-smoothing: antialiased /* 2 */
+  -moz-osx-font-smoothing: grayscale /* 2 */
 
 /** HTML5 display definitions
    ==========================================================================: */
@@ -168,11 +174,13 @@ sup
    ==========================================================================: */
 
 /**
- * Remove the border on images inside links in IE 10-.
+ * 1. Make image responsible
+ * 2. Remove the border on images inside links in IE 10-.
  */
 
 img
-  border-style: none
+  max-width: 100% /* 1 */
+  border-style: none /* 2 */
 
 /**
  * Hide the overflow in IE.
@@ -189,7 +197,7 @@ svg:not(:root)
  */
 
 figure
-  margin: 1em 40px
+  margin: 0 4rem
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -293,6 +301,12 @@ input::-moz-focus-inner
 button:-moz-focusring
 input:-moz-focusring
   outline: 1px dotted ButtonText
+
+/**
+ * Add the correct text alignment.
+ */
+th
+  text-align: left
 
 /**
  * Change the border margin and padding in all browsers (opinionated).
