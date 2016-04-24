@@ -13,7 +13,7 @@
   make-button: #fff
 
   text-decoration: none
-  box-shadow: color-border-light 0 0 0 1px inset
+  box-shadow: button-border-color 0 0 0 1px inset
 
   [class*=icon-]
     margin-right: .2rem
@@ -27,19 +27,14 @@
     &.is-{color}
       set-button-color: color-value[i]
 
-  &.is-outlined
-    make-outlined-button: #fff
-    border: 0
+    &.is-{color}-outline
+      set-outlined-button-color: color-value[i]
 
-    for color, i in color-name
-      &.-{color}
-        set-outlined-button-color: color-value[i]
+  &.is-block
+    width: 100%
 
   &.is-large
-    font-size: 130%
-
-  &.is-medium
-    font-size: 110%
+    font-size: 125%
 
   &.is-small
-    font-size: 80%
+    font-size: 75%
