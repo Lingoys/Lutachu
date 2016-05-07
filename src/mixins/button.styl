@@ -26,7 +26,7 @@ make-button(color)
   display: inline-block
   vertical-align: middle
 
-  transition: background .4s ease
+  transition: background .3s ease
 
   set-button-color: color
 
@@ -38,8 +38,6 @@ make-button(color)
     cursor: not-allowed
     user-select: none
 
-    .icon-spin
-      animation-play-state: paused
 
 /**
  * Set color of normal button
@@ -53,7 +51,7 @@ set-button-color(color)
   background-color: color
 
   &:hover
-    background-color: lighten(color, 6)
+    background-color: lighten(color, 4)
 
   &:active
     background-color: darken(color, 4)
@@ -61,23 +59,3 @@ set-button-color(color)
   &[disabled]
   &.-disabled
     background-color: color
-
-/**
- * Create a outlined button
- *
- * @param color background color
- */
-make-outlined-button(color)
-  color: color
-  background-color: transparent
-
-  box-shadow: 0 0 0 1px inset
-
-  &:hover
-    background: rgba(255, 255, 255, .3)
-
-  &:active
-    background: rgba(255, 255, 255, .6)
-
-  &:visited
-    color: color

@@ -24,14 +24,33 @@
   color-value = primary secondary success error warning
 
   &.is-outline
-    make-outlined-button: #fff
+    color: #fff
+    background-color: transparent
+
+    &:hover
+      background: rgba(255, 255, 255, .3)
+
+    &:active
+      background: rgba(255, 255, 255, .6)
 
   for color, i in color-name
     &.is-{color}
+      box-shadow: none
+
       set-button-color: color-value[i]
 
-    &.is-{color}-outline
-      make-outlined-button: color-value[i]
+    &.is-outline.is-{color}
+      color: color-value[i]
+
+      &:hover
+        background: alpha(color-value[i], .3)
+
+      &:active
+        background: alpha(color-value[i], .6)
+
+  &.is-outline
+    background: transparent
+    box-shadow: 0 0 0 1px inset
 
   &.is-block
     width: 100%
