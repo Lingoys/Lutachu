@@ -36,8 +36,6 @@
 
   for color, i in color-name
     &.is-{color}
-      box-shadow: none
-
       set-button-color: color-value[i]
 
     &.is-outline.is-{color}
@@ -61,3 +59,23 @@
 
   &.is-small
     font-size: 75%
+
+.button-group
+  display: flex
+  flex-wrap: wrap
+
+  .button
+    flex: 1 0 auto
+
+    &:first-child
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+
+    &:not(:first-child):not(:last-child)
+      border-radius: 0
+    
+    &:not(:first-child)
+      margin-left: -.1rem
+
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
