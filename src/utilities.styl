@@ -24,11 +24,11 @@
 /**
  * Floating
  */
-.left
-  float: left !important
+.float-left
+  float: left
 
-.right
-  float: right !important
+.float-right
+  float: right
 
 .clearfix
   clearfix()
@@ -39,30 +39,63 @@
 .is-center
   center()
 
-.is-text-center
+.text-center
   text-align: center
 
-.is-text-left
+// Text align
+.text-left
   text-align: left
 
-.is-text-right
+.text-right
   text-align: right
+
+.text-justify
+  text-align: justify
+
+// Text style
+.is-normal
+  font-weight: global-font-weight
+
+.is-bold
+  font-weight: bolder
+
+.is-italic
+  font-style: italic
+
+// Others
+.text-ellipsis
+  text-overflow: ellipsis
+
+.text-clip
+  text-overflow: clip
+
 
 /**
  * Display
  */
 .is-block
-  display: block !important
+  display: block
 
 .is-inline
-  display: inline !important
+  display: inline
 
 .is-inline-block
-  display: inline-block !important
+  display: inline-block
+
+.is-flex
+  display: flex
+
+.is-inline-flex
+  display: inline-flex
 
 .is-hide
-  display: none !important
-  visibility: hidden !important
+  display: none
+
+.is-visible
+  display: visible
+
+.is-invisible
+  visibility: hidden
 
 /**
  * Font families
