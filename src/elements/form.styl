@@ -31,80 +31,92 @@ input:not([type])
   outline: none
   display: inline-block
 
-  padding: .5em .8em
-  margin-bottom: .75em
-
   background: #fff
-  border: 1px solid color-border-normal
+  border: 1px solid input-border-color
 
   border-radius: border-radius-width
 
+input
+select
+textarea
+  color: input-color
+  padding: .2rem 1rem
+
   &:focus
-    border-color: color-border-normal
+    position: relative
+    border-color: input-focus-color
 
   &[disabled]
     cursor: not-allowed
 
-    color: #999
-
-    border-color: #ddd
-    background-color: #f9f9f9
-
-input[type="color"]
-  padding: .2em .5em
+    background-color: input-disabled-background
 
 textarea
-  padding: .2em .8em
+  max-width: 100%
 
-option
-  &[disabled]
-    cursor: not-allowed
-
-    color: #999
-    border-color: #DDD
-    background-color: #f9f9f9
+select
+  padding: .5rem 1rem
 
 label
   margin-bottom: .2rem
 
-.is-radius
-  input
-  select
-  textarea
-  option
-  button
-  .btn
-    border-radius: border-radius-width
-
-.group
+.form-group
   border: 0
-
   padding: 0
-  margin-bottom: .25em
+
+  margin-bottom: 2.5rem
+
+  &:last-child
+    margin-bottom: 0
 
   input
+  button
+  textarea
+    display: block
+
     margin: 0
+    width: 100%
 
-    border-bottom: 0
-    border-radius: border-radius-width
-
-    &:focus
-      position: relative
-
+    &:not(:last-child)
       margin-bottom: -1px
-      border-bottom: 1px solid color-border-normal
 
-    &:last-child
-      border-bottom: 1px solid color-border-normal
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
 
-      &:focus
-        margin-bottom: 0
-        border-bottom-color: color-border-focus
+    &:not(:first-child):not(:last-child)
+      border-radius: 0
 
-  &.is-radius
-    input
-      &:first-child
-        border-top-radius: 5px
+    &:not(:first-child)
+      border-top-left-radius: 0
+      border-top-right-radius: 0
 
-      &:last-child
-        border-bottom-radius: 5px
+.form
+  &.is-stacked
+    input:not([type="checkbox"]):not([type="radio"])
+    button
+    select
+    textarea
+      display: block
+      margin-bottom: 1rem
+
+    button
+      margin-top: 1rem
+
+  &.is-align
+    .control-group
+      display: flex
+
+      label
+        width: 14rem
+        text-align: right
+        margin: 0 1rem 0 0
+
+      input
+      textarea
+        flex: 1
+
+    .controls
+      margin-left: 15rem
+
+.control-group
+  margin-bottom: 1rem
