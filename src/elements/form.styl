@@ -60,6 +60,35 @@ select
 label
   margin-bottom: .2rem
 
+.form
+  &.is-stacked
+    input:not([type="checkbox"]):not([type="radio"])
+    button
+    select
+    textarea
+      display: block
+      margin-bottom: 1rem
+
+    button
+      margin-top: 1rem
+
+  &.is-align
+    .control-group
+      display: flex
+
+      label
+        width: 14rem
+        text-align: right
+        margin: 0 1rem 0 0
+
+      input
+      textarea
+        flex: 1
+
+    .controls
+      margin-left: 15rem
+
+
 .form-group
   border: 0
   padding: 0
@@ -90,33 +119,40 @@ label
       border-top-left-radius: 0
       border-top-right-radius: 0
 
-.form
-  &.is-stacked
-    input:not([type="checkbox"]):not([type="radio"])
-    button
-    select
-    textarea
-      display: block
-      margin-bottom: 1rem
-
-    button
-      margin-top: 1rem
-
-  &.is-align
-    .control-group
-      display: flex
-
-      label
-        width: 14rem
-        text-align: right
-        margin: 0 1rem 0 0
-
-      input
-      textarea
-        flex: 1
-
-    .controls
-      margin-left: 15rem
-
 .control-group
   margin-bottom: 1rem
+
+.input-group
+  display: flex
+  margin-bottom: 1rem
+
+  input
+    width: 100%
+
+  .button
+  .input-addon
+    flex: 1 0 auto
+
+  .input-addon
+    padding: .2rem 1rem
+    background: input-addon-background
+
+    border: 1px solid input-border-color
+    border-radius: border-radius-width
+
+  input
+  .button
+  .input-addon
+    &:first-child
+      margin-right: -1px
+
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+
+    &:not(:first-child):not(:last-child)
+      margin-right: -1px
+      border-radius: 0
+
+    &:not(:first-child)
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
