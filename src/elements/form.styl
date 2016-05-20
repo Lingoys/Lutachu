@@ -55,7 +55,12 @@ textarea
   max-width: 100%
 
 select
-  padding: .5rem 1rem
+  &:not([multiple])
+    padding: .2rem 1.6rem .2rem 1rem
+
+    appearance: none
+    background: unquote("#fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC) no-repeat right .75rem center / .8rem 1rem")
+
 
 label
   margin-bottom: .2rem
@@ -75,6 +80,7 @@ label
   &.is-align
     .control-group
       display: flex
+      align-items: center
 
       label
         width: 14rem
